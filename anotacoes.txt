@@ -1,0 +1,3 @@
+Para indentar automaticamente o código no Visual Studio Code (VS Code), 
+pode usar o atalho de teclado Shift + Alt + F no Windows. No Mac, use 
+Shift + Option + F e no Linux, Ctrl + Shift + I. 

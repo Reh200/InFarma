@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="imc.css">
+    <style>
+        /* Adicionei aqui, caso o CSS não esteja disponível */
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        .table-imc {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table-imc th, .table-imc td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .tabela-container {
+            display: none; /* Inicialmente oculta */
+        }
+        .erro {
+            color: red;
+        }
+        .classificacao {
+            font-weight: bold;
+            color: #333;
+        }
+        .sugestao {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de IMC</h2>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Digite seu peso" required>
+        
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01" placeholder="Digite sua altura" required>
+        
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        
+        <div id="resultado"></div>
+        <div id="pesoIdeal"></div>
+        <div id="sugestao"></div>
+    </div>
+
+    <!-- Contêiner da tabela (inicialmente oculta pelo CSS) -->
+    <div class="tabela-container">
+        <h3>Tabela de Classificação do IMC</h3>
+        <table class="table-imc">
+            <thead>
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                    <th>Faixa de Peso Ideal (kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- A tabela será preenchida dinamicamente pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(document.getElementById('peso').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+            var resultadoDiv = document.getElementById('resultado');
+            var pesoIdealDiv = document.getElementById('pesoIdeal');
+            var sugestaoDiv = document.getElementById('sugestao');
+            var tabelaContainer = document.querySelector('.tabela-container');
+            var tabelaIMC = document.querySelector('.table-imc tbody');
+
+            if (!peso || !altura || altura <= 0) {
+                resultadoDiv.innerHTML = "<p class='erro'>Por favor, insira valores válidos.</p>";
+                pesoIdealDiv.innerHTML = "";
+                sugestaoDiv.innerHTML = "";
+                tabelaContainer.style.display = 'none'; // Oculta a tabela e o título
+                return;
+            }
+
+            var imc = peso / (altura * altura);
+            var classificacao = "";
+            var pesoMinIdeal = 18.5 * (altura * altura);
+            var pesoMaxIdeal = 24.9 * (altura * altura);
+            var diferencaPeso = 0;
+            var mensagemSugestao = "";
+
+            // Calcula as faixas dinâmicas de classificação do IMC para a altura informada
+            var faixasIMC = [
+                { limite: 18.5, descricao: "Abaixo do peso", pesoIdeal: `Menos de ${pesoMinIdeal.toFixed(1)} kg` },
+                { limite: 24.9, descricao: "Peso normal", pesoIdeal: `${pesoMinIdeal.toFixed(1)} - ${pesoMaxIdeal.toFixed(1)} kg` },
+                { limite: 29.9, descricao: "Sobrepeso", pesoIdeal: `Entre ${pesoMaxIdeal.toFixed(1)} e ${(29.9 * altura * altura).toFixed(1)} kg` },
+                { limite: 34.9, descricao: "Obesidade Grau I", pesoIdeal: `Entre ${(30 * altura * altura).toFixed(1)} e ${(34.9 * altura * altura).toFixed(1)} kg` },
+                { limite: 39.9, descricao: "Obesidade Grau II", pesoIdeal: `Entre ${(35 * altura * altura).toFixed(1)} e ${(39.9 * altura * altura).toFixed(1)} kg` },
+                { limite: 40.0, descricao: "Obesidade Grau III (mórbida)", pesoIdeal: `Mais de ${(40 * altura * altura).toFixed(1)} kg` }
+            ];
+
+            // Atualiza a tabela de classificação com base nas faixas dinâmicas
+            tabelaIMC.innerHTML = '';
+            faixasIMC.forEach(function(faixa) {
+                var row = document.createElement('tr');
+                var imcCell = document.createElement('td');
+                var classificacaoCell = document.createElement('td');
+                var pesoIdealCell = document.createElement('td');
+                imcCell.textContent = faixa.limite < 40 ? '< ' + faixa.limite : '> ' + faixa.limite;
+                classificacaoCell.textContent = faixa.descricao;
+                pesoIdealCell.textContent = faixa.pesoIdeal;
+                row.appendChild(imcCell);
+                row.appendChild(classificacaoCell);
+                row.appendChild(pesoIdealCell);
+                tabelaIMC.appendChild(row);
+            });
+
+            // Determine a classificação atual com base no IMC calculado
+            if (imc < 18.5) {
+                classificacao = "Abaixo do peso";
+                diferencaPeso = pesoMinIdeal - peso;
+                mensagemSugestao = `Você precisa ganhar pelo menos ${diferencaPeso.toFixed(1)} kg para atingir um peso saudável.`;
+            } else if (imc < 24.9) {
+                classificacao = "Peso normal";
+                mensagemSugestao = "Parabéns! Seu peso está dentro da faixa ideal.";
+            } else if (imc < 29.9) {
+                classificacao = "Sobrepeso";
+                diferencaPeso = peso - pesoMaxIdeal;
+                mensagemSugestao = `Para atingir um peso saudável, recomenda-se perder cerca de ${diferencaPeso.toFixed(1)} kg.`;
+            } else if (imc < 34.9) {
+                classificacao = "Obesidade Grau I";
+                diferencaPeso = peso - pesoMaxIdeal;
+                mensagemSugestao = `Para um peso ideal, considere perder pelo menos ${diferencaPeso.toFixed(1)} kg.`;
+            } else if (imc < 39.9) {
+                classificacao = "Obesidade Grau II";
+                diferencaPeso = peso - pesoMaxIdeal;
+                mensagemSugestao = `Recomenda-se acompanhamento médico para perder ${diferencaPeso.toFixed(1)} kg.`;
+            } else {
+                classificacao = "Obesidade Grau III (mórbida)";
+                diferencaPeso = peso - pesoMaxIdeal;
+                mensagemSugestao = `É essencial acompanhamento médico para perder ${diferencaPeso.toFixed(1)} kg de forma segura.`;
+            }
+
+            resultadoDiv.innerHTML = `<h3>Seu IMC: ${imc.toFixed(2)}</h3><p class='classificacao'>${classificacao}</p>`;
+            pesoIdealDiv.innerHTML = `<p>Faixa de peso ideal: ${pesoMinIdeal.toFixed(1)} kg - ${pesoMaxIdeal.toFixed(1)} kg</p>`;
+            sugestaoDiv.innerHTML = `<p class='sugestao'>${mensagemSugestao}</p>`;
+
+            tabelaContainer.style.display = 'block'; // Exibe a tabela e o título apenas após o cálculo
+        }
+    </script>
+</body>
+</html>

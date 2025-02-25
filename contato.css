@@ -1,0 +1,113 @@
+/* Importando fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Fundo com efeito gradiente azul */
+body {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container do formulário */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Texto de introdução */
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    opacity: 0.85;
+}
+
+/* Estilo dos campos */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #0048a5, #007bff);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #003b8b, #0065d1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
