@@ -9,7 +9,19 @@
 <body>
     <header>
         <h1>Simulação de Skincare</h1>
+        <button id="toggle-theme" onclick="toggleTheme()" class="theme-button">
+            <span class="icon"></span>
+        </button>
     </header>
+    
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeButton = document.getElementById('toggle-theme');
+            themeButton.classList.toggle('dark');
+        }
+    </script>
+    
     <div class="container">
         <h1>Cuide da sua Pele</h1>
         <label for="skin-type">Selecione seu tipo de pele:</label>

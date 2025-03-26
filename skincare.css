@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, rgb(0, 123, 255) 0%, rgb(33, 80, 161) 100%);
     color: white;
     padding: 1.5rem;
     text-align: center;
@@ -56,9 +56,11 @@ nav ul li a:hover {
     color: #333;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
-    color: #3c174b;
+    color: #220c88;
 }
 
 h2 {
@@ -70,10 +72,11 @@ h2 {
 label {
     display: block;
     margin-top: 1rem;
-    color: #6a11cb;
+    color: #3311cb;
 }
 
-select, button {
+select,
+button {
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
@@ -83,7 +86,7 @@ select, button {
 }
 
 button {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #1d2672 0%, #2575fc 100%);
     color: white;
     border: none;
     cursor: pointer;
@@ -91,7 +94,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    background: linear-gradient(135deg, #2575fc 0%, #0d1e7c 100%);
 }
 
 .result {
@@ -118,9 +121,55 @@ ul li:last-child {
     border-bottom: none;
 }
 
+/* Estilo global para o modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Ajustando cabeçalhos */
+body.dark-mode header h1,
+body.dark-mode .container h1 {
+    color: #ffffff;
+}
+
+/* Ajustando o contêiner */
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+/* Ajustando o botão e os selects */
+body.dark-mode button,
+body.dark-mode select {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+/* Ajustando rodapé */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Ajustando links no rodapé */
+body.dark-mode footer a {
+    color: #4faaff;
+    /* Cor dos links no modo escuro */
+}
+
+/* Ajustando o resultado */
+body.dark-mode .result {
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: #ffffff;
+}
+
 footer {
     background-color: #333;
-    color: white;
+    color: rgb(46, 32, 109);
     text-align: center;
     padding: 1rem;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
@@ -130,6 +179,6 @@ footer {
 }
 
 footer a {
-    color: #b2ebf2;
+    color: #286f79;
     text-decoration: none;
 }

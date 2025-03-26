@@ -12,9 +12,22 @@
 
 <body>
     <header>
-        <h1>📚 Materiais de Estudo</h1>
+        <h1>📚 Materiais de Estudos</h1>
         <p>Explore livros, apostilas e artigos científicos para aprofundar seus conhecimentos em Farmácia.</p>
+        <button id="toggle-theme" class="theme-button" onclick="toggleTheme()">
+            <span class="icon"></span>
+        </button>
     </header>
+    
+    <script>
+       function toggleTheme() {
+    // Alterna a classe 'dark-mode' no body
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    console.log("Modo escuro ativado:", body.classList.contains('dark-mode'));
+}
+
+    </script>
 
     <section class="materiais">
         <h2>📖 Livros Gratuitos</h2>

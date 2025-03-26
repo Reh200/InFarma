@@ -14,6 +14,116 @@ body {
     padding: 20px;
 }
 
+/* Tema escuro - Fundo e texto */
+body.dark-mode {
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Garantir que todos os textos sejam visíveis */
+body.dark-mode * {
+    color: inherit; /* Herda a cor clara definida no body */
+}
+
+/* Cabeçalhos */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #ffffff; /* Garante que os cabeçalhos tenham cor clara */
+}
+
+/* Parágrafos e textos */
+body.dark-mode p, 
+body.dark-mode label, 
+body.dark-mode span {
+    color: #ffffff; /* Cor clara para textos comuns */
+}
+
+/* Botões */
+body.dark-mode button {
+    background-color: #333; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    border: 1px solid #555; /* Bordas para contraste */
+}
+
+/* Menus suspensos (select) */
+body.dark-mode select {
+    background-color: #333; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    border: 1px solid #555; /* Bordas para contraste */
+}
+
+/* Resultados (ou áreas específicas) */
+body.dark-mode .result {
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    border: 1px solid #444; /* Bordas para visibilidade */
+}
+
+/* Links */
+body.dark-mode a {
+    color: #4faaff; /* Azul claro para links, garantindo contraste */
+}
+/* Tema escuro aplicado ao corpo */
+body.dark-mode {
+    background-color: #121212; /* Fundo do modo escuro */
+    color: #ffffff; /* Texto em branco */
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+/* Garantindo que o texto seja herdado corretamente */
+body.dark-mode * {
+    color: #ffffff !important; /* Define o texto como branco */
+    background-color: transparent; /* Remove fundos indesejados */
+}
+
+/* Estilização para cabeçalhos */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #ffffff !important; /* Garante que os cabeçalhos fiquem visíveis */
+}
+
+/* Ajuste para parágrafos e textos */
+body.dark-mode p, 
+body.dark-mode label, 
+body.dark-mode span {
+    color: #ffffff !important; /* Mantém visibilidade para textos comuns */
+}
+
+/* Botões */
+body.dark-mode button {
+    background-color: #333; /* Fundo escuro para botões */
+    color: #ffffff; /* Texto claro nos botões */
+    border: 1px solid #555; /* Bordas visíveis no modo escuro */
+}
+
+/* Menus suspensos (select) */
+body.dark-mode select {
+    background-color: #333; /* Fundo escuro para select */
+    color: #ffffff; /* Texto claro */
+    border: 1px solid #555; /* Bordas visíveis */
+}
+
+/* Rodapé */
+body.dark-mode footer {
+    background-color: #1e1e1e; /* Fundo do rodapé */
+    color: #ffffff !important; /* Texto visível */
+}
+
+/* Links */
+body.dark-mode a {
+    color: #4faaff !important; /* Azul claro para links */
+}
+
+/* Resultados (ou áreas específicas) */
+body.dark-mode .result {
+    background-color: #1e1e1e; /* Fundo escuro para resultados */
+    border: 1px solid #444; /* Bordas visíveis */
+    color: #ffffff !important; /* Texto claro */
+}
+
 /* Estilo do cabeçalho */
 header {
     background-color: #007bff;
@@ -107,3 +217,4 @@ footer {
     color: white;
     border-radius: 8px;
 }
+

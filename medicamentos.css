@@ -5,18 +5,54 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    color: #333;
+}
+
+/* Garantindo que a cor do texto seja visível no modo escuro */
+body.dark-mode {
+    background-color: #121212; /* Fundo do corpo */
+    color: #ffffff; /* Cor do texto */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Garantindo que o texto dentro de divs e outros elementos seja visível */
+body.dark-mode * {
+    color: inherit; /* Herda a cor definida no body */
+    background-color: transparent; /* Apenas se necessário */
+}
+
+/* Específico para textos desaparecendo */
+body.dark-mode .result,
+body.dark-mode label,
+body.dark-mode h1,
+body.dark-mode p {
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Ajuste para links */
+body.dark-mode a {
+    color: #4faaff; /* Cor do link para visibilidade */
+}
+
+/* Garantir contraste para botões e selects */
+body.dark-mode button, 
+body.dark-mode select {
+    color: #ffffff;
+    background-color: #333; /* Fundo escuro */
+    border: 1px solid #555; /* Bordas */
 }
 
 header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, rgb(0, 123, 255) 0%, hwb(218 15% 1%) 100%);
     color: white;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
 nav {
@@ -41,26 +77,35 @@ nav ul li a {
     padding: 14px 20px;
     color: white;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    font-size: 1rem;
 }
 
 nav ul li a:hover {
     background-color: #575757;
+    padding: 14px 25px;
+    /* aumenta o padding para efeito de destaque */
 }
 
 section {
     padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
+    margin: 3rem auto;
+    max-width: 1000px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    font-size: 1rem;
 }
 
 section h2 {
-    color: #6a11cb;
+    color: #4a58da;
     border-bottom: 2px solid #2575fc;
     padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+section p {
     margin-bottom: 1rem;
 }
 
@@ -70,7 +115,7 @@ section ul {
 }
 
 section ul li {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -78,12 +123,18 @@ section ul li:last-child {
     border-bottom: none;
 }
 
+section ul li strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
@@ -91,4 +142,33 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    section ul li {
+        padding: 0.75rem 0;
+    }
 }

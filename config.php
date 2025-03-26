@@ -1,0 +1,4 @@
+<?php
+define("EMAIL_DESTINO", "alinerenata6002@gmail.com");  // Substitua pelo seu e-mail de destino
+?>
+
