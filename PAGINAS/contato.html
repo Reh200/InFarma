@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Biblioteca Virtual de Farmácia</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contato</h1>
+        <p>Entre em contato pelo WhatsApp para dúvidas ou sugestões.</p>
+        <div class="input-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="input-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+        <a id="whatsapp-link" href="#" class="btn-whatsapp" target="_blank">Enviar pelo WhatsApp</a>
+    </div>
+
+    <script>
+        document.getElementById('whatsapp-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            let nome = document.getElementById('nome').value;
+            let mensagem = document.getElementById('mensagem').value;
+            let numero = "5511999999999"; // Substitua pelo número correto
+            let texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+            let link = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(texto)}`;
+            window.open(link, '_blank');
+        });
+    </script>
+</body>
+</html>

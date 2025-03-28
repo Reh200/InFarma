@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Medicamentos - Biblioteca Virtual de Farmácia</title>
+    <link rel="stylesheet" href="medicamentos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guia de Medicamentos</h1>
+        <button id="toggle-theme" class="theme-button" onclick="toggleTheme()">
+            <span class="icon"></span>
+        </button>
+    </header>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            console.log('Modo escuro ativado?', document.body.classList.contains('dark-mode'));
+        }
+    </script>
+    
+    <nav>
+        <ul>
+            <li><a href="#antibioticos">Antibióticos</a></li>
+            <li><a href="#analgesicos">Analgésicos</a></li>
+            <li><a href="#anti-inflamatorios">Anti-inflamatórios</a></li>
+            <li><a href="#vitaminas">Vitaminas</a></li>
+        </ul>
+    </nav>
+    <section id="antibioticos">
+        <h2>Antibióticos</h2>
+        <p>Informações sobre diversos tipos de antibióticos, seu uso e efeitos colaterais.</p>
+        <ul>
+            <li><strong>Amoxicilina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/amoxicilina-comprimido-eurofarma-momenta/bula"
+                        target="_blank">Amoxicilina - Eurofarma</a></p>
+            </li>
+            <li><strong>Azitromicina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/azitromicina-suspensao-oral-eurofarma-momenta/bula"
+                        target="_blank">Azitromicina - Eurofarma</a></p>
+            </li>
+            <li><strong>Cefalexina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/cefalexina/bula" target="_blank">Cefalexina</a></p>
+            </li>
+            <li><strong>Ciprofloxacino</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/ciprofloxacino/bula"
+                        target="_blank">Ciprofloxacino</a></p>
+            </li>
+        </ul>
+    </section>
+    <section id="analgesicos">
+        <h2>Analgésicos</h2>
+        <p>Informações sobre analgésicos, incluindo indicações e precauções.</p>
+        <ul>
+            <li><strong>Paracetamol</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/paracetamol/bula" target="_blank">Paracetamol</a></p>
+            </li>
+            <li><strong>Ibuprofeno</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/ibuprofeno/bula" target="_blank">Ibuprofeno</a></p>
+            </li>
+            <li><strong>Dipirona</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/dipirona/bula" target="_blank">Dipirona</a></p>
+            </li>
+            <li><strong>Codeína</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/codeina/bula" target="_blank">Codeína</a></p>
+            </li>
+        </ul>
+    </section>
+    <section id="anti-inflamatorios">
+        <h2>Anti-inflamatórios</h2>
+        <p>Detalhes sobre anti-inflamatórios, suas aplicações e cuidados necessários.</p>
+        <ul>
+            <li><strong>Aspirina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/aspirina/bula" target="_blank">Aspirina - Bayer</a>
+                </p>
+            </li>
+            <li><strong>Naproxeno</strong>
+                <p>Bula: <a href="https://www.flanax.com.br/produtos/flanax-550mg" target="_blank">Flanax 550mg -
+                        Naproxeno</a></p>
+            </li>
+            <li><strong>Diclofenaco</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/diclofenaco/bula" target="_blank">Diclofenaco</a></p>
+            </li>
+            <li><strong>Meloxicam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/meloxicam/bula" target="_blank">Meloxicam</a></p>
+            </li>
+        </ul>
+    </section>
+    <section id="vitaminas">
+        <h2>Vitaminas</h2>
+        <p>Guia sobre diferentes vitaminas, suas fontes e importância para a saúde.</p>
+        <ul>
+            <li><strong>Vitamina C</strong>
+                <p>Fontes: Frutas cítricas como laranja e limão.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina D</strong>
+                <p>Fontes: Exposição ao sol e alimentos fortificados.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina B12</strong>
+                <p>Fontes: Vegetais, frutas Cogumelos, Leguminosas germinadas, Morango, Banana, Agrião.
+                    Bebida de arroz ou aveia, Produtos à base de soja, Cereais matinais. </p>
+                <p>Fonte: <a href="https://www.bulas.med.br/p/bulas-de-medicamentos/bula/1370973/fdc-vit-b-12.htm"
+                        target="_blank">BulasMed</a></p>
+            </li>
+            <li><strong>Vitamina E</strong>
+                <p>Fontes: Oleaginosas e óleos vegetais.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2025 Biblioteca Virtual de Farmácia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
