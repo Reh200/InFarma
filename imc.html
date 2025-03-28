@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="imc.css">
-    
 </head>
 <body>
     <div class="container">
@@ -24,7 +23,6 @@
         <div id="sugestao"></div>
     </div>
 
-    <!-- Contêiner da tabela (inicialmente oculta pelo CSS) -->
     <div class="tabela-container">
         <h3>Tabela de Classificação do IMC</h3>
         <table class="table-imc">
@@ -55,7 +53,7 @@
                 resultadoDiv.innerHTML = "<p class='erro'>Por favor, insira valores válidos.</p>";
                 pesoIdealDiv.innerHTML = "";
                 sugestaoDiv.innerHTML = "";
-                tabelaContainer.style.display = 'none'; // Oculta a tabela e o título
+                tabelaContainer.style.display = 'none';
                 return;
             }
 
@@ -66,7 +64,6 @@
             var diferencaPeso = 0;
             var mensagemSugestao = "";
 
-            // Calcula as faixas dinâmicas de classificação do IMC para a altura informada
             var faixasIMC = [
                 { limite: 18.5, descricao: "Abaixo do peso", pesoIdeal: `Menos de ${pesoMinIdeal.toFixed(1)} kg` },
                 { limite: 24.9, descricao: "Peso normal", pesoIdeal: `${pesoMinIdeal.toFixed(1)} - ${pesoMaxIdeal.toFixed(1)} kg` },
@@ -76,7 +73,6 @@
                 { limite: 40.0, descricao: "Obesidade Grau III (mórbida)", pesoIdeal: `Mais de ${(40 * altura * altura).toFixed(1)} kg` }
             ];
 
-            // Atualiza a tabela de classificação com base nas faixas dinâmicas
             tabelaIMC.innerHTML = '';
             faixasIMC.forEach(function(faixa) {
                 var row = document.createElement('tr');
@@ -92,7 +88,6 @@
                 tabelaIMC.appendChild(row);
             });
 
-            // Determine a classificação atual com base no IMC calculado
             if (imc < 18.5) {
                 classificacao = "Abaixo do peso";
                 diferencaPeso = pesoMinIdeal - peso;
@@ -122,7 +117,7 @@
             pesoIdealDiv.innerHTML = `<p>Faixa de peso ideal: ${pesoMinIdeal.toFixed(1)} kg - ${pesoMaxIdeal.toFixed(1)} kg</p>`;
             sugestaoDiv.innerHTML = `<p class='sugestao'>${mensagemSugestao}</p>`;
 
-            tabelaContainer.style.display = 'block'; // Exibe a tabela e o título apenas após o cálculo
+            tabelaContainer.style.display = 'block';
         }
     </script>
 </body>
