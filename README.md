@@ -1,3 +1,3 @@
 # InfoCare
 
-O InfoCare é uma plataforma interativa voltada para a área farmacêutica e de saúde. Além de um glossário de termos técnicos, o site oferece materiais de estudo, cálculo de IMC, simulação de rotina de skincare e acesso a bulas de medicamentos. Desenvolvido com HTML, CSS e JavaScript, o projeto proporciona uma experiência intuitiva e personalizável, incluindo modo claro e escuro. Explore os recursos acessando InfoCare.
+A InfoCare é uma plataforma interativa voltada para a área farmacêutica e de saúde. Além de um glossário de termos técnicos, o site oferece materiais de estudo, cálculo de IMC, simulação de rotina de skincare e acesso a bulas de medicamentos. Desenvolvido com HTML, CSS e JavaScript, o projeto proporciona uma experiência intuitiva e personalizável, incluindo modo claro e escuro. 
