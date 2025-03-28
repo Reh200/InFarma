@@ -1,2 +1,6 @@
 Para indentar automaticamente o código no Visual Studio Code (VS Code), 
 pode usar o atalho de teclado Shift + Alt + F no Windows.
+
+Configuração GitHub
+git config --global user.name Reh200
+git config --global user.email alinerenata1400@gmail.com
