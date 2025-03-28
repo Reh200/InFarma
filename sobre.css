@@ -1,0 +1,95 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalhos */
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2a3d4f;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2a3d4f;
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+/* Estilo de rodapé */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilo para o texto do glossário */
+.glossary-text {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.glossary-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo de Títulos Menores */
+.glossary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2a3d4f;
+    margin-top: 20px;
+}
+
