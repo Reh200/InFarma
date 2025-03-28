@@ -4,37 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - InfoCare</title>
-    <link rel="stylesheet" href="sobre.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Sobre o InfoCare</h2>
-        <p class="text-center">
-            O InfoCare é uma plataforma digital focada no aprimoramento e acesso a informações essenciais para profissionais e estudantes da área farmacêutica. 
-            Nosso objetivo é fornecer uma base de conhecimento acessível e confiável para auxiliar na compreensão de medicamentos, tratamentos e termos técnicos relevantes no dia a dia da farmácia.
-        </p>
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle">
+        <i class="fas fa-moon"></i> <!-- Ícone de lua para alternância de tema -->
+    </button>
 
-        <h3>O que oferecemos</h3>
-        <p>
-            Dentro do InfoCare, você encontrará diversos recursos, incluindo:
-        </p>
-        <ul>
-            <li><strong>Guia de Medicamentos:</strong> Informações detalhadas sobre fármacos e suas aplicações terapêuticas.</li>
-            <li><strong>Materiais de Estudo:</strong> Resumos, artigos e guias para aprimorar o seu conhecimento na área farmacêutica.</li>
-            <li><strong>Calculadora de IMC:</strong> Ferramenta para calcular o Índice de Massa Corporal de forma rápida e fácil.</li>
-            <li><strong>Simulação de Skincare:</strong> Ajuda na escolha das melhores rotinas de cuidados com a pele.</li>
-        </ul>
+    <header>
+        <h1>Sobre o InfoCare</h1>
+        <input type="text" placeholder="Buscar..." />
+    </header>
 
-        <h3>Glossário de Termos Farmacêuticos</h3>
-        <p>
-            Além dos recursos acima, também oferecemos um <strong>Glossário de Termos Farmacêuticos</strong>, uma ferramenta essencial para quem deseja entender melhor os termos técnicos e científicos usados na farmacologia. 
-            Esse glossário contém definições claras e objetivas de termos como "absorção", "antibiótico" e muitos outros, facilitando o aprendizado e a compreensão de conceitos complexos da área de saúde e farmácia.
-        </p>
+    <section class="glossary">
+        <!-- Introdução -->
+        <div class="term">
+            <h2>O que é o InfoCare?</h2>
+            <p>
+                O <strong>InfoCare</strong> surge com o objetivo de revolucionar o acesso à informação no campo da farmácia e da saúde. 
+                A nossa missão é ser a ponte entre o conhecimento técnico e a prática cotidiana dos profissionais e estudantes da área farmacêutica, oferecendo conteúdo acessível, atualizado e de qualidade.
+            </p>
+        </div>
 
-        <p>
-            O glossário é constantemente atualizado para garantir que você tenha acesso a informações de qualidade, sempre com o intuito de apoiar seu desenvolvimento acadêmico e profissional.
-        </p>
+        <!-- Benefícios do InfoCare -->
+        <div class="term">
+            <h2>Por que o InfoCare é essencial para você?</h2>
+            <p>
+                Se você é estudante de farmácia, profissional da área ou apenas um entusiasta do setor da saúde, o <strong>InfoCare</strong> tem tudo o que você precisa para aprofundar seu entendimento sobre medicamentos, cuidados com a pele, e muito mais.
+                Oferecemos recursos completos para o desenvolvimento do conhecimento técnico e prático de nossos usuários, tornando sua jornada mais eficiente e informada.
+            </p>
+        </div>
+
+        <!-- Principais recursos -->
+        <div class="term">
+            <h2>Principais Recursos</h2>
+            <ul>
+                <li><strong>Guia de Medicamentos:</strong> Conteúdo detalhado sobre fármacos, seus usos terapêuticos, efeitos colaterais e interações.</li>
+                <li><strong>Materiais de Estudo:</strong> Resumos, artigos e guias para reforçar os conhecimentos em farmacologia e legislações.</li>
+                <li><strong>Calculadora de IMC:</strong> Ferramenta para calcular o Índice de Massa Corporal, importante para quem lida com a saúde.</li>
+                <li><strong>Simulação de Skincare:</strong> Ferramenta para personalizar rotinas de cuidados com a pele, considerando as necessidades de cada tipo de pele.</li>
+            </ul>
+        </div>
+
+        <!-- Glossário de termos farmacêuticos -->
+        <div class="term">
+            <h2>Glossário de Termos Farmacêuticos</h2>
+            <p>
+                Além dos recursos acima, o <strong>InfoCare</strong> também é o lar de um valioso <strong>Glossário de Termos Farmacêuticos</strong>, uma ferramenta indispensável para profissionais e estudantes da área da saúde.
+                O glossário abrange uma vasta gama de termos técnicos usados frequentemente no universo farmacêutico. Se você já se deparou com termos como "bioequivalência", "farmacocinética" ou "farmacodinâmica" e teve dúvidas sobre seus significados, o nosso glossário é o recurso ideal para esclarecer esses e outros conceitos importantes.
+            </p>
+        </div>
     </section>
+
+    <footer>
+        <p>&copy; 2024 InfoCare. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Alternância de tema
+        const themeToggleButton = document.getElementById("theme-toggle");
+        themeToggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+        });
+    </script>
 </body>
 </html>
