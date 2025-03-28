@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossário Farmacêutico</title>
+    <link rel="stylesheet" href="glossario.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Glossário Farmacêutico</h1>
+            <input type="text" id="searchInput" placeholder="Buscar por termo..." oninput="filterGlossary()">
+        </header>
+
+        <div class="glossary">
+            <div class="term" data-category="geral">
+                <h2>Administração</h2>
+                <p><strong>Definição:</strong> Forma como o medicamento é introduzido no organismo (oral, intravenosa,
+                    tópica etc.).</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Biodisponibilidade</h2>
+                <p><strong>Definição:</strong> Percentual do medicamento que realmente chega à corrente sanguínea e
+                    produz efeito.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Bioequivalência</h2>
+                <p><strong>Definição:</strong> Comparação entre dois medicamentos para verificar se têm o mesmo efeito
+                    no organismo.</p>
+            </div>
+            <div class="term" data-category="terapêutico">
+                <h2>Contraindicação</h2>
+                <p><strong>Definição:</strong> Situações em que o uso de um medicamento não é recomendado.</p>
+            </div>
+            <div class="term" data-category="terapêutico">
+                <h2>Efeito Colateral</h2>
+                <p><strong>Definição:</strong> Reação não intencional causada pelo uso de um medicamento.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Excipiente</h2>
+                <p><strong>Definição:</strong> Substância inativa presente no medicamento que ajuda na sua formulação
+                    (ex: corantes, conservantes).</p>
+            </div>
+            <div class="term" data-category="farmacologia">
+                <h2>Farmacocinética</h2>
+                <p><strong>Definição:</strong> Estudo do caminho que o medicamento percorre no corpo (absorção,
+                    distribuição, metabolismo e eliminação).</p>
+            </div>
+            <div class="term" data-category="farmacologia">
+                <h2>Farmacodinâmica</h2>
+                <p><strong>Definição:</strong> Estudo dos efeitos que o medicamento causa no organismo e seu mecanismo
+                    de ação.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Interação Medicamentosa</h2>
+                <p><strong>Definição:</strong> Quando um medicamento altera o efeito de outro, podendo aumentar ou
+                    diminuir sua ação.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Meia-vida</h2>
+                <p><strong>Definição:</strong> Tempo necessário para que a concentração do medicamento no organismo seja
+                    reduzida à metade.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Placebo</h2>
+                <p><strong>Definição:</strong> Substância sem princípio ativo usada em estudos clínicos para comparação
+                    com o medicamento real.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Tarja Preta</h2>
+                <p><strong>Definição:</strong> Medicamento que exige receita controlada devido ao risco de dependência
+                    ou efeitos fortes.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Tarja Vermelha</h2>
+                <p><strong>Definição:</strong> Medicamento que exige prescrição médica, mas sem necessidade de receita
+                    controlada.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de alternância de tema (posição fixa no canto superior direito) -->
+    <button id="toggleTheme" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+        function filterGlossary() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const terms = document.querySelectorAll('.term');
+
+            terms.forEach(term => {
+                const termText = term.querySelector('h2').textContent.toLowerCase();
+                if (termText.includes(searchInput)) {
+                    term.style.display = 'block';
+                } else {
+                    term.style.display = 'none';
+                }
+            });
+        }
+
+        // Função para alternar entre o tema claro e escuro
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const button = document.getElementById('toggleTheme');
+            if (document.body.classList.contains('dark-theme')) {
+                button.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                button.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        }
+    </script>
+
+    <!-- Importação de ícones Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
