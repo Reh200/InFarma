@@ -10,7 +10,7 @@
 
 /* Estilo global da página */
 body {
-    background: #f7f7f7;
+    background: #eef4fc; /* Azul bem claro para fundo */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,130 +22,107 @@ body {
 
 /* Tema escuro */
 body.dark-theme {
-    background: #181818;
+    background: #102a43; /* Azul escuro */
     color: #f1f1f1;
 }
 
 /* Header */
 header {
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     margin-bottom: 30px;
     text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Degradê azul */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #003b8b;
-    margin-bottom: 20px;
+    color: #ffffff; /* Texto branco no degradê azul */
+    margin-bottom: 10px;
 }
 
-/* Barra de pesquisa */
-input[type="text"] {
+/* Estilo da seção "Sobre" */
+.about-section {
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid #007bff;
-    margin-bottom: 30px;
-    outline: none;
-    transition: border-color 0.3s ease;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.2); /* Sombra azul */
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
 }
 
-input[type="text"]:focus {
-    border-color: #0056b3;
+body.dark-theme .about-section {
+    background: #1a3b5d; /* Azul escuro para modo escuro */
 }
 
-/* Botão de alternância de tema (posição fixa no canto superior direito) */
-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 24px;
+.about-section h2 {
+    font-size: 26px;
+    color: #0056b3; /* Azul forte */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-button:hover {
-    background-color: #0056b3;
+body.dark-theme .about-section h2 {
+    color: #80c7ff;
+    border-bottom-color: #80c7ff;
 }
 
-/* Estilo dos ícones */
-button i {
-    margin: 0;
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Estilo da lista de termos */
+body.dark-theme .about-section p {
+    color: #ddd;
+}
+
+/* Estilo do glossário */
 .glossary {
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
-/* Estilo dos termos no glossário */
 .term {
-    background: #ffffff;
+    background: #f0f8ff; /* Azul suave */
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #0056b3; /* Barra lateral azul */
+    box-shadow: 0 2px 6px rgba(0, 91, 187, 0.2);
     transition: background 0.3s ease;
 }
 
 body.dark-theme .term {
-    background: #333333;
+    background: #1a3b5d;
     color: #f1f1f1;
+    border-left-color: #80c7ff;
 }
 
-.term:hover {
-    background: #f4f4f4;
-}
-
-body.dark-theme .term:hover {
-    background: #444444;
-}
-
-/* Títulos dos termos */
 .term h2 {
-    font-size: 24px;
+    font-size: 22px;
     color: #007bff;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 body.dark-theme .term h2 {
     color: #80c7ff;
 }
 
-/* Parágrafos dentro dos termos */
 .term p {
     font-size: 16px;
-    color: #555;
-    margin-top: 10px;
+    color: #444;
+    line-height: 1.5;
 }
 
 body.dark-theme .term p {
-    color: #ddd;
-}
-
-/* Listas dentro dos termos */
-.term ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.term li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-body.dark-theme .term li {
     color: #ddd;
 }
 
@@ -153,13 +130,15 @@ body.dark-theme .term li {
 footer {
     text-align: center;
     margin-top: 40px;
-    color: #007bff;
-}
-
-footer p {
+    padding: 15px;
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 8px;
+    color: #ffffff;
     font-size: 14px;
 }
 
-body.dark-theme footer p {
-    color: #80c7ff;
+body.dark-theme footer {
+    background: #1a3b5d;
 }
