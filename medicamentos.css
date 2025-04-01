@@ -10,15 +10,19 @@ body {
 
 /* Garantindo que a cor do texto seja visível no modo escuro */
 body.dark-mode {
-    background-color: #121212; /* Fundo do corpo */
-    color: #ffffff; /* Cor do texto */
+    background-color: #121212;
+    /* Fundo do corpo */
+    color: #ffffff;
+    /* Cor do texto */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Garantindo que o texto dentro de divs e outros elementos seja visível */
 body.dark-mode * {
-    color: inherit; /* Herda a cor definida no body */
-    background-color: transparent; /* Apenas se necessário */
+    color: inherit;
+    /* Herda a cor definida no body */
+    background-color: transparent;
+    /* Apenas se necessário */
 }
 
 /* Específico para textos desaparecendo */
@@ -26,20 +30,24 @@ body.dark-mode .result,
 body.dark-mode label,
 body.dark-mode h1,
 body.dark-mode p {
-    color: #ffffff; /* Cor do texto */
+    color: #ffffff;
+    /* Cor do texto */
 }
 
 /* Ajuste para links */
 body.dark-mode a {
-    color: #4faaff; /* Cor do link para visibilidade */
+    color: #4faaff;
+    /* Cor do link para visibilidade */
 }
 
 /* Garantir contraste para botões e selects */
-body.dark-mode button, 
+body.dark-mode button,
 body.dark-mode select {
     color: #ffffff;
-    background-color: #333; /* Fundo escuro */
-    border: 1px solid #555; /* Bordas */
+    background-color: #333;
+    /* Fundo escuro */
+    border: 1px solid #555;
+    /* Bordas */
 }
 
 header {
