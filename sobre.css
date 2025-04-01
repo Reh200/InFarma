@@ -26,6 +26,22 @@ body.dark-theme {
     color: #f1f1f1;
 }
 
+/* Botão de alternância de tema */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0056b3;
+}
+
+body.dark-theme #theme-toggle {
+    color: #80c7ff;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -33,7 +49,7 @@ header {
     margin-bottom: 30px;
     text-align: center;
     padding: 15px;
-    background: linear-gradient(135deg, #0056b3, #007bff); /* Degradê azul */
+    background: linear-gradient(135deg, #0056b3, #007bff);
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -41,7 +57,7 @@ header {
 h1 {
     font-size: 32px;
     font-weight: 600;
-    color: #ffffff; /* Texto branco no degradê azul */
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -50,23 +66,24 @@ h1 {
     width: 100%;
     max-width: 900px;
     background: #ffffff;
-    padding: 25px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.2); /* Sombra azul */
+    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.2);
     margin-bottom: 20px;
     transition: background 0.3s ease;
+    line-height: 1.8;
 }
 
 body.dark-theme .about-section {
-    background: #1a3b5d; /* Azul escuro para modo escuro */
+    background: #1a3b5d;
 }
 
 .about-section h2 {
     font-size: 26px;
-    color: #0056b3; /* Azul forte */
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    color: #0056b3;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 body.dark-theme .about-section h2 {
@@ -77,7 +94,8 @@ body.dark-theme .about-section h2 {
 .about-section p {
     font-size: 18px;
     color: #333;
-    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 body.dark-theme .about-section p {
@@ -91,13 +109,15 @@ body.dark-theme .about-section p {
 }
 
 .term {
-    background: #f0f8ff; /* Azul suave */
-    padding: 20px;
-    margin-bottom: 15px;
+    background: #f0f8ff;
+    padding: 25px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    border-left: 5px solid #0056b3; /* Barra lateral azul */
+    border-left: 5px solid #0056b3;
     box-shadow: 0 2px 6px rgba(0, 91, 187, 0.2);
     transition: background 0.3s ease;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 body.dark-theme .term {
@@ -107,9 +127,10 @@ body.dark-theme .term {
 }
 
 .term h2 {
-    font-size: 22px;
+    font-size: 24px;
     color: #007bff;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    text-align: left;
 }
 
 body.dark-theme .term h2 {
@@ -117,28 +138,35 @@ body.dark-theme .term h2 {
 }
 
 .term p {
-    font-size: 16px;
+    font-size: 18px;
     color: #444;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 body.dark-theme .term p {
     color: #ddd;
 }
 
+.term ul {
+    padding-left: 20px;
+}
+
+.term ul li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
 /* Estilo do rodapé */
 footer {
     text-align: center;
     margin-top: 40px;
-    padding: 15px;
+    padding: 20px;
     width: 100%;
     max-width: 900px;
     background: linear-gradient(135deg, #007bff, #0056b3);
     border-radius: 8px;
     color: #ffffff;
-    font-size: 14px;
-}
-
-body.dark-theme footer {
-    background: #1a3b5d;
+    font-size: 16px;
+    font-weight: 500;
 }
