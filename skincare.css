@@ -1,22 +1,28 @@
+/* === Estilos Gerais === */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* === Cabeçalho === */
 header {
-    background: linear-gradient(135deg, rgb(0, 123, 255) 0%, rgb(33, 80, 161) 100%);
+    background: linear-gradient(135deg, #007bff, #2150a1);
     color: white;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
+/* === Navegação === */
 nav {
     background-color: #333;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,6 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -39,77 +46,94 @@ nav ul li a {
     padding: 14px 20px;
     color: white;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #555;
 }
 
+/* === Conteúdo Principal === */
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 2rem auto;
     background: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container h2 {
+    text-align: center;
+    color: #1d2672;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2575fc;
+    padding-bottom: 0.5rem;
 }
 
 h1,
 h2,
 h3 {
+    color: #1d2672;
     text-align: center;
-    color: #220c88;
-}
-
-h2 {
-    border-bottom: 2px solid #2575fc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 label {
     display: block;
     margin-top: 1rem;
-    color: #3311cb;
+    font-weight: 600;
+    color: #2c2c9c;
 }
 
 select,
 button {
     width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    padding: 0.9rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
+select:focus,
+button:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+}
+
+/* === Botões === */
 button {
-    background: linear-gradient(135deg, #1d2672 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #1d2672, #2575fc);
     color: white;
     border: none;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #2575fc 0%, #0d1e7c 100%);
+    background: linear-gradient(135deg, #2575fc, #0d1e7c);
 }
 
+/* === Resultado === */
 .result {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1.2rem;
     background: #e0f7fa;
     border: 1px solid #b2ebf2;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1.1rem;
     color: #333;
 }
 
+/* === Listas === */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 ul li {
@@ -121,64 +145,94 @@ ul li:last-child {
     border-bottom: none;
 }
 
-/* Estilo global para o modo escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Ajustando cabeçalhos */
-body.dark-mode header h1,
-body.dark-mode .container h1 {
-    color: #ffffff;
-}
-
-/* Ajustando o contêiner */
-body.dark-mode .container {
-    background-color: #1e1e1e;
-    border: 1px solid #444;
-    color: #ffffff;
-}
-
-/* Ajustando o botão e os selects */
-body.dark-mode button,
-body.dark-mode select {
-    background-color: #333;
-    color: #ffffff;
-    border: 1px solid #555;
-}
-
-/* Ajustando rodapé */
-body.dark-mode footer {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-/* Ajustando links no rodapé */
-body.dark-mode footer a {
-    color: #4faaff;
-    /* Cor dos links no modo escuro */
-}
-
-/* Ajustando o resultado */
-body.dark-mode .result {
-    background-color: #1e1e1e;
-    border: 1px solid #555;
-    color: #ffffff;
-}
-
+/* === Rodapé === */
 footer {
-    background-color: #333;
-    color: rgb(46, 32, 109);
+    background-color: #222;
+    color: #bbb;
     text-align: center;
     padding: 1rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    bottom: 0;
     width: 100%;
 }
 
 footer a {
-    color: #286f79;
+    color: #4faaff;
     text-decoration: none;
+}
+
+/* === Botão de alternância de tema === */
+.theme-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2rem;
+}
+
+.theme-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Ícone claro por padrão (Sol) */
+.theme-button .icon::before {
+    content: "🌞";
+    font-size: 20px;
+    transition: content 0.3s ease;
+}
+
+/* Ícone escuro (Lua) quando dark-mode ativado */
+body.dark-mode .theme-button .icon::before {
+    content: "🌙";
+}
+
+/* === Ajuste no header para posicionamento do botão === */
+header {
+    position: relative;
+}
+
+/* === Hover no botão no modo escuro === */
+body.dark-mode .theme-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === MODO CLARO (padrão) === */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === MODO ESCURO === */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+
+/* === Responsivo === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    button {
+        padding: 0.9rem;
+    }
 }
