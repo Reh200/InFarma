@@ -1,0 +1,118 @@
+/* Corpo da página */
+body {
+    background: #f7f7f7;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #003b8b;
+    margin-bottom: 10px;
+}
+
+/* Containers dos cards */
+.area-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada card */
+.area-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1 1 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.area-card img {
+    width: 100%; /* A imagem ocupará 100% da largura do container */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta o conteúdo da imagem sem deformá-la */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.area-card:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos dos cards */
+.area-card h2 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Descrição dos cards */
+.area-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Ajuste para a responsividade */
+@media (max-width: 768px) {
+    .area-card {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Modo escuro */
+body.dark-theme {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+body.dark-theme .area-card {
+    background: #2a2a2a;
+    color: #f1f1f1;
+}
+
+body.dark-theme .area-card h2 {
+    color: #66bfff;
+}
+
+body.dark-theme .area-card p {
+    color: #ccc;
+}
+
+body.dark-theme .area-card img {
+    border-radius: 8px;
+}
+
+/* Estilo do botão de alternar tema */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
