@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riscos da Automedicação</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="uso-medicamentos.css">
+    <link rel="stylesheet" href="automedicacao.css">
 </head>
 <body>
     <header class="header bg-primary text-light">
@@ -14,6 +14,11 @@
             <p class="lead">Entenda os perigos de se medicar sem orientação médica e como isso pode afetar sua saúde.</p>
         </div>
     </header>
+
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle" aria-label="Alternar Tema">
+        🌙
+    </button>
 
     <main class="container">
         <section class="intro mt-5 mb-4">
@@ -60,5 +65,14 @@
             <p>&copy; 2025 Riscos da Automedicação. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Função para alternar entre os temas claro e escuro
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            themeToggleButton.textContent = document.body.classList.contains('dark-theme') ? '🌞' : '🌙';
+        });
+    </script>
 </body>
 </html>
