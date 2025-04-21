@@ -110,96 +110,58 @@ body {
 .theme-toggle:hover {
     background: #e0a800;
     transform: scale(1.1);
-}/* Configuração global */
+}
+
+/* Configuração global */
 body {
     font-family: 'Inter', sans-serif;
     background: #f8f9fa;
     transition: background 0.3s, color 0.3s;
 }
 
-/* Tema escuro */
-.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-theme .navbar,
-.dark-theme footer {
-    background-color: #1e1e1e;
-}
-
-/* Estilização do botão de alternância de tema */
 .theme-toggle {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     background-color: transparent;
     border: none;
-    font-size: 28px;
-    color: #fff;
+    font-size: 18px;
+    /* menor tamanho */
+    color: #ffffff1a;
+    /* cor quase invisível */
     cursor: pointer;
-    z-index: 1050; /* Garante que o botão fique acima de outros elementos */
-    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1050;
+    transition: opacity 0.3s ease;
+    padding: 4px;
     border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+    /* sem sombra */
+    opacity: 0.3;
+    /* pouca opacidade */
 }
 
 .theme-toggle:focus {
     outline: none;
 }
 
-/* Alteração de ícone */
 .theme-toggle i {
     transition: transform 0.3s ease;
 }
 
-/* Efeito de hover */
 .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.theme-toggle i.fas.fa-sun {
-    color: #f39c12; /* Cor do ícone de sol */
-}
-
-.theme-toggle i.fas.fa-moon {
-    color: #f39c12; /* Cor do ícone de lua */
-}/* Estilização do botão de alternância de tema */
-.theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    opacity: 0.5;
+    /* levemente visível no hover */
+    transform: none;
+    /* sem aumento */
     background-color: transparent;
-    border: none;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1050; /* Garante que o botão fique acima de outros elementos */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Remover qualquer contorno ou borda */
-.theme-toggle:focus {
-    outline: none;
-}
-
-/* Alteração de ícone */
-.theme-toggle i {
-    transition: transform 0.3s ease;
-}
-
-/* Efeito de hover */
-.theme-toggle:hover {
-    background-color: transparent; /* Remover o fundo ao passar o mouse */
-    transform: scale(1.1);
 }
 
 .theme-toggle i.fas.fa-sun,
 .theme-toggle i.fas.fa-moon {
-    color: #1111112d; /* Cor do ícone de sol e lua */
+    color: #ffffff1a;
+    /* bem discreto */
 }
+
 
 
 /* Logo */
@@ -221,11 +183,13 @@ body {
 .banner-bg img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantém a proporção e cobre a área */
+    object-fit: cover;
+    /* Mantém a proporção e cobre a área */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Joga a imagem para trás do conteúdo */
+    z-index: -1;
+    /* Joga a imagem para trás do conteúdo */
 }
 
 /* Adicionando um efeito de escurecimento */
@@ -235,7 +199,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+    background: rgba(0, 0, 0, 0.5);
+    /* Escurece a imagem */
 }
 
 .hero .container {
@@ -309,7 +274,12 @@ footer {
 }
 
 /* Títulos e textos */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -350,7 +320,8 @@ textarea {
     width: 100%;
     min-height: 150px;
     padding: 12px 15px;
-    border: 2px solid #ffc107; /* Amarelo para destaque */
+    border: 2px solid #ffc107;
+    /* Amarelo para destaque */
     border-radius: 12px;
     background-color: #fffbea;
     resize: vertical;
@@ -358,11 +329,10 @@ textarea {
     color: #333;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: border 0.3s, box-shadow 0.3s;
-  }
-  
-  textarea:focus {
+}
+
+textarea:focus {
     outline: none;
     border-color: #ffb300;
     box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
-  }
-  
+}

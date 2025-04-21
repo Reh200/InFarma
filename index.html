@@ -2,153 +2,151 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Virtual de Farmácia</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-theme');
-            const isDark = document.body.classList.contains('dark-theme');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            document.getElementById('theme-icon').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca Virtual de Farmácia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('theme-icon').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    }
 
-        window.onload = function () {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-theme');
-                document.getElementById('theme-icon').className = 'fas fa-sun';
-            }
-        }
-    </script>
+    window.onload = function () {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.getElementById('theme-icon').className = 'fas fa-sun';
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-        <i id="theme-icon" class="fas fa-moon"></i>
-    </button>
+  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+    <i id="theme-icon" class="fas fa-moon"></i>
+  </button>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo-azul.jpg" alt="Logo" class="logo"> InfoCare</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="medicamentos.html">Bulas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="materiais.html">Materiais de Estudos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="automedicacao.html">Automedicação</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/logo-azul.jpg" alt="Logo InfoCare" class="logo" /> InfoCare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="medicamentos.html">Bulas</a></li>
+          <li class="nav-item"><a class="nav-link" href="materiais.html">Materiais de Estudos</a></li>
+          <li class="nav-item"><a class="nav-link" href="automedicacao.html">Automedicação</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <h1 class="display-4 animate-title">InfoCare: Seu Guia Farmacêutico</h1>
+      <p class="lead">Materiais de estudo, bulas de medicamentos e muito mais em um só lugar!</p>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Nossas Informações</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <div class="card destaque h-100">
+          <img src="img/bulas.webp" class="card-img-top" alt="Guia de Bulas" />
+          <div class="card-body">
+            <h5 class="card-title">Guia de Bulas</h5>
+            <p class="card-text">Saiba tudo sobre o seu medicamento: composição, usos e precauções.</p>
+            <a href="medicamentos.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
         </div>
-    </nav>
-
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="container text-center">
-            <h1 class="display-4 animate-title">InfoCare: Seu Guia Farmacêutico</h1>
-            <p class="lead">Materiais de estudo, bulas de medicamentos e muito mais em um só lugar!</p>
-            <a href="glossario-farmaceutico.html" class="btn btn-warning btn-lg">Explorar Glossário</a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card destaque h-100">
+          <img src="img/materiais_estudos.jpg" class="card-img-top" alt="Materiais de Estudo" />
+          <div class="card-body">
+            <h5 class="card-title">Materiais de Estudo</h5>
+            <p class="card-text">Acesse resumos e guias para aprimorar seu conhecimento.</p>
+            <a href="materiais.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
         </div>
-    </header>
-
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Nossas Informações</h2>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="card destaque">
-                    <img src="img/bulas.webp" class="card-img-top" alt="Guia de Medicamentos">
-                    <div class="card-body">
-                        <h5 class="card-title">Guia de Bulas</h5>
-                        <p class="card-text">Saiba tudo sobre o seu medicamento: composição, usos e precauções.</p>
-                        <a href="medicamentos.html" class="btn btn-primary">Saiba Mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card destaque">
-                    <img src="img/materiais_estudos.jpg" class="card-img-top" alt="Materiais de Estudo">
-                    <div class="card-body">
-                        <h5 class="card-title">Materiais de Estudo</h5>
-                        <p class="card-text">Acesse resumos e guias para aprimorar seu conhecimento.</p>
-                        <a href="materiais.html" class="btn btn-primary">Saiba Mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card destaque">
-                    <img src="img/automedicacao.jpg" class="card-img-top" alt="Exercicios Físicos">
-                    <div class="card-body">
-                        <h5 class="card-title">Automedicação</h5>
-                        <p class="card-text">Automedicação: riscos à sua saúde.</p>
-                        <a href="automedicacao.html" class="btn btn-primary">Saiba Mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card destaque">
-                    <img src="img/faumaceutico.jpeg" class="card-img-top" alt="Áreas no Ramo Farmacêutico">
-                    <div class="card-body">
-                        <h5 class="card-title">Áreas no Ramo Farmacêutico</h5>
-                        <p class="card-text">Do hospital à indústria: veja onde o farmacêutico atua.</p>
-                        <a href="areas-farm.html" class="btn btn-primary">Saiba Mais</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card destaque h-100">
+          <img src="img/automedicacao.jpg" class="card-img-top" alt="Automedicação" />
+          <div class="card-body">
+            <h5 class="card-title">Automedicação</h5>
+            <p class="card-text">Automedicação: riscos à sua saúde.</p>
+            <a href="automedicacao.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Seção de Contato -->
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Entre em Contato</h2>
-        <p class="text-center">Envie suas dúvidas ou sugestões diretamente pelo WhatsApp.</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required>
-                </div>
-                <div class="input-group mb-3">
-                    <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem..."
-                        required></textarea>
-                </div>
-                <div class="text-center">
-                    <div class="text-center">
-                        <button id="whatsapp-link" class="btn btn-success" onclick="sendMessage()">
-                            <i class="fab fa-whatsapp me-2"></i> Enviar
-                        </button>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card destaque h-100">
+          <img src="img/faumaceutico.jpeg" class="card-img-top" alt="Áreas Farmacêuticas" />
+          <div class="card-body">
+            <h5 class="card-title">Áreas no Ramo Farmacêutico</h5>
+            <p class="card-text">Do hospital à indústria: veja onde o farmacêutico atua.</p>
+            <a href="areas-farm.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-primary text-white text-center py-3">
-        <p>&copy; 2024 Biblioteca Virtual de Farmácia - Todos os direitos reservados.</p>
-    </footer>
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+    <p class="text-center">Envie suas dúvidas ou sugestões diretamente pelo WhatsApp.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required autocapitalize="words" spellcheck="false" />
+        </div>
+        <div class="mb-3">
+          <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem..." required autocapitalize="sentences"></textarea>
+        </div>
+        <div class="text-center">
+          <button id="whatsapp-link" class="btn btn-success" onclick="sendMessage()">
+            <i class="fab fa-whatsapp me-2"></i> Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function sendMessage() {
-            let nome = document.getElementById('nome').value;
-            let mensagem = document.getElementById('mensagem').value;
-            let numero = "5514991087543"; // Substitua pelo número correto
-            let texto = `Olá, meu nome é ${nome}. ${mensagem}`;
-            let link = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(texto)}`;
-            window.open(link, '_blank');
-        }
-    </script>
+  <footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Biblioteca Virtual de Farmácia - Todos os direitos reservados.</p>
+  </footer>
 
-    <style>
+  <a href="glossario-farmaceutico.html" class="btn btn-primary rounded-circle position-fixed"
+    style="bottom: 20px; right: 20px; font-size: 24px; padding: 15px;">
+    📘
+  </a>
 
-    </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function sendMessage() {
+      let nome = document.getElementById('nome').value.trim();
+      let mensagem = document.getElementById('mensagem').value.trim();
+      if (nome && mensagem) {
+        let numero = "5514991087543";
+        let texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+        let link = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(texto)}`;
+        window.open(link, '_blank');
+      } else {
+        alert('Por favor, preencha seu nome e a mensagem.');
+      }
+    }
+  </script>
 </body>
 
 </html>
