@@ -336,3 +336,38 @@ textarea:focus {
     border-color: #ffb300;
     box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
 }
+
+/* Estilização do botão do glossário */
+.glossario-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    z-index: 1050;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Remover borda de foco */
+.glossario-btn:focus {
+    outline: none;
+}
+
+/* Efeito de hover */
+.glossario-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Estilização do ícone de livrinho */
+.glossario-btn i {
+    font-size: 30px;
+    color: #1111112d; /* Cor do ícone de livrinho */
+}
+
