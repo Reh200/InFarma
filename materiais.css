@@ -10,137 +10,82 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
     padding: 20px;
-}
-
-/* Tema escuro - Fundo e texto */
-body.dark-mode {
-    background-color: #121212; /* Fundo escuro */
-    color: #ffffff; /* Texto claro */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Garantir que todos os textos sejam visíveis */
-body.dark-mode * {
-    color: inherit; /* Herda a cor clara definida no body */
-}
-
-/* Cabeçalhos */
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3 {
-    color: #ffffff; /* Garante que os cabeçalhos tenham cor clara */
-}
-
-/* Parágrafos e textos */
-body.dark-mode p, 
-body.dark-mode label, 
-body.dark-mode span {
-    color: #ffffff; /* Cor clara para textos comuns */
-}
-
-/* Botões */
-body.dark-mode button {
-    background-color: #333; /* Fundo escuro */
-    color: #ffffff; /* Texto claro */
-    border: 1px solid #555; /* Bordas para contraste */
-}
-
-/* Menus suspensos (select) */
-body.dark-mode select {
-    background-color: #333; /* Fundo escuro */
-    color: #ffffff; /* Texto claro */
-    border: 1px solid #555; /* Bordas para contraste */
-}
-
-/* Resultados (ou áreas específicas) */
-body.dark-mode .result {
-    background-color: #1e1e1e; /* Fundo escuro */
-    color: #ffffff; /* Texto claro */
-    border: 1px solid #444; /* Bordas para visibilidade */
-}
-
-/* Links */
-body.dark-mode a {
-    color: #4faaff; /* Azul claro para links, garantindo contraste */
-}
-/* Tema escuro aplicado ao corpo */
-body.dark-mode {
-    background-color: #121212; /* Fundo do modo escuro */
-    color: #ffffff; /* Texto em branco */
+    text-align: center;
     transition: background-color 0.3s, color 0.3s ease;
 }
 
-/* Garantindo que o texto seja herdado corretamente */
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 body.dark-mode * {
-    color: #ffffff !important; /* Define o texto como branco */
-    background-color: transparent; /* Remove fundos indesejados */
+    color: inherit;
+    background-color: transparent;
 }
 
-/* Estilização para cabeçalhos */
-body.dark-mode h1, 
-body.dark-mode h2, 
+body.dark-mode h1,
+body.dark-mode h2,
 body.dark-mode h3 {
-    color: #ffffff !important; /* Garante que os cabeçalhos fiquem visíveis */
+    color: #ffffff;
 }
 
-/* Ajuste para parágrafos e textos */
-body.dark-mode p, 
-body.dark-mode label, 
+body.dark-mode p,
+body.dark-mode label,
 body.dark-mode span {
-    color: #ffffff !important; /* Mantém visibilidade para textos comuns */
+    color: #ffffff;
 }
 
-/* Botões */
-body.dark-mode button {
-    background-color: #333; /* Fundo escuro para botões */
-    color: #ffffff; /* Texto claro nos botões */
-    border: 1px solid #555; /* Bordas visíveis no modo escuro */
+body.dark-mode button,
+body.dark-mode .btn {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
 }
 
-/* Menus suspensos (select) */
 body.dark-mode select {
-    background-color: #333; /* Fundo escuro para select */
-    color: #ffffff; /* Texto claro */
-    border: 1px solid #555; /* Bordas visíveis */
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
 }
 
-/* Rodapé */
 body.dark-mode footer {
-    background-color: #1e1e1e; /* Fundo do rodapé */
-    color: #ffffff !important; /* Texto visível */
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
-/* Links */
 body.dark-mode a {
-    color: #4faaff !important; /* Azul claro para links */
+    color: #4faaff;
 }
 
-/* Resultados (ou áreas específicas) */
 body.dark-mode .result {
-    background-color: #1e1e1e; /* Fundo escuro para resultados */
-    border: 1px solid #444; /* Bordas visíveis */
-    color: #ffffff !important; /* Texto claro */
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #ffffff;
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho */
 header {
     background-color: #007bff;
     color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 h1 {
     font-size: 28px;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 18px;
     margin-top: 10px;
-    color: #f8f8f8;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 /* Seção de materiais */
@@ -150,6 +95,7 @@ p {
     text-align: left;
 }
 
+/* Título da seção */
 .materiais h2 {
     font-size: 24px;
     color: #007bff;
@@ -158,13 +104,13 @@ p {
     padding-bottom: 5px;
 }
 
-/* Estilo dos itens */
+/* Estilo de cada item */
 .item {
     display: flex;
     align-items: center;
     background: white;
     padding: 15px;
-    margin: 15px 0;
+    margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -193,16 +139,37 @@ p {
     margin-top: 5px;
 }
 
+/* Caixa para livro com botão */
+.livro {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.livro h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.livro p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
 /* Botão */
 .btn {
     display: inline-block;
     background-color: #007bff;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -216,5 +183,36 @@ footer {
     background-color: #007bff;
     color: white;
     border-radius: 8px;
+    text-align: center;
 }
 
+/* Estilo do botão de alternância de tema */
+button.theme-toggle {
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;  /* Remover borda */
+    border-radius: 6px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+/* Efeito do botão no tema escuro */
+body.dark-mode button.theme-toggle {
+    color: #4faaff;  /* Ajuste de cor do texto para melhor visibilidade no tema escuro */
+}
+
+/* Ao passar o mouse */
+button.theme-toggle:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Cor suave ao passar o mouse */
+}
+
+/* Quando o botão é clicado ou recebe foco */
+button.theme-toggle:focus {
+    outline: none; /* Remove o contorno ao clicar */
+    border: none;  /* Assegura que não haja borda ao focar no botão */
+}
