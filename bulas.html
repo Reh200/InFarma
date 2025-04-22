@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Medicamentos - Biblioteca Virtual de Farmácia</title>
+    <link rel="stylesheet" href="bulas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guia de Bulas</h1>
+        <button id="toggle-theme" class="theme-button" onclick="toggleTheme()">
+            <span class="icon"></span>
+        </button>
+    </header>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            console.log('Modo escuro ativado?', document.body.classList.contains('dark-mode'));
+        }
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="#antibioticos">Antibióticos</a></li>
+            <li><a href="#analgesicos">Analgésicos</a></li>
+            <li><a href="#anti-inflamatorios">Anti-inflamatórios</a></li>
+            <li><a href="#ansioliticos">Ansiolíticos</a></li>
+            <li><a href="#anticoncepcionais">Anticoncepcionais</a></li>
+            <li><a href="#antidepressivos">Antidepressivos</a></li>
+            <li><a href="#vitaminas">Vitaminas</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- ANTIBIÓTICOS -->
+    <section id="antibioticos">
+        <h2>Antibióticos</h2>
+        <p>Informações sobre diversos tipos de antibióticos, seu uso e efeitos colaterais.</p>
+        <ul>
+            <li><strong>Amoxicilina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/amoxicilina-comprimido-eurofarma-momenta/bula"
+                        target="_blank">Amoxicilina - Eurofarma</a></p>
+            </li>
+            <li><strong>Azitromicina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/azitromicina-suspensao-oral-eurofarma-momenta/bula"
+                        target="_blank">Azitromicina - Eurofarma</a></p>
+            </li>
+            <li><strong>Cefalexina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/cefalexina/bula" target="_blank">Cefalexina</a></p>
+            </li>
+            <li><strong>Ciprofloxacino</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/ciprofloxacino/bula"
+                        target="_blank">Ciprofloxacino</a></p>
+            </li>
+            <li><strong>Claritromicina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/claritromicina/bula"
+                        target="_blank">Claritromicina</a></p>
+            </li>
+            <li><strong>Doxiciclina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/doxiciclina/bula" target="_blank">Doxiciclina</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ANALGÉSICOS -->
+    <section id="analgesicos">
+        <h2>Analgésicos</h2>
+        <p>Informações sobre analgésicos, incluindo indicações e precauções.</p>
+        <ul>
+            <li><strong>Paracetamol</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/paracetamol/bula" target="_blank">Paracetamol</a></p>
+            </li>
+            <li><strong>Ibuprofeno</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/ibuprofeno/bula" target="_blank">Ibuprofeno</a></p>
+            </li>
+            <li><strong>Dipirona</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/dipirona/bula" target="_blank">Dipirona</a></p>
+            </li>
+            <li><strong>Codeína</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/codeina/bula" target="_blank">Codeína</a></p>
+            </li>
+            <li><strong>Tramadol</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/tramadol/bula" target="_blank">Tramadol</a></p>
+            </li>
+            <li><strong>Metamizol Sódico</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/metamizol-sodico/bula" target="_blank">Metamizol</a>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ANTI-INFLAMATÓRIOS -->
+    <section id="anti-inflamatorios">
+        <h2>Anti-inflamatórios</h2>
+        <p>Detalhes sobre anti-inflamatórios, suas aplicações e cuidados necessários.</p>
+        <ul>
+            <li><strong>Aspirina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/aspirina/bula" target="_blank">Aspirina - Bayer</a>
+                </p>
+            </li>
+            <li><strong>Naproxeno</strong>
+                <p>Bula: <a href="https://www.flanax.com.br/produtos/flanax-550mg" target="_blank">Flanax 550mg -
+                        Naproxeno</a></p>
+            </li>
+            <li><strong>Diclofenaco</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/diclofenaco/bula" target="_blank">Diclofenaco</a></p>
+            </li>
+            <li><strong>Meloxicam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/meloxicam/bula" target="_blank">Meloxicam</a></p>
+            </li>
+            <li><strong>Piroxicam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/piroxicam/bula" target="_blank">Piroxicam</a></p>
+            </li>
+            <li><strong>Indometacina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/indometacina/bula" target="_blank">Indometacina</a>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Seção Ansiolíticos -->
+    <section id="ansioliticos">
+        <h2>Ansiolíticos</h2>
+        <p>Medicamentos utilizados para aliviar a ansiedade e promover o relaxamento.</p>
+        <ul>
+            <li><strong>Diazepam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/diazepam/bula" target="_blank">Diazepam</a></p>
+            </li>
+            <li><strong>Clonazepam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/clonazepam/bula" target="_blank">Clonazepam</a></p>
+            </li>
+            <li><strong>Alprazolam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/alprazolam/bula" target="_blank">Alprazolam</a></p>
+            </li>
+            <li><strong>Bromazepam</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/bromazepam/bula" target="_blank">Bromazepam</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ANTICONCEPCIONAIS -->
+    <section id="anticoncepcionais">
+        <h2>Anticoncepcionais</h2>
+        <p>Informações sobre anticoncepcionais hormonais orais, seu uso, indicações e efeitos colaterais.</p>
+        <ul>
+            <li><strong>Diane 35</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/diane-35/bula" target="_blank">Diane 35</a></p>
+            </li>
+            <li><strong>Selene</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/selene/bula" target="_blank">Selene</a></p>
+            </li>
+            <li><strong>Microvlar</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/microvlar/bula" target="_blank">Microvlar</a></p>
+            </li>
+            <li><strong>Mercilon</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/mercilon/bula" target="_blank">Mercilon</a></p>
+            </li>
+            <li><strong>Yaz</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/yaz/bula" target="_blank">Yaz</a></p>
+            </li>
+            <li><strong>Elani Ciclo</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/elani-ciclo/bula" target="_blank">Elani Ciclo</a></p>
+            </li>
+            <li><strong>Qlaira</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/qlaira/bula" target="_blank">Qlaira</a></p>
+            </li>
+            <li><strong>Ciclo 21</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/ciclo-21/bula" target="_blank">Ciclo 21</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Seção Antidepressivos -->
+    <section id="antidepressivos">
+        <h2>Antidepressivos</h2>
+        <p>Medicamentos utilizados no tratamento da depressão e outros transtornos do humor.</p>
+        <ul>
+            <li><strong>Fluoxetina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/fluoxetina/bula" target="_blank">Fluoxetina</a></p>
+            </li>
+            <li><strong>Sertralina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/sertralina/bula" target="_blank">Sertralina</a></p>
+            </li>
+            <li><strong>Amitriptilina</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/amitriptilina/bula" target="_blank">Amitriptilina</a>
+                </p>
+            </li>
+            <li><strong>Escitalopram</strong>
+                <p>Bula: <a href="https://consultaremedios.com.br/escitalopram/bula" target="_blank">Escitalopram</a>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- VITAMINAS -->
+    <section id="vitaminas">
+        <h2>Vitaminas</h2>
+        <p>Guia sobre diferentes vitaminas, suas fontes e importância para a saúde.</p>
+        <ul>
+            <li><strong>Vitamina C</strong>
+                <p>Fontes: Frutas cítricas como laranja e limão.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina D</strong>
+                <p>Fontes: Exposição ao sol e alimentos fortificados.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina B12</strong>
+                <p>Fontes: Vegetais, frutas, cogumelos, leguminosas germinadas, morango, banana, agrião, bebida de arroz
+                    ou aveia, produtos à base de soja, cereais matinais.</p>
+                <p>Fonte: <a href="https://www.bulas.med.br/p/bulas-de-medicamentos/bula/1370973/fdc-vit-b-12.htm"
+                        target="_blank">BulasMed</a></p>
+            </li>
+            <li><strong>Vitamina E</strong>
+                <p>Fontes: Oleaginosas e óleos vegetais.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina A</strong>
+                <p>Fontes: Cenoura, batata-doce, manga, espinafre.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+            <li><strong>Vitamina K</strong>
+                <p>Fontes: Vegetais verdes escuros como brócolis, couve e espinafre.</p>
+                <p>Fonte: <a href="https://www.anvisa.gov.br" target="_blank">Anvisa</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Biblioteca Virtual de Farmácia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
