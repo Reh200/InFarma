@@ -95,7 +95,6 @@ p {
     text-align: left;
 }
 
-/* Título da seção */
 .materiais h2 {
     font-size: 24px;
     color: #007bff;
@@ -104,7 +103,6 @@ p {
     padding-bottom: 5px;
 }
 
-/* Estilo de cada item */
 .item {
     display: flex;
     align-items: center;
@@ -139,7 +137,6 @@ p {
     margin-top: 5px;
 }
 
-/* Caixa para livro com botão */
 .livro {
     background-color: #ffffff;
     border-radius: 10px;
@@ -186,7 +183,6 @@ footer {
     text-align: center;
 }
 
-/* Estilo do botão de alternância de tema */
 button.theme-toggle {
     background-color: transparent;
     color: #007bff;
@@ -201,18 +197,15 @@ button.theme-toggle {
     font-size: 16px;
 }
 
-/* Efeito do botão no tema escuro */
 body.dark-mode button.theme-toggle {
-    color: #4faaff;  /* Ajuste de cor do texto para melhor visibilidade no tema escuro */
+    color: #4faaff;  
 }
 
-/* Ao passar o mouse */
 button.theme-toggle:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Cor suave ao passar o mouse */
+    background-color: rgba(0, 123, 255, 0.1); 
 }
 
-/* Quando o botão é clicado ou recebe foco */
 button.theme-toggle:focus {
-    outline: none; /* Remove o contorno ao clicar */
-    border: none;  /* Assegura que não haja borda ao focar no botão */
+    outline: none; 
+    border: none; 
 }
