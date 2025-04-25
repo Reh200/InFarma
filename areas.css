@@ -116,3 +116,29 @@ body.dark-theme .area-card img {
 .theme-toggle-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* Estilo para a descrição introdutória */
+.intro-text {
+    max-width: 1500px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to right, #e8f0ff, #f7faff);
+    border-left: 6px solid #003b8b;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Modo escuro - descrição introdutória */
+body.dark-theme .intro-text {
+    background: linear-gradient(to right, #2a2a2a, #1f1f1f);
+    color: #ddd;
+    border-left: 6px solid #66bfff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
