@@ -1,103 +1,103 @@
-/* Reset básico */
-* {
-    box-sizing: border-box;
+/* Estilo geral */
+body {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #e3f2fd, #f0f8ff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-    overflow-x: hidden;
-}
-
-/* Título */
-h1 {
-    margin-bottom: 25px;
-    color: #0c3c78;
-    font-size: 2.5em;
+    font-family: Arial, sans-serif;
+    background-color: #e8f0fe;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-/* Tabuleiro fixo com 10 colunas */
-#game-board {
+  }
+  
+  h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #1a237e;
+  }
+  
+  #game-board {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
     gap: 10px;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: center;
     padding: 10px;
-}
-
-/* Cartas com tamanho proporcional */
-.card {
-    aspect-ratio: 1 / 1;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    cursor: pointer;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    width: 100%;
+    padding-top: 100%; /* para manter formato quadrado */
+    position: relative;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.25s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
     overflow: hidden;
-    width: 100%;
-}
-
-.card:hover {
+    transition: transform 0.2s;
+  }
+  
+  .card.flipped,
+  .card.matched {
     transform: scale(1.05);
-}
-
-.card.flipped img {
-    width: 90%;
-    height: 90%;
+  }
+  
+  .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 8px;
-}
-
-.card.matched {
-    opacity: 0.5;
-    pointer-events: none;
-    border: 2px solid #4caf50;
-}
-
-/* Botão */
-button {
-    margin-top: 25px;
-    padding: 10px 24px;
-    font-size: 1em;
-    background-color: #0c3c78;
+    border-radius: 10px;
+  }
+  
+  /* Texto com o nome e categoria */
+  .card-texto {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    font-size: 0.7rem;
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+  }
+  
+  /* Botão de reinício */
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3949ab;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-button:hover {
-    background-color: #1252a3;
-    transform: scale(1.03);
-}
-
-.category-text {
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-    background-color: #1e7e8f; /* Cor de fundo verde (pode ser alterada) */
-    padding: 10px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombras para dar destaque */
-}
-
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+  }
+  
+  /* Para dispositivos menores */
+  @media screen and (max-width: 480px) {
+    #game-board {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+    }
+  
+    .card-texto {
+      font-size: 0.6rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }  
