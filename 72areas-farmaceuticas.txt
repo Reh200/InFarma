@@ -1,0 +1,72 @@
+1.    Acupuntura
+2.    Administração de laboratório clínico
+3.    Administração farmacêutica
+4.    Administração hospitalar
+5.    Análises clínicas
+6.    Assistência domiciliar em equipes multidisciplinares
+7.    Atendimento pré-hospitalar de urgência e emergência
+8.    Auditoria farmacêutica
+9.    Bacteriologia clínica
+10.    Banco de cordão umbilical
+11.    Banco de leite humano
+12.    Banco de sangue
+13.    Banco de Sêmen
+14.    Banco de órgãos
+15.    Biofarmácia
+16.    Biologia molecular
+17.    Bioquímica clínica 
+18.    Bromatologia
+19.    Citologia clínica
+20.    Citopatologia
+21.    Citoquímica
+22.    Controle de qualidade e tratamento de água, potabilidade e controle ambiental
+23.    Controle de vetores e pragas urbanas
+24.    Cosmetologia
+25.    Exames de DNA
+26.    Farmacêutico na análise físico-química do solo
+27.    Farmácia antroposófica
+28.    Farmácia clínica
+29.    Farmácia comunitária
+30.    Farmácia de dispensação
+31.    Fracionamento de medicamentos
+32.    Farmácia dermatológica
+33.    Farmácia homeopática
+34.    Farmácia hospitalar
+35.    Farmácia industrial
+36.    Farmácia magistral
+37.    Farmácia nuclear (radiofarmácia)
+38.    Farmácia oncológica
+39.    Farmácia pública
+40.    Farmácia veterinária
+41.    Farmácia-escola
+42.    Farmacocinética clínica
+43.    Farmacoepidemiologia
+44.    Fitoterapia
+45.    Gases e misturas de uso terapêutico
+46.    Genética humana
+47.    Gerenciamento de resíduos dos serviços de saúde
+48.    Hematologia clínica
+49.    Hemoterapia
+50.    Histopatologia 
+51.    Histoquímica
+52.    Imunocitoquímica
+53.    Imunogenética e histocompatibilidade
+54.    Imunohistoquímica
+55.    Imunologia clínica
+56.    Imunopatologia
+57.    Meio ambiente, segurança no trabalho, saúde ocupacional e responsabilidade social
+58.    Micologia clínica
+59.    Microbiologia clínica
+60.    Nutrição parenteral
+61.    Parasitologia clínica
+62.    Saúde pública
+63.    Toxicologia clínica
+64.    Toxicologia ambiental
+65.    Toxicologia de alimentos
+66.    Toxicologia desportiva
+67.    Toxicologia farmacêutica
+68.    Toxicologia forense
+69.    Toxicologia ocupacional
+70.    Toxicologia veterinária
+71.    Vigilância sanitária
+72.    Virologia clínica
