@@ -394,3 +394,25 @@ textarea:focus {
 .sobre-btn:focus {
     outline: none; /* Remove o contorno ao focar */
 }
+
+/* Estilo do botão flutuante */
+.float-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.float-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
