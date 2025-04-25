@@ -59,7 +59,8 @@ function createBoard() {
         const card = document.createElement("div");
         card.classList.add("card");
         card.setAttribute("data-index", index);
-        card.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`; // Novo verso da carta
+        card.setAttribute("data-flipped", "false");
+        card.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`; // verso
         card.addEventListener("click", flipCard);
         board.appendChild(card);
     });
@@ -70,17 +71,23 @@ function flipCard() {
     const index = card.getAttribute("data-index");
     const med = medications[index];
 
-    if (card.classList.contains("flipped") || card.classList.contains("matched")) {
-        return;
+    if (card.getAttribute("data-flipped") === "true" || flippedCards.length >= 2) return;
+
+    // Alterna entre mostrar imagem ou texto
+    card.innerHTML = "";
+    if (flippedCards.length === 0) {
+        const img = document.createElement("img");
+        img.src = med.image;
+        card.appendChild(img);
+    } else {
+        const textDiv = document.createElement("div");
+        textDiv.classList.add("category-text");
+        textDiv.innerText = `${med.name} é um ${med.active}.`;
+        card.appendChild(textDiv);
     }
 
-    // Mostrar a imagem do medicamento
-    const img = document.createElement("img");
-    img.src = med.image;
-    card.innerHTML = "";
-    card.appendChild(img);
-
     card.classList.add("flipped");
+    card.setAttribute("data-flipped", "true");
     flippedCards.push(card);
 
     if (flippedCards.length === 2) {
@@ -93,24 +100,29 @@ function checkMatch() {
     const index1 = card1.getAttribute("data-index");
     const index2 = card2.getAttribute("data-index");
 
-    if (medications[index1].active === medications[index2].active) {
+    if (medications[index1].name === medications[index2].name &&
+        medications[index1].active === medications[index2].active) {
         card1.classList.add("matched");
         card2.classList.add("matched");
         matchedCards += 2;
     } else {
         card1.classList.remove("flipped");
         card2.classList.remove("flipped");
+        card1.setAttribute("data-flipped", "false");
+        card2.setAttribute("data-flipped", "false");
+
         card1.innerHTML = "";
         card2.innerHTML = "";
 
-        // Reaplica o verso da carta
+        // Volta o verso
         card1.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
         card2.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
     }
 
     flippedCards = [];
+
     if (matchedCards === medications.length) {
-        alert("Parabéns! Você completou o jogo.");
+        setTimeout(() => alert("Parabéns! Você completou o jogo."), 200);
     }
 }
 
