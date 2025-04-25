@@ -11,36 +11,35 @@ const medications = [
     { name: "Captopril", image: "img/captopril.jpg", active: "Anti-hipertensivo" },
     { name: "Omeprazol", image: "img/omeprazol.jpg", active: "Inibidor de bomba de prótons" },
     { name: "Omeprazol", image: "img/omeprazol.jpg", active: "Inibidor de bomba de prótons" },
-    { name: "Losartana", image: "img/losartana.jpg", active: "Anti-hipertensivo" },
-    { name: "Losartana", image: "img/losartana.jpg", active: "Anti-hipertensivo" },
-    { name: "Loratadina", image: "img/loratadina.jpg", active: "Antialérgico" },
-    { name: "Loratadina", image: "img/loratadina.jpg", active: "Antialérgico" },
-    { name: "Salmeterol", image: "img/salmeterol.jpg", active: "Broncodilatador" },
-    { name: "Salmeterol", image: "img/salmeterol.jpg", active: "Broncodilatador" },
+    { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
+    { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
+    { name: "Loratadina", image: "img/loratadina.webp", active: "Antialérgico" },
+    { name: "Loratadina", image: "img/loratadina.webp", active: "Antialérgico" },
+    { name: "Salmeterol", image: "img/salmeterol.png", active: "Broncodilatador" },
+    { name: "Salmeterol", image: "img/salmeterol.png", active: "Broncodilatador" },
     { name: "Cloridrato de Sertralina", image: "img/sertralina.jpg", active: "Antidepressivo" },
     { name: "Cloridrato de Sertralina", image: "img/sertralina.jpg", active: "Antidepressivo" },
-    { name: "Furosemida", image: "img/furosemida.jpg", active: "Diurético" },
-    { name: "Furosemida", image: "img/furosemida.jpg", active: "Diurético" },
+    { name: "Furosemida", image: "img/furosemida.png", active: "Diurético" },
+    { name: "Furosemida", image: "img/furosemida.png", active: "Diurético" },
     { name: "Metformina", image: "img/metformina.jpg", active: "Antidiabético" },
     { name: "Metformina", image: "img/metformina.jpg", active: "Antidiabético" },
-    { name: "Dexametasona", image: "img/dexametasona.jpg", active: "Corticoide" },
-    { name: "Dexametasona", image: "img/dexametasona.jpg", active: "Corticoide" },
-    { name: "AAS", image: "img/aas.jpg", active: "Antiagregante plaquetário" },
-    { name: "AAS", image: "img/aas.jpg", active: "Antiagregante plaquetário" },
-    { name: "Diclofenaco", image: "img/diclofenaco.jpg", active: "Anti-inflamatório" },
-    { name: "Diclofenaco", image: "img/diclofenaco.jpg", active: "Anti-inflamatório" },
-    { name: "Amitriptilina", image: "img/amitriptilina.jpg", active: "Antidepressivo" },
-    { name: "Amitriptilina", image: "img/amitriptilina.jpg", active: "Antidepressivo" },
-    { name: "Tramadol", image: "img/tramadol.jpg", active: "Analgesia opioide" },
-    { name: "Tramadol", image: "img/tramadol.jpg", active: "Analgesia opioide" },
-    { name: "Cetoconazol", image: "img/cetoconazol.jpg", active: "Antifúngico" },
-    { name: "Cetoconazol", image: "img/cetoconazol.jpg", active: "Antifúngico" },
-    { name: "Trazodona", image: "img/trazodona.jpg", active: "Antidepressivo" },
-    { name: "Trazodona", image: "img/trazodona.jpg", active: "Antidepressivo" },
-    { name: "Ranitidina", image: "img/ranitidina.jpg", active: "Antiácido" },
-    { name: "Ranitidina", image: "img/ranitidina.jpg", active: "Antiácido" }
+    { name: "Dexametasona", image: "img/dexametasona.png", active: "Corticoide" },
+    { name: "Dexametasona", image: "img/dexametasona.png", active: "Corticoide" },
+    { name: "AAS", image: "img/aas.webp", active: "Antiagregante plaquetário" },
+    { name: "AAS", image: "img/aas.webp", active: "Antiagregante plaquetário" },
+    { name: "Diclofenaco", image: "img/diclofenaco.webp", active: "Anti-inflamatório" },
+    { name: "Diclofenaco", image: "img/diclofenaco.webp", active: "Anti-inflamatório" },
+    { name: "Amitriptilina", image: "img/amitriptilina.webp", active: "Antidepressivo" },
+    { name: "Amitriptilina", image: "img/amitriptilina.webp", active: "Antidepressivo" },
+    { name: "Tramadol", image: "img/tramadol.webp", active: "Analgesia opioide" },
+    { name: "Tramadol", image: "img/tramadol.webp", active: "Analgesia opioide" },
+    { name: "Cetoconazol", image: "img/cetoconazol.webp", active: "Antifúngico" },
+    { name: "Cetoconazol", image: "img/cetoconazol.webp", active: "Antifúngico" },
+    { name: "Trazodona", image: "img/trazodona.webp", active: "Antidepressivo" },
+    { name: "Trazodona", image: "img/trazodona.webp", active: "Antidepressivo" },
+    { name: "Ranitidina", image: "img/ranitidina.webp", active: "Antiácido" },
+    { name: "Ranitidina", image: "img/ranitidina.webp", active: "Antiácido" }
 ];
-
 
 let flippedCards = [];
 let matchedCards = 0;
@@ -60,7 +59,7 @@ function createBoard() {
         const card = document.createElement("div");
         card.classList.add("card");
         card.setAttribute("data-index", index);
-        card.style.backgroundImage = `url(imagens/flip-card-back.jpg)`; // Imagem do verso da carta
+        card.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`; // Novo verso da carta
         card.addEventListener("click", flipCard);
         board.appendChild(card);
     });
@@ -70,6 +69,10 @@ function flipCard() {
     const card = this;
     const index = card.getAttribute("data-index");
     const med = medications[index];
+
+    if (card.classList.contains("flipped") || card.classList.contains("matched")) {
+        return;
+    }
 
     // Mostrar a imagem do medicamento
     const img = document.createElement("img");
@@ -99,6 +102,10 @@ function checkMatch() {
         card2.classList.remove("flipped");
         card1.innerHTML = "";
         card2.innerHTML = "";
+
+        // Reaplica o verso da carta
+        card1.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
+        card2.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
     }
 
     flippedCards = [];

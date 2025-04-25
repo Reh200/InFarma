@@ -6,46 +6,55 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #f0f8ff);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 /* Título */
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #0c3c78;
-    font-size: 2em;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Tabuleiro */
+/* Tabuleiro fixo com 10 colunas */
 #game-board {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
     width: 100%;
+    max-width: 1200px;
+    padding: 10px;
 }
 
-/* Cartas */
+/* Cartas com tamanho proporcional */
 .card {
-    width: 100px;
-    height: 100px;
+    aspect-ratio: 1 / 1;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s;
+    transition: transform 0.25s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card.flipped img {
@@ -61,19 +70,34 @@ h1 {
     border: 2px solid #4caf50;
 }
 
-/* Botão reiniciar */
+/* Botão */
 button {
-    margin-top: 30px;
-    padding: 10px 20px;
+    margin-top: 25px;
+    padding: 10px 24px;
     font-size: 1em;
     background-color: #0c3c78;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 button:hover {
     background-color: #1252a3;
+    transform: scale(1.03);
 }
+
+.category-text {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Cor de fundo verde (pode ser alterada) */
+    padding: 10px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombras para dar destaque */
+}
+
