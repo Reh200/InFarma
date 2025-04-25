@@ -1,12 +1,12 @@
 const medications = [
-    { name: "Amoxicilina", image: "img/amoxicilina.jpg", active: "Antibiótico" },
-    { name: "Dipirona", image: "img/dipirona.jpg", active: "Analgésico" },
-    { name: "Ibuprofeno", image: "img/ibuprofeno.jpg", active: "Anti-inflamatório" },
-    { name: "Paracetamol", image: "img/paracetamol.jpg", active: "Antitérmico" },
-    { name: "Amoxicilina", image: "img/amoxicilina.jpg", active: "Antibiótico" },
-    { name: "Dipirona", image: "img/dipirona.jpg", active: "Analgésico" },
-    { name: "Ibuprofeno", image: "img/ibuprofeno.jpg", active: "Anti-inflamatório" },
-    { name: "Paracetamol", image: "img/paracetamol.jpg", active: "Antitérmico" }
+    { name: "Amoxicilina", image: "img/Amoxicilina.jpeg", active: "Antibiótico" },
+    { name: "Dipirona", image: "img/dipirona.webp", active: "Analgésico" },
+    { name: "Ibuprofeno", image: "img/ibuprofeno.webp", active: "Anti-inflamatório" },
+    { name: "Paracetamol", image: "img/paracetamol.webp", active: "Antitérmico" },
+    { name: "Amoxicilina", image: "img/Amoxicilina.jpeg", active: "Antibiótico" },
+    { name: "Dipirona", image: "img/dipirona.webp", active: "Analgésico" },
+    { name: "Ibuprofeno", image: "img/ibuprofeno.webp", active: "Anti-inflamatório" },
+    { name: "Paracetamol", image: "img/paracetamol.webp", active: "Antitérmico" }
 ];
 
 let flippedCards = [];
