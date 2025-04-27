@@ -43,12 +43,40 @@ const medications = [
 
 let flippedCards = [];
 let matchedCards = 0;
+let timer;
+let seconds = 0;
+let minutes = 0;
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+function startGame() {
+    // Esconde o botão de iniciar e exibe o botão de reiniciar
+    document.getElementById("start-button").style.display = "none";
+    document.getElementById("restart-button").style.display = "inline-block";
+
+    // Inicia o cronômetro
+    timer = setInterval(updateTime, 1000);
+    createBoard();
+}
+
+function updateTime() {
+    seconds++;
+    if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    // Exibe o tempo no formato MM:SS
+    document.getElementById("timer").textContent = `Tempo: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function stopTimer() {
+    clearInterval(timer);
 }
 
 function createBoard() {
@@ -122,14 +150,16 @@ function checkMatch() {
     flippedCards = [];
 
     if (matchedCards === medications.length) {
-        setTimeout(() => alert("Parabéns! Você completou o jogo."), 200);
+        stopTimer();
+        setTimeout(() => alert(`Parabéns! Você completou o jogo em ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.`), 200);
     }
 }
 
 function restartGame() {
     matchedCards = 0;
     flippedCards = [];
-    createBoard();
+    seconds = 0;
+    minutes = 0;
+    document.getElementById("timer").textContent = `Tempo: 00:00`;
+    startGame();
 }
-
-createBoard();

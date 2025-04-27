@@ -1,122 +1,141 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-color: #f0f4f8;
-    padding: 20px;
-    color: #333;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 20px;
+  color: #333;
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  position: relative;
+  padding-top: 60px; /* Adiciona espaço suficiente para o timer */
+}
+
+h1 {
+  color: #244474;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card.flipped {
+  background-color: #ffffff;
+}
+
+.card.matched {
+  background-color: #354ccf;
+}
+
+.card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.category-text {
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: #104f74;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.category-text:hover {
+  background-color: #3462b8;
+}
+
+/* Responsivo para celulares */
+@media screen and (max-width: 600px) {
   h1 {
-    color: #244474;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  .game-board {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 12px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .card {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: #e0e0e0;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card.flipped {
-    background-color: #ffffff;
-  }
-  
-  .card.matched {
-    background-color: #354ccf;
-  }
-  
-  .card img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-  }
-  
-  .category-text {
-    font-size: 0.85rem;
-    color: #fff;
-    background-color: #104f74;
-    padding: 6px 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 8px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  
-  .category-text:hover {
-    background-color: #3462b8;
-  }
-  
-  /* Responsivo para celulares */
-  @media screen and (max-width: 600px) {
-    h1 {
       font-size: 1.8rem;
       margin-bottom: 20px;
-    }
-  
-    .game-board {
+  }
+
+  .game-board {
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-    }
-  
-    .category-text {
+  }
+
+  .category-text {
       font-size: 0.75rem;
       padding: 5px 6px;
-    }
   }
-  
-  button {
-    margin-top: 30px;
-    padding: 12px 24px;
-    background-color: #35428a;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #386c8e;
-    transform: scale(1.05);
-  }
-  
-  button:active {
-    transform: scale(0.98);
-  }
-  
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #35428a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #386c8e;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Estilos para o Timer fixado no topo da tela */
+#timer {
+  font-size: 18px;
+  color: #4CAF50;
+  font-weight: bold;
+  position: fixed;
+  top: 20px; /* Distância do topo da tela */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10; /* Garante que o timer fique visível por cima dos outros elementos */
+}
