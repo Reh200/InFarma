@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Memória - Medicamentos</title>
-    <link rel="stylesheet" href="joguinho.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória - Medicamentos</title>
+  <link rel="stylesheet" href="joguinho.css">
 </head>
 <body>
-    <h1>Jogo da Memória - Medicamentos</h1> <!-- Título do Jogo -->
-    <div id="game-board" class="game-board"></div>
-    <button id="start-button" onclick="startGame()">Iniciar Jogo</button>
-    <button id="restart-button" onclick="restartGame()" style="display: none;">Reiniciar Jogo</button>
-    
-    <div id="timer" class="timer">Tempo: 00:00</div> <!-- Exibição do Tempo -->
-    
-    <script src="joguinho.js"></script>
+  <h1>Jogo da Memória - Medicamentos</h1>
+
+  <!-- Painel de tempo, pontuação e recorde -->
+  <div id="timer" class="timer">Tempo: 00:00</div>
+
+  <div id="score-container">
+    <div class="score-box">Pontuação: <span id="score">0</span></div>
+    <div class="score-box">Recorde: <span id="record">--:--</span></div>
+  </div>
+
+  <div id="game-board" class="game-board"></div>
+
+  <button id="start-button" onclick="startGame()">Iniciar Jogo</button>
+  <button id="restart-button" onclick="startGame()" style="display: none;">Reiniciar Jogo</button>
+
+  <script src="joguinho.js"></script>
 </body>
 </html>
