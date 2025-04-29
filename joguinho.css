@@ -85,25 +85,24 @@ h1 {
 /* Responsivo para celulares */
 @media screen and (max-width: 600px) {
   h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
   }
 
   .game-board {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .category-text {
-      font-size: 0.75rem;
-      padding: 5px 6px;
+    font-size: 0.75rem;
+    padding: 5px 6px;
   }
 }
 
+/* Estilos gerais para ambos os botões */
 button {
-  margin-top: 30px;
   padding: 12px 24px;
-  background-color: #35428a;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -114,13 +113,33 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #386c8e;
+/* Estilo específico para o botão de Iniciar */
+button.iniciar {
+  background-color: #35428a; /* Cor do botão Iniciar */
+}
+
+button.iniciar:hover {
+  background-color: #386c8e; /* Cor de hover para o botão Iniciar */
   transform: scale(1.05);
 }
 
-button:active {
-  transform: scale(0.98);
+button.iniciar:active {
+  transform: scale(0.98); /* Efeito ao clicar no botão Iniciar */
+}
+
+/* Estilo específico para o botão de Reiniciar */
+button.reiniciar {
+  margin-top: -20px; /* Move o botão reiniciar para cima */
+  background-color: #28a745; /* Cor verde para indicar reinício */
+}
+
+button.reiniciar:hover {
+  background-color: #218838; /* Cor de hover para o botão Reiniciar */
+  transform: scale(1.05);
+}
+
+button.reiniciar:active {
+  transform: scale(0.98); /* Efeito ao clicar no botão Reiniciar */
 }
 
 /* Estilos para o Timer fixado no topo da tela */
@@ -138,25 +157,4 @@ button:active {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   z-index: 10; /* Garante que o timer fique visível por cima dos outros elementos */
-}
-
-#score-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  position: fixed;
-  top: 60px; /* Abaixo do timer */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-.score-box {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
