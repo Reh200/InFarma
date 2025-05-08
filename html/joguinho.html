@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Memória - Medicamentos</title>
-    <link rel="stylesheet" href="css/jog.css">
+    <title>FarmaCare - Associe o Medicamento</title>
+    <link rel="stylesheet" href="joguinho.css">
 </head>
+
 <body>
     <header>
-        <h1>Jogo de Memória - Medicamentos</h1>
-        <div id="timer">Tempo: 00:00</div>
-        <!-- Botão Iniciar com a classe 'iniciar' -->
+        <h1>🧠 FarmaCare - Associe o Medicamento 💊</h1>
+        <p class="subtitulo">Descubra qual é a categoria de cada medicamento!</p>
+        <div id="timer">⏱️ Tempo: 00:00</div>
         <button id="start-button" class="iniciar" onclick="startGame()">Iniciar</button>
-        <!-- Botão Reiniciar com a classe 'reiniciar' (sem estilo inline) -->
         <button id="restart-button" class="reiniciar" onclick="restartGame()">Reiniciar</button>
     </header>
+
+    <section class="instrucoes" id="instrucoes">
+        <h2>📋 Instruções</h2>
+        <ul>
+            <li>Você verá cartas com nomes de medicamentos e cartas com categorias.</li>
+            <li>Seu objetivo é encontrar os pares corretos (medicamento + função).</li>
+            <li>Exemplo: <strong>Ibuprofeno</strong> ↔ <em>Anti-inflamatório</em>.</li>
+            <li>O jogo termina quando todos os pares forem formados.</li>
+        </ul>
+    </section>
+
     <main>
         <div id="game-board" class="game-board"></div>
     </main>
-    <script src="js/joguinho.js"></script>
+
+    <section class="curiosidade" id="curiosidade-box" style="display: none;">
+        <h2>💡 Curiosidade</h2>
+        <p id="curiosidade-texto"></p>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Aline Renata - Projeto Educacional 💙</p>
+        <p>Todos os medicamentos mostrados são apenas para fins educativos.</p>
+    </footer>
+
+    <script src="joguinho.js"></script>
 </body>
+
 </html>
