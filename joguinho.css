@@ -1,0 +1,253 @@
+/* Reset e configuração global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 20px;
+  padding-top: 60px;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 10px auto;
+  max-width: 900px;
+  position: relative;
+}
+
+header h1 {
+  color: #244474;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header .subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+header button {
+  margin: 5px;
+}
+
+/* Título principal */
+h1 {
+  color: #244474;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Grade do jogo */
+.game-board,
+#medications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Responsivo */
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Estilo dos cards */
+.card {
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card.flipped {
+  background-color: #ffffff;
+}
+
+.card.matched {
+  background-color: #354ccf;
+}
+
+.card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Texto da categoria */
+.category-text {
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: #104f74;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.category-text:hover {
+  background-color: #3462b8;
+}
+
+/* Estilo geral dos botões */
+button {
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botão iniciar */
+button.iniciar {
+  background-color: #35428a;
+}
+
+button.iniciar:hover {
+  background-color: #386c8e;
+  transform: scale(1.05);
+}
+
+button.iniciar:active {
+  transform: scale(0.98);
+}
+
+/* Botão reiniciar */
+button.reiniciar {
+  margin-top: -20px;
+  background-color: #2e60a1;
+}
+
+button.reiniciar:hover {
+  background-color: #0a2a47;
+  transform: scale(1.05);
+}
+
+button.reiniciar:active {
+  transform: scale(0.98);
+}
+
+/* Timer fixo no topo */
+#timer {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Instruções do jogo */
+.instrucoes {
+  background-color: #e6f7ff;
+  color: #333;
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instrucoes h2 {
+  margin-top: 0;
+  color: #0077b6;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.instrucoes ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.instrucoes li {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+  }
+
+  .category-text {
+    font-size: 0.75rem;
+    padding: 5px 6px;
+  }
+}
