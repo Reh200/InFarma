@@ -60,7 +60,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Responsivo */
   gap: 12px;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -106,10 +106,10 @@ h1 {
   font-size: 0.85rem;
   color: #fff;
   background-color: #104f74;
-  padding: 6px 8px;
-  border-radius: 8px;
+  padding: 6px 6px;
+  border-radius: 7px;
   font-weight: bold;
-  margin-top: 8px;
+  margin-top: 6px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
@@ -145,10 +145,20 @@ button.iniciar:active {
   transform: scale(0.98);
 }
 
-/* Botão reiniciar */
+/* Estilo do botão Reiniciar */
 button.reiniciar {
   margin-top: -20px;
   background-color: #2e60a1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  visibility: hidden;
 }
 
 button.reiniciar:hover {
@@ -157,6 +167,31 @@ button.reiniciar:hover {
 }
 
 button.reiniciar:active {
+  transform: scale(0.98);
+}
+
+/* Estilo do botão Voltar */
+button.voltar {
+  display: none; /* Inicialmente escondido */
+  margin-top: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.voltar:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}
+
+button.voltar:active {
   transform: scale(0.98);
 }
 
@@ -204,6 +239,23 @@ button.reiniciar:active {
 
 .instrucoes li {
   margin-bottom: 0.8rem;
+}
+
+footer {
+  background-color: #bccddf;
+  color: #244474;
+  text-align: center;
+  padding: 15px 10px;
+  border-top: 2px solid #cddbee;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 50px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+  margin: 6px 0;
+  line-height: 1.5;
 }
 
 /* Responsividade */
