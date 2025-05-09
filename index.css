@@ -1,4 +1,4 @@
-/* Configuração global */
+/* Configuração global */ 
 body {
     font-family: 'Inter', sans-serif;
     background: #f8f9fa;
@@ -19,8 +19,9 @@ body {
 /* Estilização do Banner */
 .hero {
     position: relative;
-    height: 350px;
-    background: url('img/banner.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,14 +29,13 @@ body {
     color: white;
 }
 
-.overlay {
+.hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* Sobreposição escura */
 }
 
 .hero .container {
@@ -53,7 +53,6 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -66,7 +65,6 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     height: 100%;
-    /* Mantém a altura uniforme */
     display: flex;
     flex-direction: column;
 }
@@ -94,75 +92,32 @@ body {
 /* Estilo do botão para mudar o tema */
 .theme-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgb(0, 123, 255);
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s ease-in-out;
-}
-
-/* Efeito hover no botão */
-.theme-toggle:hover {
-    background: #e0a800;
-    transform: scale(1.1);
-}
-
-/* Configuração global */
-body {
-    font-family: 'Inter', sans-serif;
-    background: #f8f9fa;
-    transition: background 0.3s, color 0.3s;
-}
-
-.theme-toggle {
-    position: fixed;
     top: 8px;
     right: 8px;
     background-color: transparent;
     border: none;
     font-size: 18px;
-    /* menor tamanho */
     color: #ffffff1a;
-    /* cor quase invisível */
     cursor: pointer;
     z-index: 1050;
     transition: opacity 0.3s ease;
     padding: 4px;
     border-radius: 50%;
     box-shadow: none;
-    /* sem sombra */
     opacity: 0.3;
-    /* pouca opacidade */
 }
 
-.theme-toggle:focus {
-    outline: none;
-}
-
-.theme-toggle i {
-    transition: transform 0.3s ease;
-}
-
+/* Efeito hover no botão */
 .theme-toggle:hover {
     opacity: 0.5;
-    /* levemente visível no hover */
     transform: none;
-    /* sem aumento */
     background-color: transparent;
 }
 
 .theme-toggle i.fas.fa-sun,
 .theme-toggle i.fas.fa-moon {
     color: #ffffff1a;
-    /* bem discreto */
 }
-
-
 
 /* Logo */
 .logo {
@@ -171,92 +126,56 @@ body {
     border-radius: 50%;
 }
 
-/* Estilização do Banner */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
+/* Estilização do botão do glossário, sobre e joguinho */
+.glossario-btn, .sobre-btn, .float-btn {
+    position: fixed;
+    right: 20px;
+    font-size: 24px;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    z-index: 1050;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
-/* Ajusta a imagem para ocupar todo o espaço */
-.banner-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Mantém a proporção e cobre a área */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* Joga a imagem para trás do conteúdo */
+/* Posições específicas para cada botão */
+.float-btn { bottom: 140px; } /* Botão de joguinho no topo */
+.glossario-btn { bottom: 80px; } /* Botão de glossário no meio */
+.sobre-btn { bottom: 20px; } /* Botão de sobre no final */
+
+/* Efeito de hover para os botões */
+.glossario-btn:hover, .sobre-btn:hover, .float-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
-/* Adicionando um efeito de escurecimento */
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Escurece a imagem */
+/* Ícones dos botões */
+.glossario-btn i, .sobre-btn i, .float-btn i {
+    font-size: 30px;
 }
 
-.hero .container {
-    position: relative;
-    z-index: 1;
-    color: white;
+/* Remover borda de foco */
+.glossario-btn:focus, .sobre-btn:focus, .float-btn:focus {
+    outline: none;
 }
 
-
-
-/* Animação de entrada */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Estilo do botão fixo para a página sobre */
+.sobre-btn {
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-/* Garantir que os cards tenham a mesma altura */
-.destaque {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    height: 100%;
-    /* Mantém a altura uniforme */
-    display: flex;
-    flex-direction: column;
+.sobre-btn:hover {
+    background-color: #8c918d00;
 }
 
-/* Ajuste para a imagem dos cards */
-.destaque img {
-    height: 160px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-/* Garantir que o conteúdo do card preencha igualmente */
-.destaque .card-body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-/* Faz o botão alinhar na parte inferior */
-.destaque .btn {
-    margin-top: auto;
-}
-
-/* Configuração de navbar */
-.navbar {
+/* Estilos de navbar e footer */
+.navbar, footer {
     transition: background-color 0.3s ease;
 }
 
@@ -268,18 +187,8 @@ body {
     color: #f8f9fa;
 }
 
-/* Configuração de footer */
-footer {
-    transition: background-color 0.3s ease;
-}
-
 /* Títulos e textos */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -304,24 +213,12 @@ h6 {
     border-color: #0056b3;
 }
 
-/* Adiciona transições de cor e fundo para o botão de acordo com o tema */
-.dark-theme .theme-toggle {
-    color: #f8f9fa;
-}
-
-/* Logo */
-.logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
+/* Estilização do textarea */
 textarea {
     width: 100%;
     min-height: 150px;
     padding: 12px 15px;
     border: 2px solid #ffc107;
-    /* Amarelo para destaque */
     border-radius: 12px;
     background-color: #fffbea;
     resize: vertical;
@@ -335,98 +232,4 @@ textarea:focus {
     outline: none;
     border-color: #ffb300;
     box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
-}
-
-/* Estilização do botão do glossário */
-.glossario-btn {
-    position: fixed;
-    bottom: 20px; /* Posição do botão do glossário */
-    right: 20px;
-    font-size: 24px;
-    padding: 15px;
-    background-color: transparent;
-    border: none;
-    z-index: 1050;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Remover borda de foco */
-.glossario-btn:focus {
-    outline: none;
-}
-
-/* Efeito de hover */
-.glossario-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-/* Estilização do ícone de livrinho */
-.glossario-btn i {
-    font-size: 30px;
-    color: #1111112d; /* Cor do ícone de livrinho */
-}
-
-/* Estilo do botão fixo para a página sobre */
-.sobre-btn {
-    position: fixed;
-    bottom: 80px; /* Ajuste para não sobrepor o botão do glossário */
-    right: 20px;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.sobre-btn:hover {
-    background-color: #8c918d00; /* Cor verde mais escuro quando o botão for hover */
-}
-
-.sobre-btn:focus {
-    outline: none; /* Remove o contorno ao focar */
-}
-
-/* Estilo do botão flutuante do joguinho */
-.float-btn {
-    position: fixed;
-    bottom: 140px; /* Espaço acima dos outros dois botões */
-    right: 20px;
-    font-size: 24px;
-    padding: 15px;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1050;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    text-align: center;
-}
-
-/* Hover do botão do joguinho */
-.float-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-/* Ícone do botão do joguinho */
-.float-btn i {
-    font-size: 30px;
-    color: #ffffff;
-}
-
-/* Remover borda de foco */
-.float-btn:focus {
-    outline: none;
 }
