@@ -145,20 +145,10 @@ button.iniciar:active {
   transform: scale(0.98);
 }
 
-/* Estilo do botão Reiniciar */
+/* Botão reiniciar */
 button.reiniciar {
   margin-top: -20px;
   background-color: #2e60a1;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  visibility: hidden;
 }
 
 button.reiniciar:hover {
@@ -167,31 +157,6 @@ button.reiniciar:hover {
 }
 
 button.reiniciar:active {
-  transform: scale(0.98);
-}
-
-/* Estilo do botão Voltar */
-button.voltar {
-  display: none; /* Inicialmente escondido */
-  margin-top: 10px;
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button.voltar:hover {
-  background-color: #ff3333;
-  transform: scale(1.05);
-}
-
-button.voltar:active {
   transform: scale(0.98);
 }
 
@@ -242,10 +207,10 @@ button.voltar:active {
 }
 
 footer {
-  background-color: #bccddf;
+  background-color: #f9fbfd;
   color: #244474;
   text-align: center;
-  padding: 15px 10px;
+  padding: 20px 10px;
   border-top: 2px solid #cddbee;
   font-size: 0.95rem;
   font-weight: 500;
