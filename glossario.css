@@ -65,7 +65,7 @@ button {
     top: 20px;
     right: 20px;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ffffff10;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -75,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #93afce49;
 }
 
 /* Estilo dos ícones no botão */
