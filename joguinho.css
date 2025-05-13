@@ -295,6 +295,16 @@ button.reiniciar:active {
     max-width: 100%;
     line-height: 1.2;
   }
+
+  /* Correção para quebra de linha no título */
+  header {
+    white-space: normal; /* Permite quebra no container */
+  }
+
+  header h1 {
+    white-space: normal; /* Permite quebra no título */
+    font-size: 1.5rem;    /* Reduz um pouco o tamanho do texto */
+  }
 }
 
 /* Footer fixo */
