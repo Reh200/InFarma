@@ -8,3 +8,6 @@ git config --global user.email alinerenata1400@gmail.com
 #pedido
 Livro: não quero um amor meia boca
 Autor: Ricardo Coiro 
+
+    /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
+    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
