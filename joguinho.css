@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
   background-color: #f0f4f8;
   padding: 20px;
-  padding-top: 60px;
+  padding-top: 80px; /* Diminui o espaço no topo para dar mais foco ao conteúdo */
+  padding-bottom: 120px; /* Espaço suficiente para o rodapé fixo */
   color: #333;
   min-height: 100vh;
   position: relative;
@@ -19,39 +21,67 @@ body {
 /* Cabeçalho */
 header {
   background-color: #ffffff;
-  padding: 4px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 0 auto 10px auto;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px auto;
   max-width: 900px;
   position: relative;
+  text-align: center;
 }
 
+/* Título do cabeçalho */
 header h1 {
   color: #244474;
   font-size: 2.2rem;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Subtítulo */
 header .subtitulo {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
+/* Botões do cabeçalho */
 header button {
-  margin: 5px;
+  margin: 8px 0;
+  padding: 8px 16px;
+  background-color: #244474;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #3a69b3;
 }
 
 /* Título principal */
 h1 {
   color: #244474;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 20px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o texto dentro de parágrafos */
+p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
 }
 
 /* Grade do jogo */
@@ -173,7 +203,7 @@ button.reiniciar:active {
   padding: 8px 16px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  z-index: 10;
+  z-index: 20; /* Aumentado para garantir que fique acima de outros conteúdos */
 }
 
 /* Instruções do jogo */
@@ -206,65 +236,42 @@ button.reiniciar:active {
   margin-bottom: 0.8rem;
 }
 
+/* Footer fixo */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #f9fbfd;
   color: #244474;
   text-align: center;
-  padding: 20px 10px;
+  padding: 10px 20px;
   border-top: 2px solid #cddbee;
-  font-size: 0.95rem;
+  font-size: 0.85rem; /* Tamanho de fonte reduzido */
   font-weight: 500;
-  margin-top: 50px;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+  overflow: hidden; /* Evita que o texto saia da área do footer */
+  text-overflow: ellipsis; /* Adiciona reticências no final se o texto for muito grande */
 }
 
 footer p {
-  margin: 6px 0;
-  line-height: 1.5;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.9rem; /* Font size ajustado para texto mais compacto */
+  display: inline-block;
+  text-align: center;
 }
 
 /* Responsividade */
-@media screen and (max-width: 1024px) {
-  .game-board,
-  #medications-container {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .game-board,
-  #medications-container {
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  }
-}
-
 @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+  footer {
+    font-size: 0.85rem; /* Ajuste de fonte para telas menores */
+    padding: 15px 5px; /* Menos espaço nas laterais */
   }
 
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  header .subtitulo {
-    font-size: 0.95rem;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .game-board,
-  #medications-container {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 10px;
-  }
-
-  .category-text {
-    font-size: 0.75rem;
-    padding: 5px 6px;
+  footer p {
+    margin: 4px 0; /* Menor margem para telas pequenas */
   }
 }

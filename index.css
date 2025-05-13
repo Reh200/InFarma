@@ -1,8 +1,14 @@
-/* Configuração global */ 
+/* Configuração global */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: #f8f9fa;
     transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
 }
 
 /* Tema escuro */
@@ -20,7 +26,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 280px; /* altura levemente reduzida */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -67,6 +73,9 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 280px; /* levemente mais fino */
+    margin: auto;
 }
 
 /* Ajuste para a imagem dos cards */
@@ -75,6 +84,7 @@ body {
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 100%;
 }
 
 /* Garantir que o conteúdo do card preencha igualmente */
@@ -107,7 +117,6 @@ body {
     opacity: 0.3;
 }
 
-/* Efeito hover no botão */
 .theme-toggle:hover {
     opacity: 0.5;
     transform: none;
@@ -126,7 +135,7 @@ body {
     border-radius: 50%;
 }
 
-/* Estilização do botão do glossário, sobre e joguinho */
+/* Estilização dos botões flutuantes */
 .glossario-btn, .sobre-btn, .float-btn {
     position: fixed;
     right: 20px;
@@ -143,28 +152,23 @@ body {
     text-decoration: none;
 }
 
-/* Posições específicas para cada botão */
-.float-btn { bottom: 140px; } /* Botão de joguinho no topo */
-.glossario-btn { bottom: 80px; } /* Botão de glossário no meio */
-.sobre-btn { bottom: 20px; } /* Botão de sobre no final */
+.float-btn { bottom: 140px; }
+.glossario-btn { bottom: 80px; }
+.sobre-btn { bottom: 20px; }
 
-/* Efeito de hover para os botões */
 .glossario-btn:hover, .sobre-btn:hover, .float-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
 
-/* Ícones dos botões */
 .glossario-btn i, .sobre-btn i, .float-btn i {
     font-size: 30px;
 }
 
-/* Remover borda de foco */
 .glossario-btn:focus, .sobre-btn:focus, .float-btn:focus {
     outline: none;
 }
 
-/* Estilo do botão fixo para a página sobre */
 .sobre-btn {
     text-align: center;
     transition: background-color 0.3s ease;
@@ -174,7 +178,7 @@ body {
     background-color: #8c918d00;
 }
 
-/* Estilos de navbar e footer */
+/* Navbar e footer */
 .navbar, footer {
     transition: background-color 0.3s ease;
 }
@@ -187,12 +191,12 @@ body {
     color: #f8f9fa;
 }
 
-/* Títulos e textos */
+/* Títulos */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
 
-/* Ajuste nos botões */
+/* Botões */
 .btn-warning {
     background-color: #1d41a3;
     border-color: #e0a800;
@@ -213,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #0056b3;
 }
 
-/* Estilização do textarea */
+/* Textarea */
 textarea {
     width: 100%;
     min-height: 150px;
@@ -232,4 +236,54 @@ textarea:focus {
     outline: none;
     border-color: #ffb300;
     box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+/* Telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .hero {
+        height: 250px;
+        font-size: 16px;
+    }
+
+    .destaque img {
+        height: 120px;
+    }
+
+    .glossario-btn, .sobre-btn, .float-btn {
+        right: 10px;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .glossario-btn i, .sobre-btn i, .float-btn i {
+        font-size: 22px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .container-cards .destaque {
+        width: 48%; /* Ajustado para que fiquem dois cards lado a lado */
+        max-width: 280px; /* Mantido para controle da largura máxima */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
