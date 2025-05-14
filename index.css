@@ -142,13 +142,14 @@ body {
     font-size: 24px;
     padding: 15px;
     background-color: transparent;
-    border: none;
+    border: none;            /* Remove borda */
+    outline: none;           /* Remove contorno de foco */
+    box-shadow: none;        /* Remove sombra, se não quiser nenhum destaque */
     z-index: 1050;
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-decoration: none;
 }
 
@@ -165,7 +166,12 @@ body {
     font-size: 30px;
 }
 
-.glossario-btn:focus, .sobre-btn:focus, .float-btn:focus {
+.glossario-btn:focus,
+.sobre-btn:focus,
+.float-btn:focus,
+.glossario-btn:focus-visible,
+.sobre-btn:focus-visible,
+.float-btn:focus-visible {
     outline: none;
 }
 
@@ -177,6 +183,7 @@ body {
 .sobre-btn:hover {
     background-color: #8c918d00;
 }
+
 
 /* Navbar e footer */
 .navbar, footer {
