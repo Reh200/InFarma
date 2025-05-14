@@ -86,7 +86,7 @@ footer {
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.007);
     transition: background-color 0.3s;
 }
 

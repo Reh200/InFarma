@@ -103,8 +103,8 @@ body.dark-theme .area-card img {
     top: 20px;
     right: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 0.363);
+    background-color: rgba(0, 0, 0, 0.089);
+    color: rgba(255, 255, 255, 0.055);
     border: none;
     border-radius: 50%;
     font-size: 18px;
@@ -114,7 +114,7 @@ body.dark-theme .area-card img {
 }
 
 .theme-toggle-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Estilo para a descrição introdutória */

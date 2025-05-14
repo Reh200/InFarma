@@ -42,15 +42,29 @@ header p {
     margin: 0 auto;
 }
 
+/* Botão de alternância de tema – super discreto */
 #theme-toggle {
     position: absolute;
     top: 1rem;
     right: 1rem;
     background-color: transparent;
     border: none;
+    outline: none;
     font-size: 1.5rem;
-    color: var(--branco);
+    color: rgba(255, 255, 255, 0.05); /* Quase invisível */
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0.15;
+}
+
+#theme-toggle:hover {
+    color: rgba(255, 255, 255, 0.25); /* Um pouco mais visível ao passar o mouse */
+    transform: scale(1.05);
+    opacity: 0.4;
+}
+
+#theme-toggle:active {
+    transform: scale(0.95);
 }
 
 .content {
@@ -108,7 +122,6 @@ footer {
 }
 
 /* Tema Escuro */
-
 .dark-theme {
     background-color: #121212;
     color: #e0f0ff;
@@ -129,5 +142,10 @@ footer {
 }
 
 .dark-theme #theme-toggle {
-    color: var(--azul-claro);
+    color: rgba(255, 255, 255, 0.08); /* Discreto no fundo escuro */
+}
+
+.dark-theme #theme-toggle:hover {
+    color: rgba(255, 255, 255, 0.25);
+    opacity: 0.4;
 }

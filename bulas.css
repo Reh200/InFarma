@@ -39,8 +39,8 @@ body.dark-mode a {
 body.dark-mode button,
 body.dark-mode select {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid rgba(255, 255, 255, 0);
     opacity: 0.2;
     transition: opacity 0.3s ease;
 }
@@ -58,14 +58,14 @@ body.dark-mode select:hover {
     right: 20px;
     background-color: transparent;
     border: none;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.2);
+    font-size: 7px;
+    color: rgba(255, 255, 255, 0.014);
     cursor: pointer;
     z-index: 1050;
     transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Sombra suave para maior contraste */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Sombra suave para maior contraste */
     opacity: 0.2;
 }
 
@@ -82,12 +82,12 @@ body.dark-mode select:hover {
 /* Estilo do ícone do tema */
 .theme-toggle i.fas.fa-sun,
 .theme-toggle i.fas.fa-moon {
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.041);
 }
 
 body.dark-mode .theme-toggle i.fas.fa-sun,
 body.dark-mode .theme-toggle i.fas.fa-moon {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0);
 }
 
 /* Cabeçalho */
@@ -96,7 +96,7 @@ header {
     color: white;
     padding: 2rem 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.014);
 }
 
 header h1 {
