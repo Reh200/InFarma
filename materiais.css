@@ -160,17 +160,23 @@ p {
 /* Botão */
 .btn {
     display: inline-block;
-    background-color: #007bff;
-    color: white;
+    background-color: transparent;
+    color: #007bff;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
+    border: 1px solid #007bff; /* Borda colorida */
     border-radius: 6px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+.btn:focus {
+    outline: none;
 }
 
 /* Rodapé */
@@ -183,11 +189,12 @@ footer {
     text-align: center;
 }
 
+/* Estilo do botão de alternância de tema */
 button.theme-toggle {
     background-color: transparent;
     color: #007bff;
     padding: 10px 20px;
-    border: none;  /* Remover borda */
+    border: none; /* Remover borda */
     border-radius: 6px;
     position: fixed;
     top: 20px;
@@ -195,17 +202,22 @@ button.theme-toggle {
     cursor: pointer;
     z-index: 1000;
     font-size: 16px;
+    opacity: 0.1; /* Opacidade bem baixa para quase invisível */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
 }
 
 body.dark-mode button.theme-toggle {
-    color: #4faaff;  
+    color: #4faaff;
+    border: none;  /* Garantir que não tenha borda no modo escuro */
 }
 
+/* Efeito hover: aumenta a opacidade quando o usuário passa o mouse */
 button.theme-toggle:hover {
-    background-color: rgba(0, 123, 255, 0.1); 
+    opacity: 0.6; /* Opacidade mais alta ao passar o mouse */
 }
 
+/* Foco no botão */
 button.theme-toggle:focus {
-    outline: none; 
-    border: none; 
+    outline: none;
+    border: none; /* Remover borda */
 }

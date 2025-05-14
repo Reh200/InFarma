@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarmaMemory - Associe o Medicamento</title>
     <link rel="stylesheet" href="joguinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
     <header>
         <h1>🧠 FarmaMemory - Associe o Medicamento 💊</h1>
         <p class="subtitulo">Descubra qual é a categoria de cada medicamento!</p>
@@ -39,8 +45,24 @@
     <footer>
         <p>Desenvolvido por Aline Renata - Projeto Educacional 💙 | Medicamentos para fins educativos.</p>
     </footer>
-    
+
     <script src="joguinho.js"></script>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.getElementById('theme-icon').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+            }
+        });
+    </script>
 </body>
 
 </html>

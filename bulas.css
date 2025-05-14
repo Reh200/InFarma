@@ -1,17 +1,22 @@
-/* medicamentos.css */
+/* Reset e configuração global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
     color: #333;
-    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Modo escuro */
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode * {
@@ -19,6 +24,7 @@ body.dark-mode * {
     background-color: transparent;
 }
 
+/* Ajuste de cores para o modo escuro */
 body.dark-mode .result,
 body.dark-mode label,
 body.dark-mode h1,
@@ -37,32 +43,54 @@ body.dark-mode select {
     border: 1px solid rgba(255, 255, 255, 0.3);
     opacity: 0.2;
     transition: opacity 0.3s ease;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 50%;
-    padding: 15px;
-    z-index: 1050;
-    /* Garantir que o botão fique fixo no canto, sem mudar de lugar */
 }
 
+/* Estilo do botão para mudar o tema */
 body.dark-mode button:hover,
 body.dark-mode select:hover {
     opacity: 0.5;
 }
 
-/* Estilos para o botão */
-button {
+/* Estilo fixo do botão de alternância de tema */
+.theme-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    border-radius: 50%;
-    padding: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
     z-index: 1050;
-    /* Outros estilos podem ser adicionados aqui */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Sombra suave para maior contraste */
+    opacity: 0.2;
 }
 
+/* Efeito hover no botão de alternância de tema */
+.theme-toggle:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
 
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Estilo do ícone do tema */
+.theme-toggle i.fas.fa-sun,
+.theme-toggle i.fas.fa-moon {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .theme-toggle i.fas.fa-sun,
+body.dark-mode .theme-toggle i.fas.fa-moon {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Cabeçalho */
 header {
     background: linear-gradient(135deg, rgb(0, 123, 255) 0%, hwb(218 15% 1%) 100%);
     color: white;
@@ -76,6 +104,7 @@ header h1 {
     font-size: 2rem;
 }
 
+/* Navegação */
 nav {
     background-color: #333;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,10 +133,10 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #575757;
-    padding: 14px 25px;
-    /* aumenta o padding para efeito de destaque */
+    padding: 14px 25px; /* Aumenta o padding para efeito de destaque */
 }
 
+/* Seção principal */
 section {
     padding: 2rem;
     margin: 3rem auto;
@@ -150,6 +179,7 @@ section ul li strong {
     margin-bottom: 0.5rem;
 }
 
+/* Rodapé */
 footer {
     background-color: #333;
     color: white;
