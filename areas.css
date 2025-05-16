@@ -3,19 +3,41 @@ body {
     background: #f7f7f7;
     color: #333;
     font-family: 'Raleway', sans-serif;
-    padding: 20px;
+    padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */
+    overflow-x: hidden; /* Retira a rolagem lateral (horizontal) */
+    overflow-y: auto; /* Permite rolagem vertical sem a barra de rolagem visível */
 }
 
+/* Cabeçalho */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+    background-color: #003b8b; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    padding: 30px 20px; /* Padding para maior espaçamento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+    margin-bottom: 30px; /* Espaço abaixo do cabeçalho */
 }
 
-h1 {
-    font-size: 32px;
-    color: #003b8b;
-    margin-bottom: 10px;
+/* Título do cabeçalho */
+header h1 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    font-family: 'Raleway', sans-serif; /* Tipografia mais moderna */
+    font-weight: bold; /* Deixa o título mais forte */
+    margin: 0; /* Remove o espaço extra ao redor do título */
+    letter-spacing: 1px; /* Espaçamento entre as letras para dar uma sensação de modernidade */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+}
+
+/* Subtítulo ou descrição, se houver */
+header p {
+    font-size: 16px; /* Tamanho do texto do subtítulo */
+    color: rgba(255, 255, 255, 0.7); /* Cor do texto mais suave */
+    margin-top: 10px; /* Espaço entre o título e o subtítulo */
+    font-style: italic; /* Deixa o texto em itálico */
 }
 
 /* Containers dos cards */
@@ -25,6 +47,7 @@ h1 {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o restante da tela */
 }
 
 /* Estilo de cada card */
@@ -103,18 +126,32 @@ body.dark-theme .area-card img {
     top: 20px;
     right: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.089);
-    color: rgba(255, 255, 255, 0.055);
+    background-color: rgba(0, 0, 0, 0.05); /* Fundo quase invisível */
+    color: rgba(255, 255, 255, 0.3); /* Cor do ícone do botão bem suave */
     border: none;
     border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transição de cor */
 }
 
+/* Efeito ao passar o mouse */
 .theme-toggle-btn:hover {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1); /* Tornar o botão um pouco visível ao passar o mouse */
+    color: rgba(255, 255, 255, 0.7); /* Cor do ícone um pouco mais visível */
+}
+
+/* Modo escuro - botão */
+body.dark-theme .theme-toggle-btn {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo suave também no modo escuro */
+    color: rgba(0, 0, 0, 0.3); /* Cor suave no modo escuro */
+}
+
+/* Efeito ao passar o mouse no modo escuro */
+body.dark-theme .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Tornar o botão um pouco visível ao passar o mouse no modo escuro */
+    color: rgba(0, 0, 0, 0.7); /* Cor mais visível no modo escuro */
 }
 
 /* Estilo para a descrição introdutória */
@@ -142,3 +179,23 @@ body.dark-theme .intro-text {
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* Rodapé */
+footer {
+    background-color: rgb(37, 117, 252);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Faz o rodapé ocupar sempre o final da página */
+    box-shadow: none; /* Remove a borda do rodapé */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Modo escuro - Footer */
+body.dark-theme footer {
+    background-color: rgb(35, 35, 35);
+}

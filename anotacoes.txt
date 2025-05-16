@@ -11,3 +11,492 @@ Autor: Ricardo Coiro
 
     /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
     { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do Ramo Farmacêutico</title>
+    <link rel="stylesheet" href="areas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Áreas do Ramo Farmacêutico</h1>
+    </header>
+
+    <p class="intro-text">
+        O curso de Farmácia oferece uma ampla gama de possibilidades profissionais. Do cuidado direto com o paciente à
+        atuação em laboratórios, indústrias, pesquisa e estética, o farmacêutico pode escolher entre mais de 70 áreas de
+        especialização. Conheça algumas das principais atuações desse profissional essencial para a saúde e bem-estar da
+        sociedade.
+    </p>
+
+    <main class="area-container">
+        <!-- Seções de Áreas -->
+        <section class="area-card">
+            <img src="img/acupuntura.jpg" alt="Acupuntura">
+            <h2>Acupuntura</h2>
+            <p>Prática terapêutica que utiliza agulhas finas para tratar diversas condições de saúde.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/laboratorio-clinico.jpg" alt="Administração de Laboratório Clínico">
+            <h2>Administração de Laboratório Clínico</h2>
+            <p>Gestão de laboratórios especializados em exames clínicos, incluindo controle de qualidade e eficiência.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/administracao-farmaceutica.jpg" alt="Administração Farmacêutica">
+            <h2>Administração Farmacêutica</h2>
+            <p>Gestão de farmácias e serviços farmacêuticos, com foco em eficiência e atendimento ao cliente.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/administracao-hospitalar.jpg" alt="Administração Hospitalar">
+            <h2>Administração Hospitalar</h2>
+            <p>Gestão de recursos e processos em hospitais, focando na eficiência dos serviços farmacêuticos.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/analises-clinicas.jpg" alt="Análises Clínicas">
+            <h2>Análises Clínicas</h2>
+            <p>Realização de exames laboratoriais para diagnóstico e monitoramento da saúde.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/assistencia-domiciliar.jpg" alt="Assistência Domiciliar">
+            <h2>Assistência Domiciliar em Equipes Multidisciplinares</h2>
+            <p>Atuação em equipes de saúde para cuidados farmacêuticos no domicílio de pacientes.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/atendimento-pre-hospitalar.jpg" alt="Atendimento Pré-Hospitalar">
+            <h2>Atendimento Pré-Hospitalar de Urgência e Emergência</h2>
+            <p>Atuação em serviços de emergência, fornecendo cuidados farmacêuticos imediatos.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/auditoria-farmaceutica.jpg" alt="Auditoria Farmacêutica">
+            <h2>Auditoria Farmacêutica</h2>
+            <p>Avaliação e monitoramento de processos relacionados ao uso de medicamentos, garantindo conformidade.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/bacteriologia-clinica.jpg" alt="Bacteriologia Clínica">
+            <h2>Bacteriologia Clínica</h2>
+            <p>Estudo de bactérias e sua relação com doenças clínicas.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/banco-cordao-umbilical.jpg" alt="Banco de Cordão Umbilical">
+            <h2>Banco de Cordão Umbilical</h2>
+            <p>Armazenamento e preservação de células-tronco do cordão umbilical para tratamentos futuros.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/banco-leite-humano.jpg" alt="Banco de Leite Humano">
+            <h2>Banco de Leite Humano</h2>
+            <p>Doação e processamento de leite materno para bebês prematuros ou em situações de risco.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/banco-sangue.jpg" alt="Banco de Sangue">
+            <h2>Banco de Sangue</h2>
+            <p>Coleta, armazenamento e distribuição de sangue para transfusões.</p>
+        </section>
+
+        <!-- Repetir para cada uma das 72 áreas -->
+        <section class="area-card">
+            <img src="img/biofarmacia.jpg" alt="Biofarmácia">
+            <h2>Biofarmácia</h2>
+            <p>Estudo dos fatores que influenciam a biodisponibilidade dos medicamentos no organismo.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/biologia-molecular.jpg" alt="Biologia Molecular">
+            <h2>Biologia Molecular</h2>
+            <p>Pesquisa de aspectos moleculares relacionados a doenças e tratamentos farmacológicos.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/bioquimica-clinica.jpg" alt="Bioquímica Clínica">
+            <h2>Bioquímica Clínica</h2>
+            <p>Estudo das substâncias químicas no corpo humano para diagnosticar doenças.</p>
+        </section>
+
+        <section class="area-card">
+            <img src="img/bromatologia.jpg" alt="Bromatologia">
+            <h2>Bromatologia</h2>
+            <p>Estudo dos alimentos e suas propriedades, focando na qualidade e segurança alimentar.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/citologia-clinica.jpg" alt="Citologia Clínica">
+            <h2>Citologia Clínica</h2>
+            <p>Exame de células para detectar doenças e alterações patológicas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/citopatologia.jpg" alt="Citopatologia">
+            <h2>Citopatologia</h2>
+            <p>Estudo das células para diagnóstico de doenças, como câncer e infecções.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/citoquimica.jpg" alt="Citoquímica">
+            <h2>Citoquímica</h2>
+            <p>Análise das células com técnicas químicas para identificar alterações celulares.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/controle-qualidade-agua.jpg" alt="Controle de Qualidade e Tratamento de Água">
+            <h2>Controle de Qualidade e Tratamento de Água</h2>
+            <p>Monitoramento da qualidade da água e controle ambiental em diversas indústrias.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/controle-vetores-pragas.jpg" alt="Controle de Vetores e Pragas Urbanas">
+            <h2>Controle de Vetores e Pragas Urbanas</h2>
+            <p>Gestão e controle de pragas e vetores para evitar doenças transmitidas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/cosmetologia.jpg" alt="Cosmetologia">
+            <h2>Cosmetologia</h2>
+            <p>Desenvolvimento e análise de produtos cosméticos para cuidados com a pele e cabelo.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/exames-dna.jpg" alt="Exames de DNA">
+            <h2>Exames de DNA</h2>
+            <p>Realização de exames genéticos para diagnóstico de doenças hereditárias e paternidade.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/analise-fisico-quimica-solo.jpg" alt="Farmacêutico na Análise Físico-química do Solo">
+            <h2>Farmacêutico na Análise Físico-química do Solo</h2>
+            <p>Estudo das propriedades do solo para o desenvolvimento agrícola e ambiental.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-antroposofica.jpg" alt="Farmácia Antroposófica">
+            <h2>Farmácia Antroposófica</h2>
+            <p>Aplicação de terapias baseadas nos princípios da medicina antroposófica para tratar doenças.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-clinica.jpg" alt="Farmácia Clínica">
+            <h2>Farmácia Clínica</h2>
+            <p>Acompanhamento de pacientes para garantir o uso racional de medicamentos e tratamentos eficazes.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-comunitaria.jpg" alt="Farmácia Comunitária">
+            <h2>Farmácia Comunitária</h2>
+            <p>Atuação em farmácias de bairro, promovendo cuidados farmacêuticos e educação para a saúde.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-dispensacao.jpg" alt="Farmácia de Dispensação">
+            <h2>Farmácia de Dispensação</h2>
+            <p>Responsável pela entrega de medicamentos conforme prescrição médica e orientação ao paciente.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/fracionamento-medicamentos.jpg" alt="Fracionamento de Medicamentos">
+            <h2>Fracionamento de Medicamentos</h2>
+            <p>Processo de dividir medicamentos para pacientes que necessitam de dosagens específicas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-dermatologica.jpg" alt="Farmácia Dermatológica">
+            <h2>Farmácia Dermatológica</h2>
+            <p>Desenvolvimento e aplicação de produtos farmacêuticos voltados para cuidados com a pele.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-homeopatica.jpg" alt="Farmácia Homeopática">
+            <h2>Farmácia Homeopática</h2>
+            <p>Preparação de medicamentos homeopáticos para tratamento de doenças com remédios naturais.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-hospitalar.jpg" alt="Farmácia Hospitalar">
+            <h2>Farmácia Hospitalar</h2>
+            <p>Gestão de medicamentos em hospitais, com foco na segurança e eficácia dos tratamentos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-industrial.jpg" alt="Farmácia Industrial">
+            <h2>Farmácia Industrial</h2>
+            <p>Produção em larga escala de medicamentos e controle de qualidade em indústrias farmacêuticas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-magistral.jpg" alt="Farmácia Magistral">
+            <h2>Farmácia Magistral</h2>
+            <p>Preparação de medicamentos sob prescrição individualizada, conforme necessidade do paciente.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-nuclear.jpg" alt="Farmácia Nuclear (Radiofarmácia)">
+            <h2>Farmácia Nuclear (Radiofarmácia)</h2>
+            <p>Manipulação e controle de radiofármacos utilizados em diagnósticos e terapias com radiação.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-oncologica.jpg" alt="Farmácia Oncológica">
+            <h2>Farmácia Oncológica</h2>
+            <p>Desenvolvimento de tratamentos farmacológicos especializados em câncer.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-publica.jpg" alt="Farmácia Pública">
+            <h2>Farmácia Pública</h2>
+            <p>Atuação em farmácias públicas com foco na distribuição de medicamentos à população.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-veterinaria.jpg" alt="Farmácia Veterinária">
+            <h2>Farmácia Veterinária</h2>
+            <p>Desenvolvimento e manipulação de medicamentos voltados para a saúde animal.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacia-escola.jpg" alt="Farmácia-Escola">
+            <h2>Farmácia-Escola</h2>
+            <p>Ambiente de ensino e prática para estudantes de Farmácia, com atendimentos à comunidade.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacocinetica-clinica.jpg" alt="Farmacocinética Clínica">
+            <h2>Farmacocinética Clínica</h2>
+            <p>Estudo da absorção, distribuição, metabolismo e excreção dos medicamentos no organismo.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/farmacoepidemiologia.jpg" alt="Farmacoepidemiologia">
+            <h2>Farmacoepidemiologia</h2>
+            <p>Estudo dos efeitos dos medicamentos em grandes populações e sua distribuição.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/fitoterapia.jpg" alt="Fitoterapia">
+            <h2>Fitoterapia</h2>
+            <p>Uso de plantas medicinais para prevenção e tratamento de doenças.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/gases-misturas-terapeuticas.jpg" alt="Gases e Misturas de Uso Terapêutico">
+            <h2>Gases e Misturas de Uso Terapêutico</h2>
+            <p>Produção e controle de gases terapêuticos utilizados em tratamentos respiratórios.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/genetica-humana.jpg" alt="Genética Humana">
+            <h2>Genética Humana</h2>
+            <p>Estudo dos genes humanos e sua influência em doenças e características hereditárias.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/gerenciamento-residuos-saude.jpg" alt="Gerenciamento de Resíduos dos Serviços de Saúde">
+            <h2>Gerenciamento de Resíduos dos Serviços de Saúde</h2>
+            <p>Controle e destinação adequada de resíduos gerados em serviços de saúde.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/hematologia-clinica.jpg" alt="Hematologia Clínica">
+            <h2>Hematologia Clínica</h2>
+            <p>Estudo do sangue e dos distúrbios hematológicos, como anemias e leucemias.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/higiene-sanitaria.jpg" alt="Higiene Sanitária e Saúde Pública">
+            <h2>Higiene Sanitária e Saúde Pública</h2>
+            <p>Controle sanitário de ambientes e práticas de saúde pública para prevenção de doenças.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/industrializacao-medicamentos.jpg" alt="Industrialização de Medicamentos">
+            <h2>Industrialização de Medicamentos</h2>
+            <p>Processo de fabricação em larga escala de medicamentos com altos padrões de qualidade.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/infusao-parenteral.jpg" alt="Infusão Parenteral">
+            <h2>Infusão Parenteral</h2>
+            <p>Preparação e administração de medicamentos por via intravenosa ou outras vias não digestivas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/hematologia-clinica.jpg" alt="Hematologia Clínica">
+            <h2>Hematologia Clínica</h2>
+            <p>Estudo das doenças do sangue, como anemias e leucemias, com foco no diagnóstico e tratamento.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/hemoterapia.jpg" alt="Hemoterapia">
+            <h2>Hemoterapia</h2>
+            <p>Tratamento com sangue e seus componentes, como transfusões para pacientes com necessidades específicas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/histopatologia.jpg" alt="Histopatologia">
+            <h2>Histopatologia</h2>
+            <p>Estudo de tecidos biológicos para diagnóstico de doenças, especialmente cânceres e infecções.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/histoquimica.jpg" alt="Histoquímica">
+            <h2>Histoquímica</h2>
+            <p>Técnicas para analisar e identificar compostos químicos em tecidos biológicos para diagnósticos precisos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/imunocitoquimica.jpg" alt="Imunocitoquímica">
+            <h2>Imunocitoquímica</h2>
+            <p>Aplicação de técnicas químicas e imunológicas para identificar componentes celulares e patológicos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/imunogenetica.jpg" alt="Imunogenética e Histocompatibilidade">
+            <h2>Imunogenética e Histocompatibilidade</h2>
+            <p>Estudo dos genes que influenciam a resposta imunológica e a compatibilidade em transplantes.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/imunohistoquimica.jpg" alt="Imunohistoquímica">
+            <h2>Imunohistoquímica</h2>
+            <p>Técnica para detectar antígenos específicos em tecidos e células, fundamental em pesquisas médicas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/imunologia-clinica.jpg" alt="Imunologia Clínica">
+            <h2>Imunologia Clínica</h2>
+            <p>Estudo e tratamento de doenças imunológicas, como alergias, doenças autoimunes e infecções.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/imunopatologia.jpg" alt="Imunopatologia">
+            <h2>Imunopatologia</h2>
+            <p>Estudo das doenças causadas por alterações no sistema imunológico, como doenças autoimunes.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/meio-ambiente.jpg" alt="Meio Ambiente, Segurança no Trabalho e Saúde Ocupacional">
+            <h2>Meio Ambiente, Segurança no Trabalho e Saúde Ocupacional</h2>
+            <p>Gestão e controle de riscos ambientais e de saúde no ambiente de trabalho, promovendo segurança.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/micologia-clinica.jpg" alt="Micologia Clínica">
+            <h2>Micologia Clínica</h2>
+            <p>Estudo de fungos patogênicos para diagnóstico de infecções fúngicas e doenças relacionadas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/microbiologia-clinica.jpg" alt="Microbiologia Clínica">
+            <h2>Microbiologia Clínica</h2>
+            <p>Estudo de microorganismos causadores de doenças, como bactérias, vírus, fungos e parasitas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/nutricao-parenteral.jpg" alt="Nutrição Parenteral">
+            <h2>Nutrição Parenteral</h2>
+            <p>Administração de nutrientes diretamente na corrente sanguínea para pacientes com necessidades específicas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/parasitologia-clinica.jpg" alt="Parasitologia Clínica">
+            <h2>Parasitologia Clínica</h2>
+            <p>Estudo de parasitas humanos, como vermes e protozoários, com diagnóstico e tratamento de infecções.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/saude-publica.jpg" alt="Saúde Pública">
+            <h2>Saúde Pública</h2>
+            <p>Promoção de políticas de saúde coletiva e prevenção de doenças em larga escala na população.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-clinica.jpg" alt="Toxicologia Clínica">
+            <h2>Toxicologia Clínica</h2>
+            <p>Estudo e diagnóstico de envenenamentos e intoxicações, bem como tratamentos para reduzir seus efeitos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-ambiental.jpg" alt="Toxicologia Ambiental">
+            <h2>Toxicologia Ambiental</h2>
+            <p>Estudo dos efeitos de substâncias tóxicas no meio ambiente e sua relação com a saúde humana.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-alimentos.jpg" alt="Toxicologia de Alimentos">
+            <h2>Toxicologia de Alimentos</h2>
+            <p>Estudo dos efeitos de substâncias químicas presentes em alimentos e sua segurança para consumo.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-desportiva.jpg" alt="Toxicologia Desportiva">
+            <h2>Toxicologia Desportiva</h2>
+            <p>Estudo do uso de substâncias no esporte, como doping, e seus efeitos no corpo humano.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-farmaceutica.jpg" alt="Toxicologia Farmacêutica">
+            <h2>Toxicologia Farmacêutica</h2>
+            <p>Estudo dos efeitos adversos dos medicamentos e substâncias químicas em seres humanos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-forense.jpg" alt="Toxicologia Forense">
+            <h2>Toxicologia Forense</h2>
+            <p>Aplicação da toxicologia em investigações criminais, como envenenamentos e substâncias ilícitas.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-ocupacional.jpg" alt="Toxicologia Ocupacional">
+            <h2>Toxicologia Ocupacional</h2>
+            <p>Estudo dos efeitos de substâncias químicas no ambiente de trabalho e suas implicações na saúde dos trabalhadores.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/toxicologia-veterinaria.jpg" alt="Toxicologia Veterinária">
+            <h2>Toxicologia Veterinária</h2>
+            <p>Estudo de substâncias tóxicas em animais, com foco na prevenção e tratamento de envenenamentos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/vigilancia-sanitaria.jpg" alt="Vigilância Sanitária">
+            <h2>Vigilância Sanitária</h2>
+            <p>Fiscalização de produtos e serviços relacionados à saúde, incluindo medicamentos, alimentos e cosméticos.</p>
+        </section>
+        
+        <section class="area-card">
+            <img src="img/virologia-clinica.jpg" alt="Virologia Clínica">
+            <h2>Virologia Clínica</h2>
+            <p>Estudo de vírus e suas doenças associadas, com diagnóstico e prevenção de infecções virais.</p>
+        </section>        
+        
+    </main>
+
+    <button class="theme-toggle-btn" onclick="toggleTheme()"></button>
+
+    <script>
+        // Função para alternar entre o tema claro e escuro
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 InFarma - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -144,23 +144,18 @@ body {
     background-color: transparent;
     border: none;            /* Remove borda */
     outline: none;           /* Remove contorno de foco */
-    box-shadow: none;        /* Remove sombra, se não quiser nenhum destaque */
+    box-shadow: none;        /* Remove sombra */
     z-index: 1050;
     color: #fff;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transição do zoom */
     border-radius: 50%;
     text-decoration: none;
 }
 
-.float-btn { bottom: 140px; }
 .glossario-btn { bottom: 80px; }
 .sobre-btn { bottom: 20px; }
-
-.glossario-btn:hover, .sobre-btn:hover, .float-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
+.float-btn { bottom: 140px; }
 
 .glossario-btn i, .sobre-btn i, .float-btn i {
     font-size: 30px;
@@ -180,10 +175,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.sobre-btn:hover {
-    background-color: #8c918d00;
+/* Efeito de zoom ao passar o mouse */
+.glossario-btn:hover, .sobre-btn:hover, .float-btn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
 }
-
 
 /* Navbar e footer */
 .navbar, footer {
