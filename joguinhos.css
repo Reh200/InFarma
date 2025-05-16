@@ -1,0 +1,39 @@
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-jogos {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px 40px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .menu-jogos:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #777;
+    }
