@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧪 Desafio da Fórmula</title>
+  <link rel="stylesheet" href="game-formulas.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Botão para alternar o tema claro/escuro -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" onclick="toggleTheme()">
+    <i id="theme-icon" class="fas fa-moon"></i>
+  </button>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <h1>🧪 Desafio da Fórmula</h1>
+    <p class="subtitulo">Combine os princípios ativos corretos para cada medicamento!</p>
+  </header>
+
+  <!-- Controles do jogo -->
+  <section class="controle-jogo">
+    <div id="score" class="score" style="display: none;">✅ Pontuação: 0</div>
+    <button id="start-button" class="iniciar" onclick="startFormulaGame()">Iniciar Jogo</button>
+    <button id="restart-button" class="reiniciar" onclick="restartFormulaGame()" style="display: none;">Reiniciar</button>
+  </section>
+
+  <!-- Instruções de como jogar -->
+  <section class="instrucoes">
+    <h2>📋 Como Jogar</h2>
+    <ul>
+      <li>Você verá o nome de um medicamento comum.</li>
+      <li>Selecione os princípios ativos que fazem parte da sua fórmula.</li>
+      <li>Ganhe pontos ao acertar todas as combinações corretas!</li>
+    </ul>
+  </section>
+
+  <!-- Área dinâmica do jogo -->
+  <main>
+    <div id="formula-container" class="formula-container">
+      <!-- Conteúdo do jogo aparece aqui via JS -->
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Desenvolvido por Aline Renata - Projeto Educacional 💙 | Jogo educativo sobre medicamentos.</p>
+  </footer>
+
+  <!-- Script de alternância de tema -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+      const isDark = document.body.classList.contains("dark-theme");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      document.getElementById("theme-icon").className = isDark ? "fas fa-sun" : "fas fa-moon";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.body.classList.add("dark-theme");
+        document.getElementById("theme-icon").className = "fas fa-sun";
+      }
+    });
+  </script>
+
+  <!-- Script do jogo -->
+  <script src="game-formulas.js"></script>
+</body>
+
+</html>
