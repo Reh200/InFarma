@@ -104,10 +104,35 @@ button.reiniciar:active {
   transform: scale(0.98);
 }
 
+.btn-confirmar {
+  background-color: #35428a; /* mesmo azul dos botões */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+  background-color: #386c8e;
+  transform: scale(1.05);
+}
+
+.btn-confirmar:active {
+  transform: scale(0.98);
+}
+
+
+
 /* Container das fórmulas */
 .formula-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  grid-template-columns: 1fr; /* 1 coluna por padrão */
   gap: 20px; /* Espaçamento entre as colunas */
   max-width: 650px;
   margin: 20px auto;
