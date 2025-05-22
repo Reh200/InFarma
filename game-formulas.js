@@ -36,7 +36,7 @@ const formulas = [
     },
     {
         medicamento: "Losartana®",
-        opcoes: ["Losartana", "Captopril", "Enalapril", "Amlodipino"],
+        opcoes: ["Losartana", "Captopril", "Enalapril", "Anlodipino"],
         corretas: ["Losartana"]
     },
     {
@@ -116,21 +116,44 @@ const formulas = [
     },
     {
         medicamento: "Lisinopril®",
-        opcoes: ["Lisinopril", "Losartana", "Enalapril", "Amlodipino"],
+        opcoes: ["Lisinopril", "Losartana", "Enalapril", "Anlodipino"],
         corretas: ["Lisinopril"]
     }
 ];
 
 let currentIndex = 0;
-let score = 0;
 const erros = [];
 
+function embaralharArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function startFormulaGame() {
-  score = 0;
   currentIndex = 0;
   erros.length = 0;
-  document.getElementById("score").style.display = "none";
-  document.getElementById("restart-button").style.display = "none";
+
+  // Embaralhar as opções para cada fórmula
+  formulas.forEach(formula => {
+    formula.opcoes = embaralharArray([...formula.opcoes]);
+  });
+
+  // Esconder instruções e botão iniciar
+  const instrucoesSection = document.querySelector(".instrucoes");
+  if (instrucoesSection) instrucoesSection.style.display = "none";
+
+  const startBtn = document.getElementById("start-button");
+  if (startBtn) startBtn.style.display = "none";
+
+  const restartBtn = document.getElementById("restart-button");
+  if (restartBtn) restartBtn.style.display = "none";
+
+  const container = document.getElementById("formula-container");
+  if (container) container.innerHTML = "";
+
   mostrarPerguntas();
 }
 
@@ -148,18 +171,21 @@ function mostrarPerguntas() {
   const perguntaDiv = document.createElement("div");
   perguntaDiv.classList.add("pergunta");
 
+  // Número da pergunta
+  const numeroPergunta = document.createElement("p");
+  numeroPergunta.textContent = `Pergunta ${currentIndex + 1} de ${formulas.length}`;
+  numeroPergunta.style.fontWeight = "bold";
+  perguntaDiv.appendChild(numeroPergunta);
+
   const titulo = document.createElement("h2");
   titulo.textContent = `💊 Medicamento: ${formula.medicamento}`;
   perguntaDiv.appendChild(titulo);
-
-  const instrucoes = document.createElement("p");
-  instrucoes.textContent = "Selecione os princípios ativos corretos:";
-  perguntaDiv.appendChild(instrucoes);
 
   const form = document.createElement("form");
 
   formula.opcoes.forEach(opcao => {
     const label = document.createElement("label");
+    label.style.display = "block";
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "principio";
@@ -169,15 +195,15 @@ function mostrarPerguntas() {
     form.appendChild(label);
   });
 
-const botaoConfirmar = document.createElement("button");
-botaoConfirmar.type = "button";
-botaoConfirmar.textContent = "Confirmar";
-botaoConfirmar.classList.add("btn-confirmar"); // Aplica o estilo definido no CSS
-botaoConfirmar.onclick = () => verificarResposta(formula, form);
+  const botaoConfirmar = document.createElement("button");
+  botaoConfirmar.type = "button";
+  botaoConfirmar.textContent = "Confirmar";
+  botaoConfirmar.classList.add("btn-confirmar");
+  botaoConfirmar.onclick = () => verificarResposta(formula, form);
 
-form.appendChild(botaoConfirmar);
-perguntaDiv.appendChild(form);
-container.appendChild(perguntaDiv);
+  form.appendChild(botaoConfirmar);
+  perguntaDiv.appendChild(form);
+  container.appendChild(perguntaDiv);
 }
 
 function verificarResposta(formulaAtual, form) {
@@ -194,9 +220,7 @@ function verificarResposta(formulaAtual, form) {
 
   const isCorreto = JSON.stringify(corretas) === JSON.stringify(escolhidas);
 
-  if (isCorreto) {
-    score++;
-  } else {
+  if (!isCorreto) {
     erros.push({
       medicamento: formulaAtual.medicamento,
       corretas: corretas
@@ -209,12 +233,17 @@ function verificarResposta(formulaAtual, form) {
 
 function mostrarResultadoFinal() {
   const container = document.getElementById("formula-container");
-  container.innerHTML = `<h3>🎉 Fim do jogo!</h3>
-    <p>✅ Você acertou <strong>${score}</strong> de <strong>${formulas.length}</strong> medicamentos.</p>`;
+  container.innerHTML = `<h3>🎉 Fim do jogo!</h3>`;
 
-  if (erros.length > 0) {
+  const total = formulas.length;
+  const errosCount = erros.length;
+  const certasCount = total - errosCount;
+
+  container.innerHTML += `<p>✅ Você acertou <strong>${certasCount}</strong> medicamentos.</p>`;
+
+  if (errosCount > 0) {
+    container.innerHTML += `<p>❌ Você errou os seguintes medicamentos:</p>`;
     const listaErros = document.createElement("ul");
-    listaErros.innerHTML = "<strong>❌ Você errou os seguintes:</strong>";
     erros.forEach(erro => {
       const item = document.createElement("li");
       item.textContent = `${erro.medicamento} → Correto: ${erro.corretas.join(", ")}`;
@@ -223,5 +252,27 @@ function mostrarResultadoFinal() {
     container.appendChild(listaErros);
   }
 
-  document.getElementById("restart-button").style.display = "inline-block";
+  // Medicamentos certos (todos que não estão em erros)
+  const medicamentosErrados = erros.map(e => e.medicamento);
+  const certos = formulas
+    .filter(f => !medicamentosErrados.includes(f.medicamento))
+    .map(f => f.medicamento);
+
+  if (certos.length > 0) {
+    container.innerHTML += `<p>✅ Medicamentos acertados:</p>`;
+    const listaCertos = document.createElement("ul");
+    certos.forEach(nome => {
+      const item = document.createElement("li");
+      item.textContent = nome;
+      listaCertos.appendChild(item);
+    });
+    container.appendChild(listaCertos);
+  }
+
+  const restartBtn = document.getElementById("restart-button");
+  if (restartBtn) restartBtn.style.display = "inline-block";
+}
+
+function restartFormulaGame() {
+  startFormulaGame();
 }

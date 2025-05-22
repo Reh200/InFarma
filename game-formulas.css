@@ -16,8 +16,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Botão fixo no canto superior esquerdo */
 .botao-canto {
-  position: fixed;        /* Fixa no canto da tela */
+  position: fixed;
   top: 10px;
   left: 10px;
   background: transparent;
@@ -31,25 +32,28 @@ body {
   transition: opacity 0.2s, color 0.2s;
 }
 
-/* Aparece mais forte no hover */
 .botao-canto:hover {
   opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
 }
 
-/* Tema claro */
-.tema-claro .botao-canto {
-  color: #007BFF; /* Azul padrão */
-}
-
-/* Tema escuro */
-.tema-escuro .botao-canto {
-  color: #66B2FF; /* Azul mais claro */
-}
+/* Como seu HTML usa dark-theme, remova tema-claro/tema-escuro */
+/* Se quiser manter, adapte seu HTML para usar essas classes */
 
 /* Tema Escuro */
 body.dark-theme {
   background-color: #2c2c2c;
   color: #eaeaea;
+}
+
+/* Botão canto no tema escuro */
+body.dark-theme .botao-canto {
+  color: #66B2FF; /* azul claro */
+  opacity: 0.7;
+}
+
+body.dark-theme .botao-canto:hover {
+  opacity: 1;
 }
 
 /* Cabeçalho */
@@ -60,6 +64,7 @@ header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 0 auto 15px;
   max-width: 750px;
+  text-align: center;
 }
 
 header h1 {
@@ -157,13 +162,11 @@ button.reiniciar:active {
   transform: scale(0.98);
 }
 
-
-
 /* Container das fórmulas */
 .formula-container {
   display: grid;
-  grid-template-columns: 1fr; /* 1 coluna por padrão */
-  gap: 20px; /* Espaçamento entre as colunas */
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 650px;
   margin: 20px auto;
   padding: 20px;
@@ -200,7 +203,7 @@ button.reiniciar:active {
 
 /* Pontuação (oculta inicialmente) */
 #score {
-  display: none; /* Esconde a pontuação até o jogo começar */
+  display: none;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
@@ -222,6 +225,7 @@ button.reiniciar:active {
   transition: all 0.3s ease;
   max-height: 300px;
   overflow-y: auto;
+  text-align: left;
 }
 
 .instrucoes h2 {
@@ -337,4 +341,21 @@ body.dark-theme .theme-toggle {
 
 body.dark-theme .theme-toggle:hover {
   color: rgba(255, 255, 255, 0.25);
+}
+
+/* Scroll bar customizada para listas com overflow */
+.instrucoes::-webkit-scrollbar,
+.formula-container ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instrucoes::-webkit-scrollbar-thumb,
+.formula-container ul::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+.instrucoes::-webkit-scrollbar-thumb:hover,
+.formula-container ul::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }
