@@ -1,20 +1,67 @@
 const medicamentos = [
-    {
-      nome: "Cápsula",
-      imagem: "img/formas-med/capsula.png",
-      descricao: "Medicamento em cápsula facilita a ingestão e pode liberar o princípio ativo gradualmente."
-    },
-    {
-      nome: "Pomada",
-      imagem: "img/formas-med/pomada.png",
-      descricao: "Pomadas são usadas para aplicação tópica, geralmente sobre a pele ou mucosas."
-    },
-    {
-      nome: "Creme",
-      imagem: "img/formas-med/creme.png",
-      descricao: "Cremes têm base aquosa e são absorvidos rapidamente pela pele."
-    }
-  ];
+  {
+    nome: "Adesivo",
+    imagem: "img/formas-med/adesivo.png",
+    descricao: "Adesivos medicinais aplicados na pele liberam o princípio ativo lentamente.",
+    pista: "Você cola na pele para liberar o remédio devagar."
+  },
+  {
+    nome: "Cápsula",
+    imagem: "img/formas-med/capsula.png",
+    descricao: "Medicamento em cápsula facilita a ingestão e pode liberar o princípio ativo gradualmente.",
+    pista: "É uma 'bolinha' que você engole com água."
+  },
+  {
+    nome: "Comprimido",
+    imagem: "img/formas-med/comprimido.jpg",
+    descricao: "Comprimidos são doses sólidas e geralmente ingeridas com água.",
+    pista: "Um pequeno disco sólido que você toma para curar."
+  },
+  {
+    nome: "Creme",
+    imagem: "img/formas-med/creme.png",
+    descricao: "Cremes têm base aquosa e são absorvidos rapidamente pela pele.",
+    pista: "É suave e você passa na pele."
+  },
+  {
+    nome: "Drágea",
+    imagem: "img/formas-med/dragea.png",
+    descricao: "Drágeas são comprimidos revestidos para facilitar a deglutição e proteção do princípio ativo.",
+    pista: "Parecido com comprimido, mas com uma camada brilhante por fora."
+  },
+  {
+    nome: "Gel",
+    imagem: "img/formas-med/gel.jpg",
+    descricao: "Géis são usados para aplicação tópica, geralmente com efeito refrescante ou anti-inflamatório.",
+    pista: "É transparente e gelatinoso para passar na pele."
+  },
+  {
+    nome: "Injeção",
+    imagem: "img/formas-med/injecao.png",
+    descricao: "Injeções administram o medicamento diretamente na corrente sanguínea ou tecido.",
+    pista: "Aplicado com uma seringa."
+  },
+  {
+    nome: "Pomada",
+    imagem: "img/formas-med/pomada.png",
+    descricao: "Pomadas são usadas para aplicação tópica, geralmente sobre a pele ou mucosas.",
+    pista: "Parecido com creme, mas mais oleoso."
+  },
+  {
+    nome: "Spray",
+    imagem: "img/formas-med/spray.png",
+    descricao: "Sprays liberam o medicamento em forma de névoa para aplicação local.",
+    pista: "Você aperta e sai uma névoa fina."
+  },
+  {
+    nome: "Xarope",
+    imagem: "img/formas-med/xarope.png",
+    descricao: "Xaropes são líquidos adoçados usados para administração oral, especialmente em crianças.",
+    pista: "É doce e vem em líquido."
+  }
+];
+
+
   
   let current = 0;
   const grid = document.getElementById("puzzle");

@@ -1,49 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f8fb;
-    text-align: center;
-    padding: 20px;
-    color: #333;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .puzzle-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    justify-content: center;
-    margin: 20px auto;
-  }
-  
-  .puzzle-grid div {
-    width: 100px;
-    height: 100px;
-    background-size: 300px 300px;
-    cursor: grab;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #2962ff;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .descricao {
-    margin-top: 20px;
-    font-size: 1rem;
-    max-width: 500px;
-    margin-inline: auto;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: #f4f8fb;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Grid do puzzle */
+#puzzle {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#puzzle div {
+  width: 100px;
+  height: 100px;
+  background-size: 300px 300px;
+  cursor: grab;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  user-select: none;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+#puzzle div:active {
+  cursor: grabbing;
+  box-shadow: 0 4px 10px rgba(41, 98, 255, 0.6);
+}
+
+/* Botão */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2962ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0039cb;
+}
+
+/* Nome do medicamento */
+#med-nome {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 30px;
+  color: #222;
+  user-select: none;
+}
+
+/* Pista */
+#pista {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  margin: 10px auto 20px auto;
+  max-width: 500px;
+  user-select: none;
+}
+
+/* Descrição */
+#descricao {
+  margin-top: 20px;
+  font-size: 1rem;
+  max-width: 500px;
+  margin-inline: auto;
+  color: #333;
+  line-height: 1.4;
+  user-select: none;
+}

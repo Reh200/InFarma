@@ -5,19 +5,10 @@ Configuração GitHub
 git config --global user.name Reh200
 git config --global user.email alinerenata1400@gmail.com
 
-#pedido
-Livro: não quero um amor meia boca
-Autor: Ricardo Coiro 
-
     /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
     { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
 
-game-formulas.js
-game-formulas.css
-game-formulas.html
-game-memoria.js
-game-memoria.css
-game-memoria.html
+game-formulas.js  game-formulas.css  game-formulas.html  game-memoria.js  game-memoria.css  game-memoria.html
 
 https://www.iloveimg.com/pt/ > Editor de imagens
 
@@ -36,3 +27,14 @@ Transdérmicas
 (Ex.: adesivos, patches)
 Supositórios e Óvulos
 (Formas para administração retal ou vaginal)
+
+img/formas-med/adesivo.png 
+img/formas-med/capsula.png 
+img/formas-med/comprimido.jpg 
+img/formas-med/creme.png 
+img/formas-med/dragea.png 
+img/formas-med/gel.jpg 
+img/formas-med/injecao.png 
+img/formas-med/pomada.png 
+img/formas-med/spray.png 
+img/formas-med/xarope.png
