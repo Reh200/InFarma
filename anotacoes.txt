@@ -19,24 +19,20 @@ game-memoria.js
 game-memoria.css
 game-memoria.html
 
+https://www.iloveimg.com/pt/ > Editor de imagens
+
 Formas Medicamentosas - Categorias Gerais
 Sólidas
 (Ex.: comprimidos, cápsulas, pós)
-
 Líquidas
 (Ex.: soluções, xaropes, suspensões)
-
 Semissólidas
 (Ex.: cremes, pomadas, géis)
-
 Inalatórias
 (Ex.: sprays, aerossóis)
-
 Injetáveis
 (Ex.: injeções, vacinas)
-
 Transdérmicas
 (Ex.: adesivos, patches)
-
 Supositórios e Óvulos
 (Formas para administração retal ou vaginal)
