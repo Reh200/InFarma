@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🧩 Quebra-Cabeça Farmacêutico</title>
   <link rel="stylesheet" href="game-quebraCabeca.css" />
 </head>
@@ -10,17 +10,20 @@
   <main class="container">
     <h1>🧩 Monte a Forma Farmacêutica</h1>
 
-    <p id="med-nome"></p>
-    <p id="pista"></p>
+    <!-- Nome do medicamento (usei <div> para mais controle de estilo) -->
+    <div id="med-nome" style="font-weight: 700; font-size: 1.4rem; min-height: 32px; color: #003366;"></div>
+
+    <!-- Pista do quebra-cabeça -->
+    <div id="pista"></div>
 
     <!-- Grid do quebra-cabeça -->
     <div id="puzzle" class="puzzle-grid"></div>
 
+    <!-- Descrição detalhada do medicamento -->
     <div id="descricao" class="descricao"></div>
 
-    <!-- Botões -->
+    <!-- Botão reiniciar -->
     <button id="reiniciar" onclick="reiniciarJogo()">🔄 Reiniciar</button>
-    <button id="próximo" onclick="carregarNovoPuzzle()">🔄 Próximo</button>
   </main>
 
   <script src="game-quebraCabeca.js"></script>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* === CONFIGURAÇÃO GLOBAL === */
 body {
   margin: 0;
@@ -119,3 +120,126 @@ footer {
     font-size: 0.8em;
   }
 }
+=======
+/* === CONFIGURAÇÃO GLOBAL === */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 20px; /* Ajustando o tamanho do cabeçalho */
+  border-bottom: 2px solid #0056b3; /* Linha de separação para maior leveza */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em; /* Menor tamanho de fonte */
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Fonte mais clean */
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 5px;
+  font-weight: 400;
+  color: #f5f5f5; /* Cor mais suave */
+}
+
+/* === MENU DE JOGOS === */
+main {
+  padding: 40px 20px;
+  flex-grow: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-jogos {
+  display: block;
+  margin: 10px 0;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-jogos:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.menu-jogos span {
+  margin-left: 10px;
+  font-size: 1.1em;
+}
+
+/* === BOTÃO DE VOLTAR === */
+.botao-canto {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #007BFF; /* Cor de fundo azul */
+  color: white;
+  font-size: 1.2em; /* Tamanho de fonte confortável */
+  padding: 10px 15px; /* Espaçamento ao redor do texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-decoration: none; /* Remover sublinhado */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animação suave */
+  z-index: 1000; /* Garantir que o botão fique visível em cima do conteúdo */
+}
+
+.botao-canto:hover {
+  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.botao-canto:active {
+  background-color: #004085; /* Cor ainda mais escura quando clicado */
+  transform: scale(1); /* Desfaz o efeito de zoom no clique */
+}
+
+/* === RODAPÉ === */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em; /* Ajuste no tamanho do título em dispositivos menores */
+  }
+
+  .menu-jogos {
+    font-size: 1.1em;
+    padding: 12px 25px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+>>>>>>> 71e0b2d15caeb2f70b77517caca6fdd0409b3bc1
