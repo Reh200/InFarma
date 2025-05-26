@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🧩 Formas Medicamentosas</title>
+  <title>🧩 Quebra-Cabeça Farmacêutico</title>
   <link rel="stylesheet" href="game-quebraCabeca.css" />
 </head>
 <body>
-  <main>
-    <h1>🧪 Monte a Forma Farmacêutica</h1>
+  <main class="container">
+    <h1>🧩 Monte a Forma Farmacêutica</h1>
 
     <p id="med-nome"></p>
     <p id="pista"></p>
 
-    <div id="puzzle"></div>
+    <!-- Grid do quebra-cabeça -->
+    <div id="puzzle" class="puzzle-grid"></div>
 
     <div id="descricao" class="descricao"></div>
 
-    <button onclick="carregarNovoPuzzle()">🔄 Próximo</button>
+    <!-- Botões -->
+    <button id="reiniciar" onclick="reiniciarJogo()">🔄 Reiniciar</button>
+    <button id="próximo" onclick="carregarNovoPuzzle()">🔄 Próximo</button>
   </main>
+
   <script src="game-quebraCabeca.js"></script>
 </body>
 </html>

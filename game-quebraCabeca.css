@@ -1,86 +1,108 @@
+/* Estilos gerais */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f8fb;
-  text-align: center;
-  padding: 20px;
-  color: #333;
-}
-
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-/* Grid do puzzle */
-#puzzle {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
   justify-content: center;
-  margin: 20px auto;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-#puzzle div {
-  width: 100px;
-  height: 100px;
-  background-size: 300px 300px;
-  cursor: grab;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  user-select: none;
-  border: 1px solid transparent;
-  transition: border-color 0.3s ease;
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
-#puzzle div:active {
-  cursor: grabbing;
-  box-shadow: 0 4px 10px rgba(41, 98, 255, 0.6);
-}
-
-/* Botão */
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #2962ff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0039cb;
-}
-
-/* Nome do medicamento */
-#med-nome {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-top: 30px;
-  color: #222;
-  user-select: none;
+/* Título */
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Pista */
 #pista {
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 1.2em;
   color: #555;
-  margin: 10px auto 20px auto;
-  max-width: 500px;
-  user-select: none;
+  margin-top: 10px;
+  font-style: italic;
 }
 
-/* Descrição */
-#descricao {
+/* Estilo do quebra-cabeça */
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px 0;
+  width: 320px;
+  height: 320px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo das peças */
+.puzzle-grid div {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border: 2px solid #ccc;
+  background-size: 300px 300px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.puzzle-grid div:hover {
+  background-color: #b3b3b3;
+  transform: scale(1.1);
+}
+
+/* Descrição do medicamento */
+.descricao {
+  font-size: 1.1em;
+  color: #444;
   margin-top: 20px;
-  font-size: 1rem;
-  max-width: 500px;
-  margin-inline: auto;
-  color: #333;
-  line-height: 1.4;
-  user-select: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  display: none;
+  word-wrap: break-word;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Resposta Final */
+button:focus {
+  outline: none;
 }
