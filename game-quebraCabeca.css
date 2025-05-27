@@ -1,17 +1,17 @@
-/* Estilos gerais */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #c3e8ff, #ffffff);
   margin: 0;
-  padding: 20px 15px;
+  padding: 0; /* Removido para evitar rolagem */
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh; /* Preenche exatamente a altura da tela */
   flex-direction: column;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Impede rolagem */
 }
 
 .container {
@@ -23,6 +23,8 @@ body {
   max-width: 400px;
   text-align: center;
   user-select: none;
+  max-height: 95vh; /* Limita a altura para caber sem rolagem */
+  overflow-y: auto; /* Caso precise rolar internamente */
 }
 
 /* Título */
