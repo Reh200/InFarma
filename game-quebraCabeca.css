@@ -2,18 +2,19 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #c3e8ff, #ffffff);
   margin: 0;
-  padding: 0; /* Removido para evitar rolagem */
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Preenche exatamente a altura da tela */
+  height: 100vh;
   flex-direction: column;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden; /* Impede rolagem */
+  overflow: hidden;
 }
 
+/* Contêiner principal */
 .container {
   background-color: #fff;
   padding: 30px 25px;
@@ -23,8 +24,11 @@ body {
   max-width: 400px;
   text-align: center;
   user-select: none;
-  max-height: 95vh; /* Limita a altura para caber sem rolagem */
-  overflow-y: auto; /* Caso precise rolar internamente */
+  max-height: 95vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Título */
@@ -59,11 +63,12 @@ h1 {
   gap: 8px;
   margin: 28px auto 30px;
   width: 100%;
-  max-width: 360px; /* controlando max tamanho */
-  aspect-ratio: 1 / 1; /* garante quadrado perfeito */
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
   border-radius: 14px;
   background-color: #e8f1fa;
-  box-shadow: inset 0 0 12px #b0c7dd;
+  /* Remover bordas internas */
+  box-shadow: none;
   touch-action: manipulation;
 }
 
@@ -71,7 +76,7 @@ h1 {
 .puzzle-grid div {
   background-color: #d9e6f6;
   border: 2.5px solid #a8bddb;
-  background-size: 360px 360px; /* tamanho da imagem da grade */
+  background-size: 360px 360px;
   background-repeat: no-repeat;
   cursor: grab;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s ease;
@@ -108,6 +113,22 @@ h1 {
   font-weight: 600;
 }
 
+/* Efeito de conclusão do quebra-cabeça */
+.puzzle-completo .puzzle-grid div {
+  background-color: #c9f7cc; /* Cor de fundo quando o puzzle é concluído */
+  transform: scale(1.2);
+  animation: glow 0.8s ease-in-out infinite alternate; /* Efeito de brilho */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  100% {
+    box-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00;
+  }
+}
+
 /* Botões */
 button {
   padding: 14px 28px;
@@ -119,10 +140,10 @@ button {
   font-size: 1.2rem;
   font-weight: 700;
   transition: background-color 0.3s ease;
-  margin: 20px auto 0 auto; /* margem horizontal automática para centralizar */
+  margin: 20px auto 0 auto;
   min-width: 130px;
   box-shadow: 0 5px 15px rgba(0, 86, 179, 0.35);
-  display: block; /* botão ocupa linha inteira para centralizar */
+  display: block;
 }
 
 button:hover {
@@ -131,4 +152,64 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .puzzle-grid {
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+  }
+
+  .descricao {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  /* Ajuste para a navegação e título */
+  header {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  /* Menu de navegação */
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #d9e6f6;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav a:hover {
+    background-color: #a8bcd9;
+    transform: scale(1.05);
+  }
 }

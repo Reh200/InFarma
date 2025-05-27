@@ -63,7 +63,7 @@ const medicamentos = [
 
 let current = 0;
 const GRID_SIZE = 4; // 4x4
-const PIECE_SIZE = 70; // tamanho das peças em px
+const PIECE_SIZE = 70; // Tamanho das peças em px
 const grid = document.getElementById("puzzle");
 const pistaElement = document.getElementById("pista");
 const descricao = document.getElementById("descricao");
@@ -73,7 +73,7 @@ let peçaEmMovimento = null;
 let autoTimer = null;
 
 function carregarNovoPuzzle() {
-  clearTimeout(autoTimer);
+  clearTimeout(autoTimer); // Limpa o timer anterior se houver
   grid.innerHTML = "";
   descricao.style.display = "none";
   pistaElement.textContent = medicamentos[current].pista;
@@ -82,6 +82,7 @@ function carregarNovoPuzzle() {
   const imgUrl = medicamentos[current].imagem;
   const peças = [];
 
+  // Cria as peças do quebra-cabeça
   for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
     const peça = document.createElement("div");
     const row = Math.floor(i / GRID_SIZE);
@@ -102,14 +103,21 @@ function carregarNovoPuzzle() {
     peças.push(peça);
   }
 
+  // Embaralha as peças de forma que a ordem delas seja única e aleatória
   shuffle(peças);
+
+  // Adiciona as peças ao grid
   peças.forEach(peça => grid.appendChild(peça));
+
+  // Remove a classe 'complete' para reiniciar o layout
+  grid.classList.remove("complete");
 }
 
 function shuffle(array) {
+  // Embaralha o array usando o algoritmo de Fisher-Yates (ou Knuth)
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    [array[i], array[j]] = [array[j], array[i]]; // Troca as peças
   }
 }
 
@@ -118,10 +126,12 @@ function verificaCompleto() {
 }
 
 function dragStart(e) {
+  console.log("Peça em movimento:", e.target);
   peçaEmMovimento = e.target;
 }
 
 function dragEnd() {
+  console.log("Drag terminou");
   peçaEmMovimento = null;
 }
 
@@ -132,9 +142,13 @@ function dragOver(e) {
 function drop(e) {
   e.preventDefault();
   const peçaAlvo = e.target;
+  console.log("Peça alvo:", peçaAlvo);
+
   if (peçaEmMovimento !== peçaAlvo && peçaAlvo.parentElement === grid) {
     const indexMovimento = parseInt(peçaEmMovimento.dataset.index);
     const indexAlvo = parseInt(peçaAlvo.dataset.index);
+
+    console.log(`Movendo de ${indexMovimento} para ${indexAlvo}`);
 
     // Troca os indexes
     peçaAlvo.dataset.index = indexMovimento;
@@ -147,16 +161,20 @@ function drop(e) {
 
     // Se finalizou, mostra descrição e ativa timer para próximo puzzle
     if (verificaCompleto()) {
+      console.log("Quebra-cabeça completo!");
       clearTimeout(autoTimer);
       descricao.style.display = "block";
       descricao.textContent = medicamentos[current].descricao;
       nomeElemento.textContent = medicamentos[current].nome;
 
+      // Adiciona a classe 'complete' para remover as divisões
+      grid.classList.add("complete");
+
       // Timer para ir para próximo puzzle em 7 segundos
       autoTimer = setTimeout(() => {
-        current = (current + 1) % medicamentos.length;
+        current = (current + 1) % medicamentos.length; // Avança para o próximo item ou reinicia no início
         carregarNovoPuzzle();
-      }, 7000);
+      }, 7000); // Delay de 7 segundos
     }
   }
 }
