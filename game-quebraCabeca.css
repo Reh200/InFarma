@@ -1,220 +1,154 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #c3e8ff, #ffffff);
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Corpo e base */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e6f2ff, #f9fbff);
   color: #222;
-  overflow: auto; /* Permite rolagem se necessário */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 /* Contêiner principal */
 .container {
-  background-color: #fff;
-  padding: 30px 25px;
-  border-radius: 16px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-  width: 95vw;
-  max-width: 400px;
-  text-align: center;
-  user-select: none;
-  max-height: 95vh;
-  overflow-y: auto;
+  height: 100vh; /* altura da tela toda */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  scroll-behavior: smooth;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* sem rolagem */
+  gap: 12px; /* espaçamento vertical entre elementos */
 }
 
 /* Título */
 h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
   color: #003366;
-  margin-bottom: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  letter-spacing: 1.2px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Nome do medicamento */
+#med-nome {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Pista */
 #pista {
-  font-size: 1.25rem;
-  color: #444;
-  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #555;
   font-style: italic;
-  min-height: 28px;
-  font-weight: 500;
-  line-height: 1.3;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-/* Grade do quebra-cabeça */
+/* Grid do quebra-cabeça */
 .puzzle-grid {
+/* ajuste para o quebra-cabeça ocupar o espaço restante */
+  flex-grow: 1;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  background-color: #e8f1fa;
+  border-radius: 14px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 2px;
-  margin: 28px auto 30px;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1 / 1;
-  border-radius: 14px;
-  background-color: #e8f1fa;
-  box-shadow: none;
-  touch-action: manipulation;
+  margin-top: 10px;
 }
 
-/* Peças */
+/* Peças do quebra-cabeça */
 .puzzle-grid div {
   background-color: #d9e6f6;
-  border: 1px solid #a8bddb;
-  background-size: 480px 480px;
+  border: 1.5px solid #a8bddb;
+  border-radius: 8px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   cursor: grab;
-  transition: transform 0.25s ease, background-color 0.35s ease;
+  transition: transform 0.3s ease, background-color 0.4s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   user-select: none;
-  width: 100%;
-  height: 100%;
 }
 
-/* Efeito hover nas peças */
 .puzzle-grid div:hover {
   background-color: #a8bcd9;
-  transform: scale(1.12);
-  cursor: grabbing;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: scale(1.08);
 }
 
 /* Descrição do medicamento */
-.descricao {
-  font-size: 1.2rem;
+#descricao {
+  font-size: 1rem;
   color: #2c3e50;
-  margin-top: 22px;
-  padding: 16px 18px;
-  background-color: #f0f6ff;
+  background-color: #ffffffdd;
+  padding: 16px;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 58, 112, 0.12);
+  max-width: 90vw;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 90px;
   display: none;
-  word-wrap: break-word;
-  min-height: 72px;
-  line-height: 1.4;
-  font-weight: 600;
+  transition: opacity 0.3s ease;
 }
 
-/* Efeito de conclusão do quebra-cabeça */
-.puzzle-completo .puzzle-grid div {
-  background-color: #c9f7cc;
-  transform: scale(1.2);
-  animation: glow 0.8s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-  }
-  100% {
-    box-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00;
-  }
-}
-
-/* Botões */
-button {
-  padding: 14px 28px;
-  background-color: #0056b3;
+#reiniciar {
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
   color: white;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.2rem;
+  border-radius: 24px;
+  font-size: 1rem;
   font-weight: 700;
-  transition: background-color 0.3s ease;
-  margin: 20px auto 0 auto;
-  min-width: 130px;
-  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.35);
-  display: block;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.35);
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
 }
 
-button:hover {
-  background-color: #003d7a;
+/* botão hover */
+#reiniciar:hover {
+  background: linear-gradient(90deg, #0056b3, #003f80);
+  transform: scale(1.05);
 }
 
-button:focus {
-  outline: none;
-}
-
-button:focus-visible {
-  outline: 3px solid #ffcc00;
-  outline-offset: 3px;
-}
-
-/* Responsividade para telas menores */
+/* Responsivo */
 @media (max-width: 480px) {
-  .container {
-    padding: 20px 15px;
-    width: 90vw;
+  h1 {
+    font-size: 1.5rem;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  #med-nome,
+  #pista,
+  #descricao {
+    font-size: 1rem;
+    padding: 10px;
   }
 
   .puzzle-grid {
-    max-width: 320px;
-    aspect-ratio: 1 / 1;
-    margin: 20px auto;
+    grid-template-columns: repeat(4, 1fr);
+    width: 95vw;
   }
 
-  .descricao {
-    font-size: 1rem;
-    padding: 12px 15px;
-  }
-
-  button {
+  #reiniciar {
     font-size: 1rem;
     padding: 12px 24px;
-  }
-
-  /* Ajuste para a navegação e título */
-  header {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  nav a {
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background-color: #d9e6f6;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  nav a:hover {
-    background-color: #a8bcd9;
-    transform: scale(1.05);
+    bottom: 16px;
   }
 }
