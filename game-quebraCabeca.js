@@ -1,69 +1,69 @@
 const medicamentos = [
   {
-    nome: "Adesivo Intradérmico",
-    imagem: "img/formas-med/adesivo.png",
-    descricao: "Adesivos intradérmicos aplicados na pele liberam o princípio ativo lentamente.",
-    pista: "Quase invisível, age por horas colado em você."
+    "nome": "Adesivo Intradérmico",
+    "imagem": "img/formas-med/adesivo.jpg",
+    "descricao": "Adesivos intradérmicos aplicados na pele liberam o princípio ativo lentamente.",
+    "pista": "Sem ser visto, sem ser sentido, sua presença muda você aos poucos."
   },
   {
-    nome: "Cápsula",
-    imagem: "img/formas-med/capsula.png",
-    descricao: "Medicamento em cápsula facilita a ingestão e pode liberar o princípio ativo gradualmente.",
-    pista: "Guarda por fora o que cura por dentro."
+    "nome": "Cápsula",
+    "imagem": "img/formas-med/capsula.png",
+    "descricao": "Medicamento em cápsula facilita a ingestão e pode liberar o princípio ativo gradualmente.",
+    "pista": "Parece uma casca frágil, mas guarda uma solução poderosa."
   },
   {
-    nome: "Comprimido",
-    imagem: "img/formas-med/comprimido.jpg",
-    descricao: "Comprimidos são doses sólidas e geralmente ingeridas com água.",
-    pista: "Pequeno e sólido, dissolve-se no corpo e na dor."
+    "nome": "Comprimido",
+    "imagem": "img/formas-med/comprimido.jpg",
+    "descricao": "Comprimidos são doses sólidas e geralmente ingeridas com água.",
+    "pista": "Minúsculo e firme, dissolve-se sem aviso, libertando seu potencial."
   },
   {
-    nome: "Creme",
-    imagem: "img/formas-med/creme.png",
-    descricao: "Forma semissólida aplicada sobre a pele para ação local.",
-    pista: "Branco ou claro, espalha-se com facilidade sobre o mal."
+    "nome": "Creme",
+    "imagem": "img/formas-med/creme.png",
+    "descricao": "Forma semissólida aplicada sobre a pele para ação local.",
+    "pista": "Desliza sem esforço, mas carrega um efeito profundo."
   },
   {
-    nome: "Drágea",
-    imagem: "img/formas-med/dragea.png",
-    descricao: "Drágeas têm revestimento duro e colorido, facilitando a ingestão.",
-    pista: "Parece doce, mas seu papel é sério."
+    "nome": "Drágea",
+    "imagem": "img/formas-med/dragea.png",
+    "descricao": "Drágeas têm revestimento duro e colorido, facilitando a ingestão.",
+    "pista": "Engana os olhos com sua cor vibrante, mas o que importa está dentro."
   },
   {
-    nome: "Gel",
-    imagem: "img/formas-med/gel.jpg",
-    descricao: "Gel é uma preparação tópica de consistência macia e transparente.",
-    pista: "Frio ao toque, penetra com precisão onde dói."
+    "nome": "Gel",
+    "imagem": "img/formas-med/gel.jpg",
+    "descricao": "Gel é uma preparação tópica de consistência macia e transparente.",
+    "pista": "Leve como o ar, mas atua com precisão onde mais se precisa."
   },
   {
-    nome: "Injeção",
-    imagem: "img/formas-med/injecao.png",
-    descricao: "Injeções administram o medicamento diretamente na corrente sanguínea.",
-    pista: "Rápido, direto e com agulha — sem rodeios."
+    "nome": "Injeção",
+    "imagem": "img/formas-med/injecao.png",
+    "descricao": "Injeções administram o medicamento diretamente na corrente sanguínea.",
+    "pista": "Sua chegada não é bem-vinda, mas sua ação é indispensável."
   },
   {
-    nome: "Pomada",
-    imagem: "img/formas-med/pomada.png",
-    descricao: "Pomadas são oleosas e usadas para tratamentos tópicos.",
-    pista: "Mais espessa que o creme, gruda e age devagar."
+    "nome": "Pomada",
+    "imagem": "img/formas-med/pomada.png",
+    "descricao": "Pomadas são oleosas e usadas para tratamentos tópicos.",
+    "pista": "Persistente e densa, luta contra o tempo para restaurar o equilíbrio."
   },
   {
-    nome: "Spray",
-    imagem: "img/formas-med/spray.png",
-    descricao: "Sprays são aplicados por pulverização e agem rapidamente.",
-    pista: "Basta um apertar e já está no ar."
+    "nome": "Spray",
+    "imagem": "img/formas-med/spray.png",
+    "descricao": "Sprays são aplicados por pulverização e agem rapidamente.",
+    "pista": "Basta um sopro e já começa sua jornada invisível de alívio."
   },
   {
-    nome: "Xarope",
-    imagem: "img/formas-med/xarope.png",
-    descricao: "Xaropes são soluções líquidas, geralmente doces, usadas por via oral.",
-    pista: "Doce e líquido, alivia devagar pela boca."
+    "nome": "Xarope",
+    "imagem": "img/formas-med/xarope.png",
+    "descricao": "Xaropes são soluções líquidas, geralmente doces, usadas por via oral.",
+    "pista": "Desce suavemente como um doce, mas trabalha arduamente contra o incômodo."
   }
 ];
 
 let current = 0;
-const GRID_SIZE = 4; // 4x4
-const PIECE_SIZE = 70; // Tamanho das peças em px
+const GRID_SIZE = 4;
+const PIECE_SIZE = 120;
 const grid = document.getElementById("puzzle");
 const pistaElement = document.getElementById("pista");
 const descricao = document.getElementById("descricao");
@@ -73,7 +73,7 @@ let peçaEmMovimento = null;
 let autoTimer = null;
 
 function carregarNovoPuzzle() {
-  clearTimeout(autoTimer); // Limpa o timer anterior se houver
+  clearTimeout(autoTimer);
   grid.innerHTML = "";
   descricao.style.display = "none";
   pistaElement.textContent = medicamentos[current].pista;
@@ -82,7 +82,6 @@ function carregarNovoPuzzle() {
   const imgUrl = medicamentos[current].imagem;
   const peças = [];
 
-  // Cria as peças do quebra-cabeça
   for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
     const peça = document.createElement("div");
     const row = Math.floor(i / GRID_SIZE);
@@ -90,6 +89,7 @@ function carregarNovoPuzzle() {
 
     peça.style.backgroundImage = `url(${imgUrl})`;
     peça.style.backgroundPosition = `-${col * PIECE_SIZE}px -${row * PIECE_SIZE}px`;
+    peça.style.backgroundSize = `${GRID_SIZE * PIECE_SIZE}px ${GRID_SIZE * PIECE_SIZE}px`;
     peça.style.width = "100%";
     peça.style.height = "100%";
     peça.dataset.index = i;
@@ -103,35 +103,34 @@ function carregarNovoPuzzle() {
     peças.push(peça);
   }
 
-  // Embaralha as peças de forma que a ordem delas seja única e aleatória
   shuffle(peças);
-
-  // Adiciona as peças ao grid
   peças.forEach(peça => grid.appendChild(peça));
-
-  // Remove a classe 'complete' para reiniciar o layout
   grid.classList.remove("complete");
 }
 
 function shuffle(array) {
-  // Embaralha o array usando o algoritmo de Fisher-Yates (ou Knuth)
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Troca as peças
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
 function verificaCompleto() {
-  return [...grid.children].every((el, idx) => parseInt(el.dataset.index) === idx);
+  const peças = Array.from(grid.children);
+  return peças.every((peça, index) => parseInt(peça.dataset.index) === index);
+}
+
+function desativarDrag() {
+  [...grid.children].forEach(peça => {
+    peça.setAttribute("draggable", false);
+  });
 }
 
 function dragStart(e) {
-  console.log("Peça em movimento:", e.target);
   peçaEmMovimento = e.target;
 }
 
 function dragEnd() {
-  console.log("Drag terminou");
   peçaEmMovimento = null;
 }
 
@@ -142,39 +141,34 @@ function dragOver(e) {
 function drop(e) {
   e.preventDefault();
   const peçaAlvo = e.target;
-  console.log("Peça alvo:", peçaAlvo);
 
   if (peçaEmMovimento !== peçaAlvo && peçaAlvo.parentElement === grid) {
-    const indexMovimento = parseInt(peçaEmMovimento.dataset.index);
-    const indexAlvo = parseInt(peçaAlvo.dataset.index);
+    const indexMovimento = peçaEmMovimento.dataset.index;
+    const indexAlvo = peçaAlvo.dataset.index;
 
-    console.log(`Movendo de ${indexMovimento} para ${indexAlvo}`);
-
-    // Troca os indexes
-    peçaAlvo.dataset.index = indexMovimento;
+    // Trocar os índices
     peçaEmMovimento.dataset.index = indexAlvo;
+    peçaAlvo.dataset.index = indexMovimento;
 
-    // Troca backgroundPosition para a peça parecer trocada visualmente
-    const tempStyle = peçaAlvo.style.backgroundPosition;
-    peçaAlvo.style.backgroundPosition = peçaEmMovimento.style.backgroundPosition;
-    peçaEmMovimento.style.backgroundPosition = tempStyle;
+    // Trocar visual
+    const posTemp = peçaEmMovimento.style.backgroundPosition;
+    peçaEmMovimento.style.backgroundPosition = peçaAlvo.style.backgroundPosition;
+    peçaAlvo.style.backgroundPosition = posTemp;
 
-    // Se finalizou, mostra descrição e ativa timer para próximo puzzle
-    if (verificaCompleto()) {
-      console.log("Quebra-cabeça completo!");
-      clearTimeout(autoTimer);
+    // Verifica se está completo e ainda não foi marcado como completo
+    if (verificaCompleto() && !grid.classList.contains("complete")) {
+      grid.classList.add("complete");
+
       descricao.style.display = "block";
       descricao.textContent = medicamentos[current].descricao;
       nomeElemento.textContent = medicamentos[current].nome;
 
-      // Adiciona a classe 'complete' para remover as divisões
-      grid.classList.add("complete");
+      desativarDrag(); // Opcional: impede interações após completar
 
-      // Timer para ir para próximo puzzle em 7 segundos
       autoTimer = setTimeout(() => {
-        current = (current + 1) % medicamentos.length; // Avança para o próximo item ou reinicia no início
+        current = (current + 1) % medicamentos.length;
         carregarNovoPuzzle();
-      }, 7000); // Delay de 7 segundos
+      }, 7000);
     }
   }
 }

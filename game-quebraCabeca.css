@@ -9,9 +9,9 @@ body {
   height: 100vh;
   flex-direction: column;
   color: #222;
+  overflow: auto; /* Permite rolagem se necessário */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
 }
 
 /* Contêiner principal */
@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 
 /* Título */
@@ -60,14 +61,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 8px;
+  gap: 2px;
   margin: 28px auto 30px;
   width: 100%;
-  max-width: 360px;
+  max-width: 480px;
   aspect-ratio: 1 / 1;
   border-radius: 14px;
   background-color: #e8f1fa;
-  /* Remover bordas internas */
   box-shadow: none;
   touch-action: manipulation;
 }
@@ -75,21 +75,22 @@ h1 {
 /* Peças */
 .puzzle-grid div {
   background-color: #d9e6f6;
-  border: 2.5px solid #a8bddb;
-  background-size: 360px 360px;
+  border: 1px solid #a8bddb;
+  background-size: 480px 480px;
   background-repeat: no-repeat;
   cursor: grab;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s ease;
+  transition: transform 0.25s ease, background-color 0.35s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   user-select: none;
   width: 100%;
   height: 100%;
 }
 
+/* Efeito hover nas peças */
 .puzzle-grid div:hover {
   background-color: #a8bcd9;
   transform: scale(1.12);
@@ -115,9 +116,9 @@ h1 {
 
 /* Efeito de conclusão do quebra-cabeça */
 .puzzle-completo .puzzle-grid div {
-  background-color: #c9f7cc; /* Cor de fundo quando o puzzle é concluído */
+  background-color: #c9f7cc;
   transform: scale(1.2);
-  animation: glow 0.8s ease-in-out infinite alternate; /* Efeito de brilho */
+  animation: glow 0.8s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -154,6 +155,11 @@ button:focus {
   outline: none;
 }
 
+button:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 480px) {
   .container {
@@ -187,7 +193,6 @@ button:focus {
     margin-bottom: 15px;
   }
 
-  /* Menu de navegação */
   nav {
     display: flex;
     flex-direction: column;
