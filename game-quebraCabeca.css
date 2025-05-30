@@ -58,7 +58,7 @@ h1 {
 
 /* Grid do quebra-cabeça */
 .puzzle-grid {
-/* ajuste para o quebra-cabeça ocupar o espaço restante */
+  /* ajuste para o quebra-cabeça ocupar o espaço restante */
   flex-grow: 1;
   width: 100%;
   max-width: 420px;
@@ -77,7 +77,7 @@ h1 {
   background-color: #d9e6f6;
   border: 1.5px solid #a8bddb;
   border-radius: 8px;
-  background-size: 100% 100%;
+  background-size: 480px 480px; /* Garantir que o fundo será do tamanho da imagem */
   background-repeat: no-repeat;
   cursor: grab;
   transition: transform 0.3s ease, background-color 0.4s ease;

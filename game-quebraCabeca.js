@@ -72,6 +72,17 @@ const nomeElemento = document.getElementById("med-nome");
 let peçaEmMovimento = null;
 let autoTimer = null;
 
+// Função para embaralhar a lista de medicamentos
+function shuffleMedicamentos(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// Embaralha a lista de medicamentos ao carregar a página
+shuffleMedicamentos(medicamentos);
+
 function carregarNovoPuzzle() {
   clearTimeout(autoTimer);
   grid.innerHTML = "";
@@ -159,22 +170,29 @@ function drop(e) {
     if (verificaCompleto() && !grid.classList.contains("complete")) {
       grid.classList.add("complete");
 
+      // Exibe a descrição e o nome do medicamento
       descricao.style.display = "block";
       descricao.textContent = medicamentos[current].descricao;
       nomeElemento.textContent = medicamentos[current].nome;
 
-      desativarDrag(); // Opcional: impede interações após completar
+      desativarDrag(); // Impede mais interações após completar
 
+      // Altera a imagem após um tempo (7 segundos)
       autoTimer = setTimeout(() => {
-        current = (current + 1) % medicamentos.length;
+        // Gera um índice aleatório para o próximo medicamento
+        current = Math.floor(Math.random() * medicamentos.length);
         carregarNovoPuzzle();
-      }, 7000);
+      }, 7000); // Aqui ele aguarda 7 segundos para mudar a imagem
     }
   }
 }
 
 function reiniciarJogo() {
   clearTimeout(autoTimer);
+
+  // Gera um índice aleatório para o próximo medicamento
+  current = Math.floor(Math.random() * medicamentos.length);
+
   carregarNovoPuzzle();
 }
 

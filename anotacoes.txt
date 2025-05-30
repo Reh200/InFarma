@@ -3,10 +3,8 @@ pode usar o atalho de teclado Shift + Alt + F no Windows.
 Quebra linha: Alt + Z
 
 Configuração GitHub
-
-
-
-
+git config --global user.name Reh200
+git config --global user.email alinerenata1400@gmail.com
 
     /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
     { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
