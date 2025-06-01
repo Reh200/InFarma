@@ -13,7 +13,7 @@ const medicamentos = [
   },
   {
     nome: "Comprimido",
-    imagem: "img/formas-med/comprimido.jpg",
+    imagem: "img/formas-med/comprimidos.jpg",
     descricao: "Comprimidos são doses sólidas e geralmente ingeridas com água.",
     pista: "Minúsculo e firme, dissolve-se sem aviso, libertando seu potencial."
   },
@@ -37,13 +37,13 @@ const medicamentos = [
   },
   {
     nome: "Injeção",
-    imagem: "img/formas-med/injecao.png",
+    imagem: "img/formas-med/injecao.jpg",
     descricao: "Injeções administram o medicamento diretamente na corrente sanguínea.",
     pista: "Sua chegada não é bem-vinda, mas sua ação é indispensável."
   },
   {
     nome: "Pomada",
-    imagem: "img/formas-med/pomada.png",
+    imagem: "img/formas-med/pomada.jpg",
     descricao: "Pomadas são oleosas e usadas para tratamentos tópicos.",
     pista: "Persistente e densa, luta contra o tempo para restaurar o equilíbrio."
   },
