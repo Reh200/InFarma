@@ -31,7 +31,7 @@ const medicamentos = [
   },
   {
     nome: "Gel",
-    imagem: "img/formas-med/gel.jpg",
+    imagem: "img/formas-med/gel.png",
     descricao: "Gel é uma preparação tópica de consistência macia e transparente.",
     pista: "Leve como o ar, mas atua com precisão onde mais se precisa."
   },
@@ -181,14 +181,14 @@ document.addEventListener("DOMContentLoaded", () => {
         pistaElement.style.display = "none";
         descricao.style.display = "block";
         descricao.textContent = medicamentos[current].descricao;
-        nomeElemento.textContent = medicamentos[current].nome;
+        nomeElemento.textContent = medicamentos[current].nome; // Mostra o nome do medicamento
 
         desativarDrag();
 
         autoTimer = setTimeout(() => {
           escolherNovoIndice();
           carregarNovoPuzzle();
-        }, 7000);
+        }, 7000); // Espera 7 segundos antes de mudar para o próximo puzzle
       }
     }
   }
