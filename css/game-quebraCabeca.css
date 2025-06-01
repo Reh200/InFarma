@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e base */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e6f2ff, #f9fbff);
+  color: #222;
+  overflow: hidden;
+}
+
+/* Container principal */
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px; /* Menor padding */
+  gap: 6px; /* Menor gap */
+  overflow: hidden;
+}
+
+/* Título */
+h1 {
+  font-size: 1.4rem; /* Menor fonte */
+  color: #003366;
+  text-align: center;
+}
+
+/* Nome do medicamento */
+#med-nome {
+  font-size: 1.1rem; /* Menor fonte */
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px; /* Menor margem */
+  text-align: center;
+  min-height: 1.2em; /* Ajuste para evitar salto */
+}
+
+/* Pista */
+#pista {
+  font-size: 0.95rem; /* Menor fonte */
+  color: #555;
+  font-style: italic;
+  margin-bottom: 10px; /* Menor margem */
+  text-align: center;
+  transition: opacity 0.3s ease;
+  min-height: 1em; /* Ajuste para evitar salto */
+}
+
+/* Grid do quebra-cabeça */
+#puzzle {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 460px; /* Reduzido */
+  aspect-ratio: 1 / 1;
+  background-color: #e8f1fa;
+  border-radius: 12px; /* Borda menor */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1px; /* Menor gap */
+  margin-top: 6px; /* Menor margem */
+}
+
+/* Peças do quebra-cabeça */
+.peça {
+  background-color: #d9e6f6;
+  border: 1.2px solid #a8bddb; /* Borda mais fina */
+  border-radius: 6px; /* Borda mais suave */
+  background-repeat: no-repeat;
+  cursor: grab;
+  transition: transform 0.3s ease, background-color 0.4s ease;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.peça:hover {
+  background-color: #a8bcd9;
+  transform: scale(1.04); /* Menor escala */
+}
+
+/* Descrição do medicamento */
+#descricao {
+  font-size: 0.9rem; /* Menor fonte */
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 12px; /* Menos padding */
+  border-radius: 10px; /* Borda mais suave */
+  max-width: 85vw; /* Reduzido para melhor ajuste */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Menos sombra */
+  text-align: center;
+  line-height: 1.4; /* Menor linha */
+  margin-bottom: 50px; /* Menor margem */
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Botão Reiniciar */
+#reiniciar {
+  padding: 6px 18px; /* Menor padding */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 0.9rem; /* Menor fonte */
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.35); /* Menos sombra */
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+#reiniciar:hover {
+  background: linear-gradient(90deg, #0056b3, #003f80);
+  transform: scale(1.03); /* Menor escala */
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem; /* Menor fonte */
+  }
+
+  #med-nome,
+  #pista,
+  #descricao {
+    font-size: 0.9rem; /* Menor fonte */
+    padding: 6px; /* Menos padding */
+  }
+
+  #puzzle {
+    width: 90vw; /* Menor largura */
+  }
+
+  #reiniciar {
+    font-size: 0.9rem; /* Menor fonte */
+    padding: 6px 14px; /* Menos padding */
+    bottom: 14px; /* Menor posição */
+  }
+}

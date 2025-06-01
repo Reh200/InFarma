@@ -1,0 +1,361 @@
+/* Reset e configuração global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 80px 20px 120px;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
+}
+
+/* Como seu HTML usa dark-theme, remova tema-claro/tema-escuro */
+/* Se quiser manter, adapte seu HTML para usar essas classes */
+
+/* Tema Escuro */
+body.dark-theme {
+  background-color: #2c2c2c;
+  color: #eaeaea;
+}
+
+/* Botão canto no tema escuro */
+body.dark-theme .botao-canto {
+  color: #66B2FF; /* azul claro */
+  opacity: 0.7;
+}
+
+body.dark-theme .botao-canto:hover {
+  opacity: 1;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 15px;
+  max-width: 750px;
+  text-align: center;
+}
+
+header h1 {
+  color: #244474;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+header .subtitulo {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Botões do cabeçalho */
+header button {
+  margin: 6px 0;
+  padding: 8px 14px;
+  background-color: #244474;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #3a69b3;
+}
+
+/* Estilo geral dos botões */
+button {
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.iniciar {
+  background-color: #35428a;
+}
+
+button.iniciar:hover {
+  background-color: #386c8e;
+  transform: scale(1.05);
+}
+
+button.iniciar:active {
+  transform: scale(0.98);
+}
+
+button.reiniciar {
+  background-color: #2e60a1;
+}
+
+button.reiniciar:hover {
+  background-color: #0a2a47;
+  transform: scale(1.05);
+}
+
+button.reiniciar:active {
+  transform: scale(0.98);
+}
+
+.btn-confirmar {
+  background-color: #35428a; /* mesmo azul dos botões */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+  background-color: #386c8e;
+  transform: scale(1.05);
+}
+
+.btn-confirmar:active {
+  transform: scale(0.98);
+}
+
+/* Container das fórmulas */
+.formula-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Ajustes nos títulos das perguntas */
+.formula-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #244474;
+}
+
+/* Estilo das perguntas e respostas */
+.formula-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Checkbox */
+.formula-container label {
+  display: block;
+  margin: 8px 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.formula-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Pontuação (oculta inicialmente) */
+#score {
+  display: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #244474;
+}
+
+/* Instruções */
+.instrucoes {
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 12px 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  max-width: 750px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.instrucoes h2 {
+  color: #0077b6;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.instrucoes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instrucoes li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+}
+
+.instrucoes li::before {
+  content: '✔';
+  color: #0077b6;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.instrucoes li:hover {
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  transform: translateX(5px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Rodapé */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9fbfd;
+  color: #244474;
+  text-align: center;
+  padding: 10px 20px;
+  border-top: 2px solid #cddbee;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+
+/* Tema escuro ajustado */
+body.dark-theme .formula-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .formula-container h2,
+body.dark-theme #score {
+  color: #66b2ff;
+}
+
+body.dark-theme .instrucoes {
+  background-color: #222;
+  color: #ddd;
+}
+
+body.dark-theme .instrucoes h2 {
+  color: #4fc3f7;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1050;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  padding: 6px;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.theme-toggle:hover {
+  opacity: 0.4;
+  transform: scale(1.05);
+  color: rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme .theme-toggle {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .theme-toggle:hover {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Scroll bar customizada para listas com overflow */
+.instrucoes::-webkit-scrollbar,
+.formula-container ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instrucoes::-webkit-scrollbar-thumb,
+.formula-container ul::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+.instrucoes::-webkit-scrollbar-thumb:hover,
+.formula-container ul::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}

@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.botao-canto {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.5;
+    z-index: 1000;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  
+  /* Hover: aumenta a visibilidade */
+  .botao-canto:hover {
+    opacity: 1;
+  }
+  
+  /* Tema claro: cor preta */
+  .tema-claro .botao-canto {
+    color: #000000;
+  }
+  
+  /* Tema escuro: cor branca (ou cinza claro para não ficar forte demais) */
+  .tema-escuro .botao-canto {
+    color: #dddddd;
+  }  
+  
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode * {
+    color: inherit;
+    background-color: transparent;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode span {
+    color: #ffffff;
+}
+
+body.dark-mode button,
+body.dark-mode .btn {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode select {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #4faaff;
+}
+
+body.dark-mode .result {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Seção de materiais */
+.materiais {
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+.materiais h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100px;
+    height: 120px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.item h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.livro {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.livro h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.livro p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #007bff; /* Borda colorida */
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007bff;
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilo do botão de alternância de tema */
+button.theme-toggle {
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none; /* Remover borda */
+    border-radius: 6px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0.1; /* Opacidade bem baixa para quase invisível */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+
+body.dark-mode button.theme-toggle {
+    color: #4faaff;
+    border: none;  /* Garantir que não tenha borda no modo escuro */
+}
+
+/* Efeito hover: aumenta a opacidade quando o usuário passa o mouse */
+button.theme-toggle:hover {
+    opacity: 0.6; /* Opacidade mais alta ao passar o mouse */
+}
+
+/* Foco no botão */
+button.theme-toggle:focus {
+    outline: none;
+    border: none; /* Remover borda */
+}
