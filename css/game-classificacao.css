@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 20px;
+  color: #333;
+}
+
+.effects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.effect {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: grab;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.groups {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.group {
+  width: 260px;
+  min-height: 210px;
+  padding: 15px 20px;
+  border: 2px dashed #bbb;
+  border-radius: 12px;
+  background: #e7f0f7;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+  transition: border-color 0.3s ease;
+}
+
+.group:hover {
+  border-color: #4caf50;
+}
+
+.group h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.correct {
+  background-color: #d0f0d7 !important;
+  border: 1px solid #4caf50 !important;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.incorrect {
+  background-color: #f9d6d5 !important;
+  border: 1px solid #e57373 !important;
+  box-shadow: 0 0 8px rgba(229, 83, 77, 0.5);
+}
+
+/* Resultado */
+#result {
+  margin-top: 25px;
+  padding: 25px 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: left;
+  color: #2f2f2f;
+}
+
+#result h3 {
+  margin-bottom: 15px;
+  color: #388e3c;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 6px;
+}
+
+#result ul {
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
+#result ul li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Botão de reset */
+#reset-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 26px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reset-btn:hover {
+  background-color: #388e3c;
+  box-shadow: 0 6px 14px rgba(56, 142, 60, 0.6);
+}
+
+/* Remover seleção do texto dos efeitos para evitar highlight durante drag */
+.effect, #reset-btn {
+  user-select: none;
+}

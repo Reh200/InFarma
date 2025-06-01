@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Classificação de Efeitos Colaterais</title>
+    <link rel="stylesheet" href="css/game-classificacao.css" />
+</head>
+
+<body>
+    <h1>🧪 Classifique os Efeitos Colaterais</h1>
+    <p>Arraste cada efeito colateral para o grupo correto:</p>
+
+    <div class="effects">
+        <div class="effect" draggable="true" data-type="leve" data-id="e1">Dor de cabeça</div>
+        <div class="effect" draggable="true" data-type="moderado" data-id="e2">Tontura</div>
+        <div class="effect" draggable="true" data-type="grave" data-id="e3">Agranulocitose</div>
+        <div class="effect" draggable="true" data-type="moderado" data-id="e4">Náusea</div>
+        <div class="effect" draggable="true" data-type="grave" data-id="e5">Lesão hepática</div>
+        <div class="effect" draggable="true" data-type="leve" data-id="e6">Sonolência</div>
+        <div class="effect" draggable="true" data-type="leve" data-id="e7">Boca seca</div>
+        <div class="effect" draggable="true" data-type="leve" data-id="e8">Coceira leve</div>
+        <div class="effect" draggable="true" data-type="moderado" data-id="e9">Aumento da pressão arterial</div>
+        <div class="effect" draggable="true" data-type="moderado" data-id="e10">Vômito</div>
+        <div class="effect" draggable="true" data-type="grave" data-id="e11">Reação alérgica severa</div>
+        <div class="effect" draggable="true" data-type="grave" data-id="e12">Insuficiência renal</div>
+        <div class="effect" draggable="true" data-type="leve" data-id="e13">Tosse seca</div>
+        <div class="effect" draggable="true" data-type="moderado" data-id="e14">Arritmia cardíaca</div>
+        <div class="effect" draggable="true" data-type="grave" data-id="e15">Convulsões</div>
+    </div>
+
+    <div class="groups">
+        <div class="group" id="leve" data-type="leve">
+            <h3>⚪ Leves</h3>
+        </div>
+        <div class="group" id="moderado" data-type="moderado">
+            <h3>🟠 Moderados</h3>
+        </div>
+        <div class="group" id="grave" data-type="grave">
+            <h3>🔴 Graves</h3>
+        </div>
+    </div>
+
+    <div id="result"></div>
+    <button id="reset-btn" style="display:none;">🔄 Jogar Novamente</button>
+
+    <script src="js/game-classificacao.js"></script>
+</body>
+
+</html>
