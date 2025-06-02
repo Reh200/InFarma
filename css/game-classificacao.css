@@ -6,6 +6,7 @@ body {
   color: #333;
 }
 
+/* Container de efeitos */
 .effects {
   display: flex;
   flex-wrap: wrap;
@@ -14,28 +15,38 @@ body {
   margin-bottom: 30px;
 }
 
+/* Bloco individual de efeito */
 .effect {
   background: #fff;
   border: 1px solid #ccc;
-  padding: 10px 15px;
+  padding: 8px 14px;
   cursor: grab;
   border-radius: 6px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   user-select: none;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  min-width: 90px;
+  max-width: 180px;
+  text-align: center;
+  font-size: 1rem;
 }
 
+/* Área de grupos de classificação */
 .groups {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 30px;
 }
 
 .group {
-  width: 260px;
-  min-height: 210px;
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 350px;
+  min-height: 220px;
   padding: 15px 20px;
   border: 2px dashed #bbb;
   border-radius: 12px;
@@ -55,6 +66,7 @@ body {
   color: #2e7d32;
 }
 
+/* Feedback de acerto/erro */
 .correct {
   background-color: #d0f0d7 !important;
   border: 1px solid #4caf50 !important;
@@ -67,7 +79,7 @@ body {
   box-shadow: 0 0 8px rgba(229, 83, 77, 0.5);
 }
 
-/* Resultado */
+/* Resultado da classificação */
 #result {
   margin-top: 25px;
   padding: 25px 30px;
@@ -122,7 +134,98 @@ body {
   box-shadow: 0 6px 14px rgba(56, 142, 60, 0.6);
 }
 
-/* Remover seleção do texto dos efeitos para evitar highlight durante drag */
+/* Evita seleção de texto em efeitos e botão */
 .effect, #reset-btn {
   user-select: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .groups {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group {
+    width: 90%;
+    max-width: none;
+    margin-bottom: 25px;
+  }
+
+  .effects {
+    justify-content: center;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .effect {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    min-width: 70px;
+    max-width: 140px;
+  }
+
+  #result {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  #reset-btn {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Footer fixo elegante */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9fbfd;
+  color: #244474;
+  text-align: center;
+  padding: 12px 20px;
+  border-top: 2px solid #cddbee;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Texto do footer */
+footer p {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 0.9rem;
+}
+
+footer strong {
+  color: #1b3a66;
+}
+
+footer small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #4a6572;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  footer {
+    font-size: 0.8rem;
+    padding: 14px 10px;
+  }
+
+  footer p {
+    margin: 4px 0;
+  }
+
+  footer small {
+    font-size: 0.75rem;
+  }
 }

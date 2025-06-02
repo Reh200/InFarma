@@ -2,11 +2,45 @@ const effects = document.querySelectorAll('.effect');
 const groups = document.querySelectorAll('.group');
 const resultDiv = document.getElementById('result');
 const resetBtn = document.getElementById('reset-btn');
-
 const originalContainer = document.querySelector('.effects');
 
-// Variável pra controlar quando o jogo acabou
+const startBtn = document.getElementById('start-btn');
+const restartBtn = document.getElementById('restart-btn');
+
 let jogoFinalizado = false;
+
+function habilitarArrastar(ativo) {
+  effects.forEach(effect => {
+    if (ativo) {
+      effect.setAttribute('draggable', 'true');
+    } else {
+      effect.removeAttribute('draggable');
+    }
+  });
+}
+
+// Controla visibilidade inicial
+startBtn.style.display = 'inline-block';
+restartBtn.style.display = 'none';
+originalContainer.style.display = 'none';
+document.querySelector('.groups').style.display = 'none';
+resetBtn.style.display = 'none';
+
+startBtn.addEventListener('click', () => {
+  startBtn.style.display = 'none';
+  restartBtn.style.display = 'inline-block';
+  originalContainer.style.display = 'flex';
+  document.querySelector('.groups').style.display = 'flex';
+  habilitarArrastar(true);
+});
+
+restartBtn.addEventListener('click', () => {
+  resetGame();
+});
+
+resetBtn.addEventListener('click', () => {
+  resetGame();
+});
 
 effects.forEach(effect => {
   effect.addEventListener('dragstart', e => {
@@ -38,7 +72,6 @@ groups.forEach(group => {
 
 function checkCompletion() {
   const total = effects.length;
-  // Contar quantos efeitos já estão dentro de algum grupo
   let classificados = 0;
 
   effects.forEach(effect => {
@@ -46,8 +79,8 @@ function checkCompletion() {
   });
 
   if (classificados === total) {
-    // Jogo acabou, avaliar acertos e erros
     jogoFinalizado = true;
+    habilitarArrastar(false);
 
     let correct = 0;
     let incorrect = 0;
@@ -62,13 +95,7 @@ function checkCompletion() {
       }
     });
 
-    // Montar lista das respostas corretas
-    const respostas = {
-      leve: [],
-      moderado: [],
-      grave: []
-    };
-
+    const respostas = { leve: [], moderado: [], grave: [] };
     effects.forEach(e => {
       respostas[e.dataset.type].push(e.textContent);
     });
@@ -90,13 +117,14 @@ function checkCompletion() {
     `;
 
     resetBtn.style.display = 'inline-block';
+    restartBtn.style.display = 'none'; // Oculta reiniciar ao finalizar o jogo
   } else {
     resultDiv.textContent = "";
     resetBtn.style.display = 'none';
   }
 }
 
-resetBtn.addEventListener('click', () => {
+function resetGame() {
   jogoFinalizado = false;
   effects.forEach(effect => {
     effect.classList.remove('correct', 'incorrect');
@@ -104,4 +132,10 @@ resetBtn.addEventListener('click', () => {
   });
   resultDiv.textContent = "";
   resetBtn.style.display = 'none';
-});
+
+  originalContainer.style.display = 'flex';
+  document.querySelector('.groups').style.display = 'flex';
+
+  habilitarArrastar(true);
+  restartBtn.style.display = 'inline-block';
+}
