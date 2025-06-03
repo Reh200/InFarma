@@ -6,6 +6,7 @@ const originalContainer = document.querySelector('.effects');
 
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
+const instructions = document.getElementById('instructions');
 
 let jogoFinalizado = false;
 
@@ -26,6 +27,7 @@ restartBtn.style.display = 'none';
 originalContainer.style.display = 'none';
 document.querySelector('.groups').style.display = 'none';
 resetBtn.style.display = 'none';
+instructions.style.display = 'block';  // Mostra instruções inicialmente
 
 startBtn.addEventListener('click', () => {
   startBtn.style.display = 'none';
@@ -33,6 +35,7 @@ startBtn.addEventListener('click', () => {
   originalContainer.style.display = 'flex';
   document.querySelector('.groups').style.display = 'flex';
   habilitarArrastar(true);
+  instructions.style.display = 'none';  // Oculta instruções ao iniciar
 });
 
 restartBtn.addEventListener('click', () => {
@@ -145,4 +148,5 @@ function resetGame() {
   habilitarArrastar(true);
   restartBtn.style.display = 'inline-block';
   startBtn.style.display = 'none'; // Esconde o botão de início durante o reinício
+  instructions.style.display = 'none'; // Oculta instruções no reinício do jogo
 }

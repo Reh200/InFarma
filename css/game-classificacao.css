@@ -1,30 +1,72 @@
 /* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* impede rolagem horizontal */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+#instructions {
   text-align: center;
-  background: #f8f8f8;
-  padding: 20px;
-  color: #333;
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #244474;
+}
+
+main {
+  flex: 1 0 auto; /* main ocupa o espaço disponível */
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - 140px); /* ajuste para dar espaço ao footer */
+  max-width: 100vw; /* evitar ultrapassar a largura da viewport */
+  overflow-wrap: break-word; /* garantir quebra de palavras se necessário */
 }
 
 /* Cabeçalho */
 header {
   text-align: center;
-  padding: 10px 20px; /* Reduzido o padding para um espaçamento mais compacto */
+  padding: 10px 20px;
+  max-width: 100vw;
+  overflow-wrap: break-word;
 }
 
 header h1 {
-  font-size: 2rem; /* Ajustei o tamanho da fonte para algo mais equilibrado */
-  margin: 10px 0; /* Ajustado o espaçamento da margem */
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700; /* Mais grossa */
+  font-size: 3rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  margin: 15px 0;
+  letter-spacing: 0.03em;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 header p {
   font-size: 1rem;
-  margin: 5px 0; /* Menor margem para o parágrafo */
+  margin: 5px 0;
 }
 
 /* Botões de Início e Reinício */
-#start-btn, #restart-btn {
+#start-btn,
+#restart-btn {
   padding: 12px 26px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -35,11 +77,19 @@ header p {
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(76, 127, 175, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  display: inline-block;
+  max-width: 300px;
+  width: 100%; /* responsivo */
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  box-sizing: border-box;
 }
 
-#start-btn:hover, #restart-btn:hover {
-  background-color: #3b79d6;
+#start-btn:hover,
+#restart-btn:hover {
+  background-color: #2d66b6;
   box-shadow: 0 6px 14px rgba(76, 127, 175, 0.4);
 }
 
@@ -50,6 +100,8 @@ header p {
   justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
+  max-width: 100vw;
+  overflow-wrap: break-word;
 }
 
 .effect {
@@ -61,16 +113,18 @@ header p {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   user-select: none;
-  white-space: nowrap;
+  white-space: normal;         /* permite quebra de linha */
+  word-wrap: break-word;       /* quebra palavras grandes */
+  overflow-wrap: break-word;   /* suporte adicional */
   flex: 0 0 auto;
   min-width: 110px;
   max-width: 180px;
   text-align: center;
   font-size: 1rem;
   margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
-/* Efeitos Arrastáveis */
 .effect:active {
   cursor: grabbing;
 }
@@ -90,9 +144,11 @@ header p {
 /* Área de Grupos de Classificação */
 .groups {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;           /* Permite quebra em telas menores */
+  justify-content: center;   /* Centraliza os grupos */
   gap: 30px;
   margin-top: 30px;
+  max-width: 100vw;
 }
 
 .group {
@@ -110,12 +166,17 @@ header p {
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .group h2 {
   font-size: 1.2rem;
-  color: #388e3c;
+  color: #02040f;
   margin-bottom: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .group:hover {
@@ -134,6 +195,9 @@ header p {
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   text-align: left;
   color: #2f2f2f;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 #result h3 {
@@ -159,7 +223,7 @@ header p {
 /* Botão de Reset */
 #reset-btn {
   display: inline-block;
-  margin-top: 30px;
+  margin: 30px auto 0 auto;
   padding: 12px 26px;
   font-size: 17px;
   cursor: pointer;
@@ -170,6 +234,11 @@ header p {
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+  user-select: none;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 #reset-btn:hover {
@@ -177,16 +246,8 @@ header p {
   box-shadow: 0 6px 14px rgba(56, 142, 60, 0.6);
 }
 
-/* Evita seleção de texto em efeitos e botões */
-.effect, #reset-btn {
-  user-select: none;
-}
-
 /* Footer */
 footer {
-  position: relative; /* Ajuste para a posição relativa (não fixa) */
-  bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #f9fbfd;
   color: #244474;
@@ -199,6 +260,8 @@ footer {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-shrink: 0; /* impede o footer de encolher */
+  box-sizing: border-box;
 }
 
 /* Texto do footer */
@@ -237,13 +300,10 @@ footer small {
     font-size: 0.8rem;
     padding: 14px 10px;
   }
-
   footer p {
     margin: 4px 0;
   }
-
   footer small {
     font-size: 0.75rem;
   }
 }
-
