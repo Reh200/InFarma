@@ -15,6 +15,9 @@
   </header>
 
   <main>
+    <button id="start-btn" aria-label="Iniciar Jogo">▶️ Iniciar</button>
+    <button id="restart-btn" style="display: none;" aria-label="Reiniciar Jogo">🔄 Reiniciar</button>
+
     <section class="effects" aria-label="Lista de efeitos colaterais">
       <div class="effect" draggable="true" data-type="leve" data-id="e1" tabindex="0">Dor de cabeça</div>
       <div class="effect" draggable="true" data-type="moderado" data-id="e2" tabindex="0">Tontura</div>
@@ -47,7 +50,7 @@
 
     <section id="result" aria-live="polite" role="region"></section>
 
-    <button id="reset-btn" style="display:none;" aria-label="Jogar novamente">🔄 Jogar Novamente</button>
+    <button id="reset-btn" style="display: none;" aria-label="Jogar novamente">🔄 Jogar Novamente</button>
   </main>
 
   <footer class="site-footer" role="contentinfo">

@@ -9,6 +9,7 @@ const restartBtn = document.getElementById('restart-btn');
 
 let jogoFinalizado = false;
 
+// Controla se os efeitos podem ser arrastados ou não
 function habilitarArrastar(ativo) {
   effects.forEach(effect => {
     if (ativo) {
@@ -42,34 +43,38 @@ resetBtn.addEventListener('click', () => {
   resetGame();
 });
 
+// Evento para iniciar o arrasto de um efeito
 effects.forEach(effect => {
   effect.addEventListener('dragstart', e => {
     if (jogoFinalizado) e.preventDefault();
-    else e.dataTransfer.setData('text/plain', effect.dataset.id);
+    else e.dataTransfer.setData('text/plain', effect.dataset.id); // Armazena o id do efeito
   });
 });
 
+// Eventos para as áreas de classificação (grupos)
 groups.forEach(group => {
   group.addEventListener('dragover', e => {
-    if (!jogoFinalizado) e.preventDefault();
+    e.preventDefault(); // Permite o drop
   });
 
   group.addEventListener('drop', e => {
     if (jogoFinalizado) return;
 
     e.preventDefault();
-    const id = e.dataTransfer.getData('text/plain');
-    const dragged = document.querySelector(`[data-id="${id}"]`);
+    const id = e.dataTransfer.getData('text/plain'); // Obtém o id do efeito arrastado
+    const dragged = document.querySelector(`[data-id="${id}"]`); // Seleciona o efeito arrastado
 
-    if (!dragged) return;
-    if (dragged.parentElement === group) return;
+    // Se o efeito não existir ou já estiver no grupo correto, não faz nada
+    if (!dragged || dragged.parentElement === group) return;
 
+    // Adiciona o efeito ao grupo
     group.appendChild(dragged);
 
-    checkCompletion();
+    checkCompletion(); // Verifica se o jogo foi finalizado
   });
 });
 
+// Função para checar se todos os efeitos foram classificados
 function checkCompletion() {
   const total = effects.length;
   let classificados = 0;
@@ -117,18 +122,19 @@ function checkCompletion() {
     `;
 
     resetBtn.style.display = 'inline-block';
-    restartBtn.style.display = 'none'; // Oculta reiniciar ao finalizar o jogo
+    restartBtn.style.display = 'none'; // Oculta o botão de reiniciar ao finalizar o jogo
   } else {
     resultDiv.textContent = "";
     resetBtn.style.display = 'none';
   }
 }
 
+// Função para resetar o jogo
 function resetGame() {
   jogoFinalizado = false;
   effects.forEach(effect => {
     effect.classList.remove('correct', 'incorrect');
-    originalContainer.appendChild(effect);
+    originalContainer.appendChild(effect); // Reposiciona os efeitos de volta ao container original
   });
   resultDiv.textContent = "";
   resetBtn.style.display = 'none';
@@ -138,4 +144,5 @@ function resetGame() {
 
   habilitarArrastar(true);
   restartBtn.style.display = 'inline-block';
+  startBtn.style.display = 'none'; // Esconde o botão de início durante o reinício
 }

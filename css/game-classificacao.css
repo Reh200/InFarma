@@ -1,3 +1,4 @@
+/* Estilos Gerais */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
@@ -6,20 +7,55 @@ body {
   color: #333;
 }
 
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 10px 20px; /* Reduzido o padding para um espaçamento mais compacto */
+}
+
+header h1 {
+  font-size: 2rem; /* Ajustei o tamanho da fonte para algo mais equilibrado */
+  margin: 10px 0; /* Ajustado o espaçamento da margem */
+}
+
+header p {
+  font-size: 1rem;
+  margin: 5px 0; /* Menor margem para o parágrafo */
+}
+
+/* Botões de Início e Reinício */
+#start-btn, #restart-btn {
+  padding: 12px 26px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #3b79d6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(76, 127, 175, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#start-btn:hover, #restart-btn:hover {
+  background-color: #3b79d6;
+  box-shadow: 0 6px 14px rgba(76, 127, 175, 0.4);
+}
+
 /* Container de efeitos */
 .effects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 30px;
 }
 
-/* Bloco individual de efeito */
 .effect {
   background: #fff;
   border: 1px solid #ccc;
-  padding: 8px 14px;
+  padding: 10px 18px;
   cursor: grab;
   border-radius: 6px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -27,19 +63,36 @@ body {
   user-select: none;
   white-space: nowrap;
   flex: 0 0 auto;
-  min-width: 90px;
+  min-width: 110px;
   max-width: 180px;
   text-align: center;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-/* Área de grupos de classificação */
+/* Efeitos Arrastáveis */
+.effect:active {
+  cursor: grabbing;
+}
+
+.effect.correct {
+  background-color: #d0f0d7 !important;
+  border: 1px solid #4caf50 !important;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.effect.incorrect {
+  background-color: #f9d6d5 !important;
+  border: 1px solid #e57373 !important;
+  box-shadow: 0 0 8px rgba(229, 83, 77, 0.5);
+}
+
+/* Área de Grupos de Classificação */
 .groups {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .group {
@@ -47,42 +100,32 @@ body {
   min-width: 250px;
   max-width: 350px;
   min-height: 220px;
-  padding: 15px 20px;
+  padding: 20px;
   border: 2px dashed #bbb;
   border-radius: 12px;
   background: #e7f0f7;
   box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
   transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.group h2 {
+  font-size: 1.2rem;
+  color: #388e3c;
+  margin-bottom: 15px;
 }
 
 .group:hover {
   border-color: #4caf50;
 }
 
-.group h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-weight: 700;
-  color: #2e7d32;
-}
-
-/* Feedback de acerto/erro */
-.correct {
-  background-color: #d0f0d7 !important;
-  border: 1px solid #4caf50 !important;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
-}
-
-.incorrect {
-  background-color: #f9d6d5 !important;
-  border: 1px solid #e57373 !important;
-  box-shadow: 0 0 8px rgba(229, 83, 77, 0.5);
-}
-
-/* Resultado da classificação */
+/* Área de Resultados */
 #result {
   margin-top: 25px;
-  padding: 25px 30px;
+  padding: 20px 25px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -113,7 +156,7 @@ body {
   line-height: 1.4;
 }
 
-/* Botão de reset */
+/* Botão de Reset */
 #reset-btn {
   display: inline-block;
   margin-top: 30px;
@@ -134,51 +177,14 @@ body {
   box-shadow: 0 6px 14px rgba(56, 142, 60, 0.6);
 }
 
-/* Evita seleção de texto em efeitos e botão */
+/* Evita seleção de texto em efeitos e botões */
 .effect, #reset-btn {
   user-select: none;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .groups {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .group {
-    width: 90%;
-    max-width: none;
-    margin-bottom: 25px;
-  }
-
-  .effects {
-    justify-content: center;
-    gap: 8px;
-    padding: 0 10px;
-  }
-
-  .effect {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    min-width: 70px;
-    max-width: 140px;
-  }
-
-  #result {
-    padding: 20px;
-    font-size: 0.95rem;
-  }
-
-  #reset-btn {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-/* Footer fixo elegante */
+/* Footer */
 footer {
-  position: fixed;
+  position: relative; /* Ajuste para a posição relativa (não fixa) */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -190,7 +196,6 @@ footer {
   font-size: 0.85rem;
   font-weight: 500;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-  z-index: 10;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -214,8 +219,20 @@ footer small {
   color: #4a6572;
 }
 
-/* Responsivo */
-@media screen and (max-width: 600px) {
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    padding: 14px 10px;
+  }
+  footer p {
+    margin: 4px 0;
+  }
+  footer small {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
   footer {
     font-size: 0.8rem;
     padding: 14px 10px;
@@ -229,3 +246,4 @@ footer small {
     font-size: 0.75rem;
   }
 }
+
