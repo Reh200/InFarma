@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
 }
 
 /* Estilo global da página */
@@ -17,39 +18,45 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 30px;
+    color: #333;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Botão de canto */
 .botao-canto {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     background: transparent;
     border: none;
-    padding: 4px 8px;
-    font-size: 14px;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.5;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s, transform 0.2s ease;
     z-index: 1000;
-    transition: opacity 0.2s, color 0.2s;
-  }
-  
-  /* Hover: aumenta a visibilidade */
-  .botao-canto:hover {
+    border-radius: 5px;
+}
+
+.botao-canto:hover {
     opacity: 1;
-  }
-  
-  /* Tema claro: cor preta */
-  .tema-claro .botao-canto {
-    color: #000000;
-  }
-  
-  /* Tema escuro: cor branca (ou cinza claro para não ficar forte demais) */
-  .tema-escuro .botao-canto {
-    color: #dddddd;
-  }  
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Tema claro: cor preta */
+.tema-claro .botao-canto {
+    color: #000;
+}
+
+/* Tema escuro: cor clara */
+.tema-escuro .botao-canto {
+    color: #ddd;
+}
 
 /* Tema escuro */
 body.dark-theme {
@@ -61,32 +68,37 @@ body.dark-theme {
 header {
     width: 100%;
     max-width: 1000px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
     color: #003b8b;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 /* Barra de pesquisa */
 input[type="text"] {
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+    max-width: 450px;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 6px;
     border: 2px solid #007bff;
-    margin-bottom: 30px;
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 input[type="text"]:focus {
     border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 91, 179, 0.4);
 }
 
 /* Botão de alternância de tema */
@@ -94,42 +106,54 @@ button {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 10px;
-    background-color: #ffffff10;
-    color: #fff;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    color: rgba(252, 252, 252, 0.4);
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+button i {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
 button:hover {
-    background-color: #93afce49;
+    background-color: rgba(147, 175, 206, 0.2);
+    transform: scale(1.1);
 }
 
-/* Estilo dos ícones no botão */
-button i {
-    margin: 0;
+button:hover i {
+    opacity: 1;
 }
 
 /* Estilo da lista de termos */
 .glossary {
     width: 100%;
     max-width: 1000px;
+    margin-top: 30px;
 }
 
+/* Estilo dos termos */
 .term {
     background: #ffffff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .term:hover {
     background: #f4f4f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 body.dark-theme .term {
@@ -139,12 +163,16 @@ body.dark-theme .term {
 
 body.dark-theme .term:hover {
     background: #444444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo dos títulos e textos dentro dos termos */
 .term h2 {
-    font-size: 22px;
+    font-size: 24px;
     color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 body.dark-theme .term h2 {
@@ -153,8 +181,9 @@ body.dark-theme .term h2 {
 
 .term p {
     font-size: 16px;
-    color: #555;
+    color: #141414b4;
     margin-top: 10px;
+    line-height: 1.6;
 }
 
 body.dark-theme .term p {
@@ -163,4 +192,24 @@ body.dark-theme .term p {
 
 .term strong {
     font-weight: bold;
+    color: #003b8b;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .botao-canto {
+        top: 15px;
+        left: 15px;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    button {
+        top: 15px;
+        right: 15px;
+        font-size: 22px;
+    }
 }

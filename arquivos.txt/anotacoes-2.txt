@@ -38,8 +38,8 @@ img/formas-med/injecao.jpg ✅
 img/formas-med/comprimidos.jpg ✅
 img/formas-med/adesivo.jpg ✅
 img/formas-med/creme.png ✅
+img/formas-med/xarope.png ✅
 img/formas-med/capsula.png 
 img/formas-med/gel.png 
 img/formas-med/pomada.jpg 
 img/formas-med/spray.png 
-img/formas-med/xarope.png ✅
