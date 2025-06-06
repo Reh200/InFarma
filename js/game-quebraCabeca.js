@@ -1,7 +1,7 @@
 const medicamentos = [
   {
     nome: "Adesivo Intradérmico",
-    imagem: "img/formas-med/adesivo.jpg",
+    imagem: "img/formas-med/adesivo.png",
     descricao: "Adesivos intradérmicos aplicados na pele liberam o princípio ativo lentamente.",
     pista: "Sem ser visto, sem ser sentido, sua presença muda você aos poucos."
   },
@@ -37,13 +37,13 @@ const medicamentos = [
   },
   {
     nome: "Injeção",
-    imagem: "img/formas-med/injecao.jpg",
+    imagem: "img/formas-med/injecao.png",
     descricao: "Injeções administram o medicamento diretamente na corrente sanguínea.",
     pista: "Sua chegada não é bem-vinda, mas sua ação é indispensável."
   },
   {
     nome: "Pomada",
-    imagem: "img/formas-med/pomada.jpg",
+    imagem: "img/formas-med/pomada.png",
     descricao: "Pomadas são oleosas e usadas para tratamentos tópicos.",
     pista: "Persistente e densa, luta contra o tempo para restaurar o equilíbrio."
   },

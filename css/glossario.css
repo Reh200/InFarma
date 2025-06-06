@@ -21,6 +21,7 @@ body {
     padding: 30px;
     color: #333;
     transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
 /* Botão de canto */
@@ -193,6 +194,24 @@ body.dark-theme .term p {
 .term strong {
     font-weight: bold;
     color: #003b8b;
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(37, 117, 252);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box; /* Inclui o padding dentro da largura */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Ajustes de responsividade */

@@ -10,138 +10,174 @@
 
 <body>
 
+    <!-- Botão para voltar à página inicial -->
     <a href="index.html" class="botao-canto">←</a>
 
+    <!-- Container principal -->
     <div class="container">
+
+        <!-- Cabeçalho com título e barra de pesquisa -->
         <header>
             <h1>Glossário Farmacêutico</h1>
             <input type="text" id="searchInput" placeholder="Buscar por termo..." oninput="filterGlossary()">
         </header>
 
+        <!-- Glossário de termos -->
         <div class="glossary">
-            <div class="term" data-category="geral">
-                <h2>Anticorpo Monoclonal</h2>
-                <p><strong>Definição:</strong> Proteínas produzidas em laboratório que podem imitar anticorpos naturais do corpo, sendo usadas para tratar várias doenças, como câncer e doenças autoimunes. Exemplo: trastuzumabe.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Antiarritmico</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para tratar distúrbios do ritmo cardíaco. Exemplo: amiodarona.</p>
-            </div>
+
+            <!-- Categoria: Terapêutico -->
             <div class="term" data-category="terapêutico">
                 <h2>Antiespasmódico</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para aliviar espasmos musculares, especialmente no trato gastrointestinal. Exemplo: butilbrometo de hioscina.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para aliviar espasmos musculares, especialmente no
+                    trato gastrointestinal. Exemplo: butilbrometo de hioscina.</p>
             </div>
             <div class="term" data-category="terapêutico">
                 <h2>Antidiabético</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para controlar os níveis de glicose no sangue em pacientes com diabetes. Exemplo: metformina.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para controlar os níveis de glicose no sangue em
+                    pacientes com diabetes. Exemplo: metformina.</p>
             </div>
             <div class="term" data-category="terapêutico">
                 <h2>Antimicrobiano</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para prevenir ou tratar infecções causadas por microorganismos, como vírus, bactérias ou fungos.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para prevenir ou tratar infecções causadas por
+                    microorganismos, como vírus, bactérias ou fungos.</p>
             </div>
             <div class="term" data-category="terapêutico">
                 <h2>Antiviral</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para prevenir ou tratar infecções causadas por vírus. Exemplo: oseltamivir.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Associação Medicamentosa</h2>
-                <p><strong>Definição:</strong> Uso combinado de dois ou mais medicamentos no tratamento de uma condição. Exemplo: associação de medicamentos para hipertensão.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Bioequivalente</h2>
-                <p><strong>Definição:</strong> Medicamento que possui o mesmo princípio ativo e ação terapêutica de outro medicamento, sendo substituível em tratamento.</p>
-            </div>
-            <div class="term" data-category="farmacologia">
-                <h2>Bioética</h2>
-                <p><strong>Definição:</strong> Estudo dos aspectos éticos envolvidos no uso de medicamentos e tratamentos médicos.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Broncodilatador</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para dilatar as vias aéreas, facilitando a respiração. Exemplo: salbutamol.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Coeficiente Terapêutico</h2>
-                <p><strong>Definição:</strong> Relação entre a dose efetiva e a dose tóxica de um medicamento. Quanto maior for esse coeficiente, mais seguro é o medicamento.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Composição Química</h2>
-                <p><strong>Definição:</strong> Descrição dos elementos e moléculas que compõem um medicamento, determinando suas propriedades e efeitos.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para prevenir ou tratar infecções causadas por
+                    vírus. Exemplo: oseltamivir.</p>
             </div>
             <div class="term" data-category="terapêutico">
                 <h2>Descongestionante</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para aliviar a congestão nasal, promovendo a dilatação das vias respiratórias. Exemplo: pseudoefedrina.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Enzima</h2>
-                <p><strong>Definição:</strong> Proteínas que catalisam reações bioquímicas no corpo. Muitas drogas atuam inibindo ou estimulando enzimas específicas.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Espectro de Ação</h2>
-                <p><strong>Definição:</strong> Variedade de organismos ou condições que um medicamento pode tratar, como antibióticos de amplo ou estreito espectro.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Estudo Clínico</h2>
-                <p><strong>Definição:</strong> Pesquisa realizada com seres humanos para avaliar a eficácia, segurança e efeitos colaterais de novos medicamentos.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Farmacodinâmica</h2>
-                <p><strong>Definição:</strong> Estudo dos efeitos de um fármaco no organismo e o mecanismo pelo qual ele exerce esses efeitos.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Farmacoeconomia</h2>
-                <p><strong>Definição:</strong> Estudo dos custos associados ao uso de medicamentos e tratamentos, analisando sua relação custo-benefício.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Farmacogenética</h2>
-                <p><strong>Definição:</strong> Estudo da relação entre a genética de um indivíduo e a sua resposta aos medicamentos.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Farmacotecnologia</h2>
-                <p><strong>Definição:</strong> Ciência que aplica os conhecimentos sobre medicamentos para o desenvolvimento de formas farmacêuticas e processos de produção.</p>
-            </div>
-            <div class="term" data-category="geral">
-                <h2>Fármaco</h2>
-                <p><strong>Definição:</strong> Substância utilizada no tratamento de doenças, seja para curar, prevenir ou aliviar sintomas.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para aliviar a congestão nasal, promovendo a
+                    dilatação das vias respiratórias. Exemplo: pseudoefedrina.</p>
             </div>
             <div class="term" data-category="terapêutico">
                 <h2>Imunossupressor</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para suprimir ou reduzir a resposta imunológica do corpo. Exemplo: ciclosporina.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para suprimir ou reduzir a resposta imunológica do
+                    corpo. Exemplo: ciclosporina.</p>
+            </div>
+            <div class="term" data-category="terapêutico">
+                <h2>Vasodilatador</h2>
+                <p><strong>Definição:</strong> Medicamento utilizado para dilatar os vasos sanguíneos, facilitando a
+                    circulação e aliviando a pressão arterial. Exemplo: nitroglicerina.</p>
+            </div>
+            <div class="term" data-category="terapêutico">
+                <h2>Vasopressor</h2>
+                <p><strong>Definição:</strong> Medicamento utilizado para aumentar a pressão arterial em situações de
+                    choque ou hipotensão grave. Exemplo: noradrenalina.</p>
+            </div>
+
+            <!-- Categoria: Geral -->
+            <div class="term" data-category="geral">
+                <h2>Anticorpo Monoclonal</h2>
+                <p><strong>Definição:</strong> Proteínas produzidas em laboratório que podem imitar anticorpos naturais
+                    do corpo, sendo usadas para tratar várias doenças, como câncer e doenças autoimunes. Exemplo:
+                    trastuzumabe.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Antiarritmico</h2>
+                <p><strong>Definição:</strong> Medicamento utilizado para tratar distúrbios do ritmo cardíaco. Exemplo:
+                    amiodarona.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Associação Medicamentosa</h2>
+                <p><strong>Definição:</strong> Uso combinado de dois ou mais medicamentos no tratamento de uma condição.
+                    Exemplo: associação de medicamentos para hipertensão.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Bioequivalente</h2>
+                <p><strong>Definição:</strong> Medicamento que possui o mesmo princípio ativo e ação terapêutica de
+                    outro medicamento, sendo substituível em tratamento.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Broncodilatador</h2>
+                <p><strong>Definição:</strong> Medicamento utilizado para dilatar as vias aéreas, facilitando a
+                    respiração. Exemplo: salbutamol.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Coeficiente Terapêutico</h2>
+                <p><strong>Definição:</strong> Relação entre a dose efetiva e a dose tóxica de um medicamento. Quanto
+                    maior for esse coeficiente, mais seguro é o medicamento.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Composição Química</h2>
+                <p><strong>Definição:</strong> Descrição dos elementos e moléculas que compõem um medicamento,
+                    determinando suas propriedades e efeitos.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Enzima</h2>
+                <p><strong>Definição:</strong> Proteínas que catalisam reações bioquímicas no corpo. Muitas drogas atuam
+                    inibindo ou estimulando enzimas específicas.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Espectro de Ação</h2>
+                <p><strong>Definição:</strong> Variedade de organismos ou condições que um medicamento pode tratar, como
+                    antibióticos de amplo ou estreito espectro.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Estudo Clínico</h2>
+                <p><strong>Definição:</strong> Pesquisa realizada com seres humanos para avaliar a eficácia, segurança e
+                    efeitos colaterais de novos medicamentos.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Farmacodinâmica</h2>
+                <p><strong>Definição:</strong> Estudo dos efeitos de um fármaco no organismo e o mecanismo pelo qual ele
+                    exerce esses efeitos.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Farmacoeconomia</h2>
+                <p><strong>Definição:</strong> Estudo dos custos associados ao uso de medicamentos e tratamentos,
+                    analisando sua relação custo-benefício.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Farmacogenética</h2>
+                <p><strong>Definição:</strong> Estudo da relação entre a genética de um indivíduo e a sua resposta aos
+                    medicamentos.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Farmacotecnologia</h2>
+                <p><strong>Definição:</strong> Ciência que aplica os conhecimentos sobre medicamentos para o
+                    desenvolvimento de formas farmacêuticas e processos de produção.</p>
+            </div>
+            <div class="term" data-category="geral">
+                <h2>Fármaco</h2>
+                <p><strong>Definição:</strong> Substância utilizada no tratamento de doenças, seja para curar, prevenir
+                    ou aliviar sintomas.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Imunização</h2>
-                <p><strong>Definição:</strong> Processo de indução de imunidade contra doenças, geralmente por meio de vacinas ou medicamentos imunizantes.</p>
+                <p><strong>Definição:</strong> Processo de indução de imunidade contra doenças, geralmente por meio de
+                    vacinas ou medicamentos imunizantes.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Injeção Subcutânea</h2>
-                <p><strong>Definição:</strong> Forma de administração de medicamentos onde a substância é injetada sob a pele, mais comum para insulina e certos imunobiológicos.</p>
-            </div>
-            <div class="term" data-category="farmacologia">
-                <h2>Inibidor da Protease</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado no tratamento de infecções virais, como HIV, ao inibir a ação de enzimas virais. Exemplo: ritonavir.</p>
+                <p><strong>Definição:</strong> Forma de administração de medicamentos onde a substância é injetada sob a
+                    pele, mais comum para insulina e certos imunobiológicos.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Medicação Profilática</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para prevenir o aparecimento de doenças ou complicações. Exemplo: vacina.</p>
+                <p><strong>Definição:</strong> Medicamento utilizado para prevenir o aparecimento de doenças ou
+                    complicações. Exemplo: vacina.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Medicamento Biológico</h2>
-                <p><strong>Definição:</strong> Medicamento produzido a partir de organismos vivos ou seus derivados. Exemplo: insulina recombinante.</p>
+                <p><strong>Definição:</strong> Medicamento produzido a partir de organismos vivos ou seus derivados.
+                    Exemplo: insulina recombinante.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Monitoração Terapêutica</h2>
-                <p><strong>Definição:</strong> Acompanhamento contínuo do efeito de medicamentos em um paciente, ajustando a dosagem quando necessário. Comum em pacientes com doenças crônicas.</p>
+                <p><strong>Definição:</strong> Acompanhamento contínuo do efeito de medicamentos em um paciente,
+                    ajustando a dosagem quando necessário. Comum em pacientes com doenças crônicas.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Polifarmácia</h2>
-                <p><strong>Definição:</strong> Uso de múltiplos medicamentos simultaneamente, o que pode aumentar o risco de interações medicamentosas.</p>
-            </div>
-            <div class="term" data-category="farmacologia">
-                <h2>Probiotico</h2>
-                <p><strong>Definição:</strong> Microorganismos vivos que, quando administrados em quantidades adequadas, trazem benefícios à saúde, especialmente ao sistema digestivo.</p>
+                <p><strong>Definição:</strong> Uso de múltiplos medicamentos simultaneamente, o que pode aumentar o
+                    risco de interações medicamentosas.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Propriedade Antioxidante</h2>
-                <p><strong>Definição:</strong> Capacidade de uma substância de prevenir ou retardar os danos causados pelos radicais livres no organismo. Exemplo: vitamina C.</p>
+                <p><strong>Definição:</strong> Capacidade de uma substância de prevenir ou retardar os danos causados
+                    pelos radicais livres no organismo. Exemplo: vitamina C.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Reação Adversa</h2>
@@ -149,37 +185,56 @@
             </div>
             <div class="term" data-category="geral">
                 <h2>Reconstituição de Medicamento</h2>
-                <p><strong>Definição:</strong> Processo de adicionar líquido a um medicamento liofilizado para torná-lo administrável, como no caso de certos antibióticos.</p>
+                <p><strong>Definição:</strong> Processo de adicionar líquido a um medicamento liofilizado para torná-lo
+                    administrável, como no caso de certos antibióticos.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Resistência Bacteriana</h2>
-                <p><strong>Definição:</strong> Capacidade das bactérias de resistir aos efeitos de um antibiótico, dificultando o tratamento de infecções.</p>
+                <p><strong>Definição:</strong> Capacidade das bactérias de resistir aos efeitos de um antibiótico,
+                    dificultando o tratamento de infecções.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Sinergismo</h2>
-                <p><strong>Definição:</strong> Efeito resultante da interação entre dois ou mais medicamentos que, quando administrados juntos, têm um efeito mais potente do que se administrados separadamente.</p>
+                <p><strong>Definição:</strong> Efeito resultante da interação entre dois ou mais medicamentos que,
+                    quando administrados juntos, têm um efeito mais potente do que se administrados separadamente.</p>
             </div>
             <div class="term" data-category="geral">
                 <h2>Solubilidade</h2>
-                <p><strong>Definição:</strong> Capacidade de uma substância se dissolver em um solvente, o que influencia a absorção e a eficácia do medicamento.</p>
+                <p><strong>Definição:</strong> Capacidade de uma substância se dissolver em um solvente, o que
+                    influencia a absorção e a eficácia do medicamento.</p>
             </div>
-            <div class="term" data-category="terapêutico">
-                <h2>Vasodilatador</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para dilatar os vasos sanguíneos, facilitando a circulação e aliviando a pressão arterial. Exemplo: nitroglicerina.</p>
+
+            <!-- Categoria: Farmacologia -->
+            <div class="term" data-category="farmacologia">
+                <h2>Bioética</h2>
+                <p><strong>Definição:</strong> Estudo dos aspectos éticos envolvidos no uso de medicamentos e
+                    tratamentos médicos.</p>
             </div>
-            <div class="term" data-category="terapêutico">
-                <h2>Vasopressor</h2>
-                <p><strong>Definição:</strong> Medicamento utilizado para aumentar a pressão arterial em situações de choque ou hipotensão grave. Exemplo: noradrenalina.</p>
-            </div>            
+            <div class="term" data-category="farmacologia">
+                <h2>Inibidor da Protease</h2>
+                <p><strong>Definição:</strong> Medicamento utilizado no tratamento de infecções virais, como HIV, ao
+                    inibir a ação de enzimas virais. Exemplo: ritonavir.</p>
+            </div>
+            <div class="term" data-category="farmacologia">
+                <h2>Probiotico</h2>
+                <p><strong>Definição:</strong> Microorganismos vivos que, quando administrados em quantidades adequadas,
+                    trazem benefícios à saúde, especialmente ao sistema digestivo.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Botão de alternância de tema (posição fixa no canto superior direito) -->
+    <!-- Rodapé -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 InFarma - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão para alternar o tema (posição fixa no canto superior direito) -->
     <button id="toggleTheme" onclick="toggleTheme()">
         <i class="fas fa-moon"></i>
     </button>
 
     <script>
+        // Função para filtrar os termos do glossário
         function filterGlossary() {
             const searchInput = document.getElementById('searchInput').value.toLowerCase();
             const terms = document.querySelectorAll('.term');
@@ -205,6 +260,7 @@
             }
         }
     </script>
+
 </body>
 
 </html>
