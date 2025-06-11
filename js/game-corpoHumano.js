@@ -19,16 +19,41 @@ const challenges = {
   }
 };
 
+const startBtn = document.getElementById("start-btn");
+const instructions = document.getElementById("instructions");
+const systemSelection = document.getElementById("system-selection");
+const challengeArea = document.getElementById("challenge-area");
+
+startBtn.onclick = () => {
+  // Mostrar seleção de sistemas
+  systemSelection.classList.remove("hidden");
+  // Esconder instruções
+  instructions.classList.add("hidden");
+  // Esconder área de desafio
+  challengeArea.classList.add("hidden");
+  // Mudar texto do botão para reiniciar
+  startBtn.textContent = "Reiniciar";
+
+  // Se o botão reiniciar for clicado, recarrega a página para reiniciar o jogo
+  startBtn.onclick = () => location.reload();
+};
+
 function startChallenge(system) {
-  document.getElementById("system-selection").classList.add("hidden");
-  document.getElementById("challenge-area").classList.remove("hidden");
-
+  challengeArea.classList.remove("hidden");
   const challenge = challenges[system];
-  document.getElementById("challenge-text").textContent = challenge.text;
+  if (!challenge) {
+    document.getElementById("challenge-text").textContent = "Desafio ainda não disponível para este sistema.";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("feedback").textContent = "";
+    return;
+  }
 
+  document.getElementById("challenge-text").textContent = challenge.text;
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
-  challenge.options.forEach((opt, index) => {
+  document.getElementById("feedback").textContent = "";
+
+  challenge.options.forEach((opt) => {
     const btn = document.createElement("button");
     btn.textContent = opt.text;
     btn.onclick = () => showFeedback(opt.correct, challenge.feedback);

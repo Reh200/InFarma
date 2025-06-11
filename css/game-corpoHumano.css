@@ -1,22 +1,64 @@
 body {
   font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
   text-align: center;
-  padding: 20px;
-  background-color: #f0f4f7;
+  color: #2c3e50;
+}
+
+#instructions p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #34495e;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 1em;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px 10px 10px 0;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#challenge-text {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #27ae60; /* verde para feedback positivo */
+}
+
+#feedback:empty {
+  display: none;
 }
 
 .hidden {
   display: none;
-}
-
-#feedback {
-  margin-top: 20px;
-  font-weight: bold;
 }

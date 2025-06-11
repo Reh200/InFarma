@@ -8,9 +8,18 @@
 </head>
 <body>
   <h1>🧬 Viagem pelo Corpo Humano</h1>
-  <div id="system-selection">
+
+  <div id="instructions">
+    <p>Vamos nessa? Aperte <strong>Iniciar</strong> e escolha um sistema para desafiar seus conhecimentos!</p>
+  </div>
+
+  <div id="start-area">
+    <button id="start-btn">Iniciar</button>
+  </div>
+
+  <div id="system-selection" class="hidden">
     <button onclick="startChallenge('Coração')">❤️ Coração</button>
-    <button onclick="startChallenge('Pulmões')">🫁 Pulmões</button>
+    <button onclick="startChallenge('Pulmões')">💨🌬️😤 Pulmões</button>
     <button onclick="startChallenge('Cérebro')">🧠 Cérebro</button>
     <button onclick="startChallenge('Fígado')">🧪 Fígado</button>
   </div>
@@ -24,4 +33,3 @@
   <script src="js/game-corpoHumano.js"></script>
 </body>
 </html>
-  
