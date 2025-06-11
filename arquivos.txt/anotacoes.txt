@@ -6,6 +6,9 @@ Configuração GitHub
 git config --global user.name Reh200
 git config --global user.email alinerenata1400@gmail.com
 
+git config --global user.name Aline6002
+git config --global user.email alinerenata6002@gmail.com
+
     /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
     { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
 
