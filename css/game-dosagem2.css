@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e1f5fe; /* Azul claro forte de fundo */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #039be5; /* Azul claro forte para o cabeçalho */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Instruções */
+#instrucoes {
+    background-color: #81d4fa; /* Azul claro forte suave para fundo */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#instrucoes p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #039be5; /* Azul claro forte para o texto */
+}
+
+#iniciar-btn {
+    background-color: #039be5; /* Azul claro forte */
+    color: white;
+    font-size: 1.5rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+#iniciar-btn:hover {
+    background-color: #0288d1; /* Azul ligeiramente mais escuro ao passar o mouse */
+}
+
+/* Perguntas */
+#perguntas {
+    display: none;
+}
+
+#pergunta-container {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #039be5; /* Azul claro forte nas bordas */
+    color: #039be5; /* Azul claro forte para o texto */
+}
+
+#pergunta-container p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Campo de Resposta */
+input[type="number"] {
+    padding: 12px;
+    font-size: 1.3rem;
+    border: 2px solid #039be5;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0288d1; /* Azul ligeiramente mais escuro ao focar */
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #039be5;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0288d1; /* Azul ligeiramente mais escuro ao passar o mouse */
+}
+
+/* Resultado */
+#resultado {
+    display: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#resultado p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #039be5; /* Azul claro forte no texto */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    #instrucoes p, #pergunta-container p {
+        font-size: 1.1rem;
+    }
+
+    input[type="number"], button {
+        width: 100%;
+    }
+}

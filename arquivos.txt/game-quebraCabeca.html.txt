@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🧩 Quebra-Cabeça Farmacêutico</title>
+  <link rel="stylesheet" href="css/game-quebraCabeca.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🧩 Monte a Forma Farmacêutica</h1>
+
+    <button id="reiniciar" onclick="reiniciarJogo()">🔄 Reiniciar</button>
+
+    <div id="med-nome"></div>
+    <div id="pista"></div>
+    <div id="puzzle"></div>  <!-- <----- Esse é o elemento importante! -->
+    <div id="descricao"></div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Aline Renata - Projeto Educacional 💙 | Medicamentos para fins educativos.</p>
+  </footer>
+
+  <script src="js/game-quebraCabeca.js"></script>
+</body>
+</html>

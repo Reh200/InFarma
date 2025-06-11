@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Dosagem - FarmaGames</title>
+    <link rel="stylesheet" href="css/game-dosagem2.css">
+</head>
+<body>
+    <header>
+        <h1>FarmaGames - Dosagem Correta</h1>
+    </header>
+    
+    <section id="instrucoes">
+        <p>Bem-vindo ao jogo de dosagem! Em cada pergunta, você deverá calcular a dosagem correta de medicamentos para diferentes pacientes (humanos e animais). Responda o máximo que puder!</p>
+        <button id="iniciar-btn" onclick="iniciarJogo()">Iniciar Jogo</button>
+    </section>
+
+    <section id="perguntas" style="display:none;">
+        <div id="pergunta-container"></div>
+        <input type="number" id="resposta" placeholder="Sua resposta" />
+        <button onclick="verificarResposta()">Confirmar Resposta</button>
+    </section>
+
+    <section id="resultado" style="display:none;">
+        <p id="pontuacao"></p>
+        <button onclick="location.reload()">Reiniciar Jogo</button>
+    </section>
+
+    <script src="js/game-dosagem2.js"></script>
+</body>
+</html>

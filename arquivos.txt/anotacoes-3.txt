@@ -1,0 +1,71 @@
+### **🌍 Viagem pelo Corpo Humano (Versão Simples)**
+
+**Conceito**: O jogador “viaja” rapidamente pelo corpo humano e resolve mini-desafios relacionados ao impacto de tratamentos nos sistemas corporais.
+
+**Objetivo**: Resolver desafios rápidos sobre o funcionamento dos sistemas do corpo e como intervenções farmacológicas podem ajudar de maneira simplificada.
+
+**Como funciona**:
+
+1. **Escolha do Sistema**: O jogador escolhe um dos sistemas do corpo (como Coração, Pulmão, Cérebro, Fígado).
+2. **Desafio do Órgão**: Ao entrar em um novo órgão/sistema, o jogador encontra um mini-desafio.
+
+   * Exemplo:
+
+     * No **coração**, o jogador precisa **ajustar a pressão arterial** escolhendo o tratamento certo.
+     * Nos **pulmões**, ele tem que **aumentar o oxigênio** para restaurar a respiração.
+     * No **cérebro**, ele resolve um **quebra-cabeça de neurotransmissores**.
+3. **Escolha Rápida**: O jogador é apresentado a 3 opções rápidas de tratamentos ou ajustes (medicação, terapia, ou ação física).
+4. **Tempo**: O desafio deve ser completado em **10-15 segundos**.
+5. **Feedback Educativo**: Após resolver o desafio, o jogador ganha pontos e um **fato educativo curto** sobre como aquele sistema funciona ou o impacto do tratamento.
+
+**Exemplo de Desafio**:
+
+* **Pulmões**: "O paciente está com dificuldade para respirar. Escolha o tratamento certo para melhorar a oxigenação."
+
+  * Opção A: **Oxigênio suplementar**
+  * Opção B: **Broncodilatador**
+  * Opção C: **Esteroide inalatório**
+
+  Após a escolha, o jogo mostra rapidamente **como o tratamento impacta os pulmões** e dá um **fato educativo** (ex: “O broncodilatador ajuda a relaxar os músculos das vias aéreas, facilitando a respiração.”)
+game-corpoHumano.html 
+js/game-corpoHumano.js
+css/game-corpoHumano.css
+
+---
+
+### **🧬 Desafio da Inovação (Versão Simples)**
+
+**Conceito**: O jogador cria **novos tratamentos farmacológicos** ou **soluções rápidas** para problemas de saúde em um laboratório futurista, com escolhas simples e rápidas.
+
+**Objetivo**: Criar soluções eficientes para problemas de saúde usando ingredientes ou tecnologias disponíveis.
+
+**Como funciona**:
+
+1. **Problema de Saúde**: O jogador é apresentado a um problema de saúde que precisa ser resolvido de forma rápida.
+
+   * Exemplo: **Dor de cabeça** ou **Resfriado comum**.
+2. **Escolha de Ingredientes/Tecnologia**: O jogador escolhe 2 ou 3 ingredientes ou tecnologias para criar uma solução.
+
+   * Exemplo: Para dor de cabeça, ele escolhe entre:
+
+     1. **Analgesico**
+     2. **Anti-inflamatório**
+     3. **Aromaterapia**
+3. **Feedback Imediato**: O jogo fornece uma explicação **rápida** e simples sobre o impacto da escolha.
+
+   * Exemplo: "A combinação de **analgésico** e **anti-inflamatório** é a mais eficaz para dor de cabeça, pois reduz a inflamação e alivia a dor."
+4. **Pontuação**: O jogador recebe pontos pela escolha mais eficiente, e uma **informação educativa** sobre o funcionamento dos tratamentos escolhidos.
+
+**Exemplo de Desafio Rápido**:
+
+* **Problema**: "O paciente está com **resfriado comum**. Escolha os ingredientes certos."
+
+  * Opção A: **Vitamina C + Antiviral**
+  * Opção B: **Descongestionante + Analgésico**
+  * Opção C: **Anti-histamínico + Hidratação**
+
+  Feedback: “**Vitamina C e antiviral** são boas opções para fortalecer o sistema imunológico e combater o vírus. Ideal para o início do resfriado.”
+
+game-inovacao.html
+css/game-inovacao.css
+js/game-inovacao.js
