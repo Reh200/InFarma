@@ -9,7 +9,7 @@
 <body>
   <h1>🧬 Viagem pelo Corpo Humano</h1>
 
-  <!-- Instruções iniciais -->
+  <!-- Instruções -->
   <div id="instructions">
     <p>Vamos nessa? Aperte <strong>Iniciar</strong> e escolha um sistema para desafiar seus conhecimentos!</p>
   </div>
@@ -19,7 +19,7 @@
     <button id="start-btn">Iniciar</button>
   </div>
 
-  <!-- Seleção de sistemas (gerado dinamicamente com emojis) -->
+  <!-- Seleção de sistemas -->
   <div id="system-selection" class="hidden">
     <h2>Escolha um sistema do corpo humano:</h2>
     <div id="system-buttons"></div>
@@ -29,6 +29,7 @@
   <div id="challenge-area" class="hidden">
     <h2 id="challenge-text"></h2>
     <div id="options"></div>
+    <div id="feedback" role="alert" aria-live="polite" style="margin-top: 1rem; font-weight: bold;"></div>
   </div>
 
   <!-- Resumo final -->
