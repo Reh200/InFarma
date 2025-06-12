@@ -1,11 +1,12 @@
-/* === CONFIGURAÇÃO GLOBAL === */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Adicionando fonte Lobster */
+/* === IMPORTAÇÃO DE FONTE === */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* === CONFIGURAÇÃO GLOBAL === */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  background: linear-gradient(to bottom right, #e8f0ff, #ffffff);
   color: #333;
   display: flex;
   flex-direction: column;
@@ -13,56 +14,72 @@ body {
   line-height: 1.6;
 }
 
+/* === CABEÇALHO === */
 header {
   background-color: #007BFF;
   color: #fff;
-  padding: 12px 20px;
-  border-bottom: 2px solid #0056b3;
+  padding: 16px 20px;
   text-align: center;
+  border-bottom: 2px solid #0056b3;
+  animation: fadeInUp 0.8s ease both;
 }
 
 header h1 {
-  font-size: 2em;
-  font-family: 'Lobster', cursive; /* Fonte Lobster apenas para o título */
+  font-size: 2.5em;
+  font-family: 'Lobster', cursive;
   margin: 0;
   letter-spacing: 1px;
 }
 
 header p {
-  font-size: 1.1em;
-  margin-top: 4px;
-  font-weight: 400;
+  font-size: 1.2em;
+  margin-top: 6px;
   color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Voltei a fonte padrão aqui */
 }
 
-/* === MENU DE JOGOS === */
-main {
-  padding: 30px 20px;
-  flex-grow: 1;
-  background-color: #fff;
+/* === LOGO PRINCIPAL === */
+.logo-destaque {
+  max-width: 120px;           
+  border-radius: 12px;        
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+/* === INTRODUÇÃO === */
+.intro {
+  text-align: center;
+  margin: 40px 20px 30px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === GRID DE JOGOS === */
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
 }
 
 .menu-jogos {
   display: block;
-  margin: 8px 0;
-  padding: 12px 20px;
-  font-size: 1.1em;
-  font-weight: 600;
-  border-radius: 8px;
   background-color: #007BFF;
   color: white;
   text-decoration: none;
+  font-size: 1em;           
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 16px;       
+  border-radius: 8px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte simples para os menus */
+  animation: scaleIn 0.5s ease both;
 }
 
 .menu-jogos:hover {
@@ -72,53 +89,23 @@ nav {
 
 .menu-jogos:active {
   background-color: #004085;
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 .menu-jogos span {
   margin-left: 8px;
-  font-size: 1em;
-}
-
-.menu-jogos:hover span {
-  margin-left: 12px;
-}
-
-/* === BOTÃO DE VOLTAR === */
-.botao-canto {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #007BFF;
-  color: white;
-  font-size: 1.1em;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.botao-canto:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-.botao-canto:active {
-  background-color: #004085;
-  transform: scale(1);
 }
 
 /* === RODAPÉ === */
 footer {
-  margin-top: 20px;
-  padding: 15px 10px;
   background-color: #333;
   color: #f5f5f5;
-  font-size: 0.9em;
   text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+  margin-top: auto;
   border-top: 2px solid #0056b3;
+  animation: fadeInUp 0.8s ease both;
 }
 
 footer a {
@@ -132,23 +119,49 @@ footer a:hover {
   color: #007BFF;
 }
 
+/* === ANIMAÇÕES === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* === RESPONSIVO === */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.7em; /* Ajuste do tamanho do título em dispositivos menores */
+    font-size: 2em;
+  }
+
+  .logo-destaque {
+    max-width: 90px;
+  }
+
+  .intro p {
+    font-size: 1.1em;
   }
 
   .menu-jogos {
-    font-size: 1em;
-    padding: 10px 15px;
+    font-size: 0.95em;
+    padding: 8px 14px;
   }
 
   footer {
     font-size: 0.85em;
-  }
-
-  .botao-canto {
-    font-size: 1em;
-    padding: 8px 12px;
   }
 }

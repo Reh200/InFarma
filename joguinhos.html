@@ -1,60 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Escolha e jogue os melhores jogos educativos sobre farmacologia e saúde!">
-  <meta property="og:title" content="FarmaGames - Jogos Educacionais">
-  <meta property="og:description"
-    content="Divirta-se e aprenda com os jogos educativos da FarmaGames. Desafios para melhorar seus conhecimentos sobre farmácia e saúde.">
-  <meta property="og:image" content="img/carta.jpg">
-  <meta property="og:url" content="http://www.exemplo.com">
-  <title>Escolha um Jogo - FarmaGames</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Escolha e jogue os melhores jogos educativos sobre farmacologia e saúde!" />
+  <meta property="og:title" content="FarmaGames - Jogos Educacionais" />
+  <meta property="og:description" content="Divirta-se e aprenda com os jogos educativos da FarmaGames." />
+  <meta property="og:image" content="img/logo-farmagames.png" />
+  <meta property="og:url" content="http://www.exemplo.com" />
+  <title>FarmaGames - Início</title>
 
-  <!-- Link para Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Link para a folha de estilos -->
-  <link rel="stylesheet" href="css/joguinhos.css">
-
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/joguinhos.css" />
 </head>
 
 <body>
 
-  <!-- Cabeçalho da página -->
   <header>
     <h1>FarmaGames</h1>
     <p>Escolha seu jogo educativo e divirta-se aprendendo!</p>
   </header>
 
-  <!-- Seção de jogos -->
   <main>
-    <nav>
-      <a href="game-memoria.html" class="menu-jogos" aria-label="Acessar o jogo FarmaMemory">
-        🧠 <span>FarmaMemory</span> - Teste sua memória com nossos desafios de farmácia!
-      </a>
-      <a href="game-formulas.html" class="menu-jogos" aria-label="Acessar o jogo Desafio da Fórmula">
-        🧪 <span>Desafio da Fórmula</span> - Desafie-se a resolver fórmulas farmacológicas!
-      </a>
-      <a href="game-corpoHumano.html" class="menu-jogos" aria-label="Acessar o Jogo Viagem pelo Corpo Humano">
-        🧬 Viagem pelo Corpo Humano – Descubra como os tratamentos atuam no corpo!
-      </a>
-      <a href="game-dosagem.html" class="menu-jogos" aria-label="Acessar o jogo Dosagem Correta">
-        ⚖️💊 <span>Dosagem Correta</span> - Administra ou Corrige?
-        <a href="game-classificacao.html" class="menu-jogos"
-          aria-label="Acessar o jogo de Classificação de Efeitos Colaterais de Medicamentos">
-          🤕🧴 <span>Classifique os Efeitos</span> - Leve, Moderado ou Grave?
-        </a>
-        <a href="game-dosagem2.html" class="menu-jogos" aria-label="Acessar o Jogo de Dosagem de Medicamentos">
-          🧑‍⚕️ Dosagem Correta - Aprenda a calcular a dosagem de medicamentos!
-        </a>
+    <section class="intro">
+      <img src="img/logo-rosa-azul.png" alt="Logo FarmaGames" class="logo-destaque" />
+      <p>Aprenda de forma divertida com nossos jogos interativos sobre saúde, medicamentos e o corpo humano.</p>
+    </section>
 
+    <nav class="grid-jogos">
+      <a href="game-memoria.html" class="menu-jogos">🧠 <span>FarmaMemory</span></a>
+      <a href="game-formulas.html" class="menu-jogos">🧪 <span>Desafio da Fórmula</span></a>
+      <a href="game-corpoHumano.html" class="menu-jogos">🧬 <span>Viagem pelo Corpo Humano</span></a>
+      <a href="game-dosagem.html" class="menu-jogos">⚖️💊 <span>Dosagem Correta</span></a>
+      <a href="game-classificacao.html" class="menu-jogos">🤕🧴 <span>Classifique os Efeitos</span></a>
+      <a href="game-dosagem2.html" class="menu-jogos">🧑‍⚕️ <span>Dosagem de Medicamentos</span></a>
     </nav>
   </main>
 
-  <!-- Rodapé -->
   <footer>
     <p>Desenvolvido por Aline Renata - Projeto Educacional 💙</p>
   </footer>
 
+  <script src="js/sw-register.js"></script>
 </body>
+</html>
