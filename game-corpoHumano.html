@@ -3,33 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Viagem pelo Corpo Humano</title>
+  <title>🧬 Viagem pelo Corpo Humano</title>
   <link rel="stylesheet" href="css/game-corpoHumano.css" />
 </head>
 <body>
   <h1>🧬 Viagem pelo Corpo Humano</h1>
 
+  <!-- Instruções iniciais -->
   <div id="instructions">
     <p>Vamos nessa? Aperte <strong>Iniciar</strong> e escolha um sistema para desafiar seus conhecimentos!</p>
   </div>
 
+  <!-- Botão de início -->
   <div id="start-area">
     <button id="start-btn">Iniciar</button>
   </div>
 
+  <!-- Seleção de sistemas (gerado dinamicamente com emojis) -->
   <div id="system-selection" class="hidden">
-    <button onclick="startChallenge('Coração')">❤️ Coração</button>
-    <button onclick="startChallenge('Pulmões')">💨🌬️😤 Pulmões</button>
-    <button onclick="startChallenge('Cérebro')">🧠 Cérebro</button>
-    <button onclick="startChallenge('Fígado')">🧪 Fígado</button>
+    <h2>Escolha um sistema do corpo humano:</h2>
+    <div id="system-buttons"></div>
   </div>
 
+  <!-- Área de desafio -->
   <div id="challenge-area" class="hidden">
-    <p id="challenge-text"></p>
+    <h2 id="challenge-text"></h2>
     <div id="options"></div>
-    <div id="feedback"></div>
   </div>
 
+  <!-- Resumo final -->
+  <div id="summary" class="hidden">
+    <h2>Resultado Final</h2>
+    <div id="results"></div>
+    <button onclick="location.reload()">Jogar Novamente</button>
+  </div>
+
+  <!-- Script -->
   <script src="js/game-corpoHumano.js"></script>
 </body>
 </html>
