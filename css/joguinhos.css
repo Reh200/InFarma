@@ -14,6 +14,35 @@ body {
   line-height: 1.6;
 }
 
+.sobre-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px; /* Tamanho menor do ícone */
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sobre-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.sobre-btn:active {
+  transform: scale(0.95);
+}
+
+.texto-sobre {
+  display: block;
+  font-size: 8px; /* Tamanho bem pequeno da palavra */
+  color: rgba(0, 0, 0, 0.6); /* Cor do texto */
+  margin-top: 1px; /* Menor espaço entre o emoji e o texto */
+}
+
 /* === CABEÇALHO === */
 header {
   background-color: #007BFF;

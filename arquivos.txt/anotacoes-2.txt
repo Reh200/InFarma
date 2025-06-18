@@ -1,9 +1,6 @@
-areas-farm.html 
-css/areas.css 
-css/utomedicacao.css 
-automedicacao.html 
-css/bulas.css 
-bulas.html 
+game-corpoHumano.html 
+js/game-corpoHumano.js
+css/game-corpoHumano.css
 css/game-dosagem.css 
 game-dosagem.html 
 js/game-dosagem.js 
@@ -13,19 +10,14 @@ js/game-formulas.js
 css/game-memoria.css 
 game-memoria.html 
 js/game-memoria.js 
-css/game-quebraCabeca.css 
-game-quebraCabeca.html 
-js/game-quebraCabeca.js 
-glossario-farmaceutico.html 
-css/glossario.css 
-css/index.css 
 index.html 
 css/joguinhos.css 
-joguinhos.html 
-css/materiais.css 
-materiais.html 
-css/sobre.css 
-sobre.html
+
+
+//       <a href="game-quebraCabeca.html" class="menu-jogos" aria-label="Acessar o jogo Quebra Cabeça Medicamentoso">
+        🧩 <span>Quebra Cabeça Medicamentoso</span> - Complete o quebra-cabeça e aprenda sobre medicamentos!
+      </a> 
+
 
 https://guiadafarmacia.com.br/cortar-comprimido-ao-meio-equivale-a-tomar-meia-dose/
 
@@ -43,3 +35,89 @@ img/formas-med/gel.png ✅
 img/formas-med/injecao.png ✅
 img/formas-med/pomada.png ✅
 img/formas-med/xarope.png ✅
+
+
+### 🧫 **Bactéria ou Vírus?**
+
+**Tema:** Identificação rápida
+**Como funciona:** Aparece o nome de um agente infeccioso e o jogador deve clicar rapidamente em “Bactéria” ou “Vírus”.
+**Extras:** Cronômetro + feedback com explicação rápida.
+
+---
+
+### 💊 **Interações Perigosas**
+
+**Tema:** Farmacologia / segurança medicamentosa
+**Como funciona:** Jogador vê dois medicamentos e deve responder “Interagem” ou “Seguros”.
+
+---
+
+### 🩺 **Farmacêutico vs Mitos**
+
+**Tema:** Fake news na saúde
+**Como funciona:** Aparecem frases (ex: “Antibiótico cura gripe”), e o jogador deve arrastar para “MITO” ou “VERDADE”.
+**Extras:** Pode incluir memes educativos.
+
+---
+
+### 🧠 **Siglas & Abreviações**
+
+**Tema:** Vocabulário técnico
+**Como funciona:** Mostra siglas como “BID”, “SC”, “IM”, “PO” e o jogador precisa escolher o significado correto.
+**Extras:** Níveis com siglas mais avançadas.
+
+💊 Jogo: Tarja Certa
+🎯 Objetivo:
+Testar o conhecimento dos jogadores sobre os diferentes tipos de tarjas de medicamentos e suas exigências de prescrição (receita simples, controlada ou nenhuma).
+
+🕹️ Como Funciona:
+O jogo exibe o nome de um medicamento (real ou fictício).
+
+O jogador deve escolher a tarja correta entre:
+
+⚪ Tarja Branca
+
+🔴 Tarja Vermelha (Receita Simples)
+
+🔴📄 Tarja Vermelha (Receita Retida)
+
+⚫ Tarja Preta
+
+O jogo informa se a resposta está correta e mostra uma explicação rápida.
+
+Após algumas rodadas, exibe a pontuação final.
+
+📚 Conteúdos abordados:
+Classificação das tarjas (Branca, Vermelha, Preta)
+
+Necessidade de receita médica (comum, controlada ou nenhuma)
+
+Exemplos práticos de medicamentos comuns
+
+Educação sobre o uso seguro de medicamentos
+
+
+💊 Jogo: Nome Comercial vs Genérico
+🎯 Objetivo:
+Testar se o jogador sabe qual é o nome genérico (princípio ativo) correspondente ao nome comercial de um medicamento.
+
+🧠 Como Funciona:
+Aparece um nome comercial de medicamento (ex: "Tylenol").
+
+O jogador escolhe entre 3 ou 4 opções de nomes genéricos (ex: "Ibuprofeno", "Paracetamol", "Dipirona").
+
+O jogo informa se a resposta está correta.
+
+Ao final, mostra a pontuação total.
+
+📋 Conteúdo de exemplo:
+Nome Comercial	Genérico
+Tylenol	- Paracetamol
+Neosaldina - Dipirona + outros
+Dorflex - Dipirona
+Voltaren - Diclofenaco
+Rivotril - Clonazepam
+Frontal - Alprazolam
+Cataflan - Diclofenaco
+Buscopan - Butilbrometo
+Dramin - Dimenidrinato

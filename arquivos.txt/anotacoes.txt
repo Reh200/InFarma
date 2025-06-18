@@ -43,11 +43,5 @@ img/formas-med/pomada.png
 img/formas-med/spray.png 
 img/formas-med/xarope.png
 
-*Jogo de Efeitos Colaterais**: Programe um jogo onde o usuário deve combinar medicamentos com seus efeitos 
-colaterais mais comuns. Isso ajuda a reforçar o conhecimento sobre segurança no uso de medicamentos.
-
-**Quiz de Dosagens**: Desenvolva um quiz focado em dosagens corretas para diferentes grupos etários 
-(adultos, crianças, idosos) e condições específicas. Isso pode ajudar a entender melhor as recomendações de dosagem.
-
 **Escape Room Virtual**: Monte uma história onde você precisa resolver problemas relacionados a 
 medicamentos (como interações ou dosagens incorretas) para "escapar" de uma situação fictícia.

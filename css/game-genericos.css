@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Botão fixo no canto superior esquerdo */
+.botao-canto {
+position: fixed;
+top: 10px;
+left: 10px;
+background: transparent;
+border: none;
+padding: 4px 8px;
+font-size: 14px;
+cursor: pointer;
+text-decoration: none;
+opacity: 0.5;
+z-index: 1000;
+transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+opacity: 1;
+color: #007BFF;
+}
+
+#instrucoes {
+font-size: 1.2em;
+margin-bottom: 20px;
+}
+
+#instrucoes p {
+margin-bottom: 20px;
+}
+
+#instrucoes button {
+padding: 10px 20px;
+background-color: #007BFF;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1em;
+transition: background-color 0.3s;
+}
+
+#instrucoes button:hover {
+background-color: #0056b3;
+}
+
+#pergunta {
+font-size: 1.5em;
+margin-bottom: 20px;
+}
+
+#opcoes {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+#opcoes button {
+background-color: #ffffff;
+border: 2px solid #007BFF;
+color: #007BFF;
+font-size: 1em;
+padding: 10px 20px;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s;
+}
+
+#opcoes button:hover {
+background-color: #007BFF;
+color: #ffffff;
+}
+
+#resultado {
+margin-top: 20px;
+font-size: 1.2em;
+font-weight: bold;
+}
+
+#btnReiniciar {
+padding: 10px 20px;
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.2em;
+margin-top: 20px;
+}
+
+#btnReiniciar:hover {
+background-color: #218838;
+}

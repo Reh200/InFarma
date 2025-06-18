@@ -1,0 +1,66 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fffde7;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #f9a825;
+    margin-bottom: 20px;
+  }
+  
+    /* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
+}
+  #pergunta {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+  }
+  
+  #opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  #opcoes button {
+    padding: 12px 22px;
+    font-size: 1.1em;
+    border: 2px solid #f9a825;
+    background-color: white;
+    color: #f9a825;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  #opcoes button:hover {
+    background-color: #f9a825;
+    color: white;
+  }
+  
+  #resultado {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  

@@ -38,6 +38,26 @@ main {
   overflow-wrap: break-word; /* garantir quebra de palavras se necessário */
 }
 
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+/* Hover: aumenta a visibilidade */
+.botao-canto:hover {
+  opacity: 1;
+}
+
 /* Cabeçalho */
 header {
   text-align: center;

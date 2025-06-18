@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #c3e3f9, #e0f7fa);
+    margin: 0;
+    padding: 30px 40px;
+    color: #004d60;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Para permitir scroll se necessário */
+    overflow-y: auto;
+  }
+  
+  /* Container com largura fluida e max largura maior */
+  .container {
+    width: 100%;
+    max-width: 900px; /* maior que 600 para aproveitar melhor a tela */
+    background: #ffffffdd; /* branco translúcido */
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 105, 135, 0.25);
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Sombra mais intensa no hover */
+  .container:hover {
+    box-shadow: 0 16px 40px rgba(0, 105, 135, 0.35);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007b9e;
+    font-weight: 700;
+    font-size: 3rem; /* ligeiramente maior */
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0, 123, 158, 0.3);
+  }
+  
+  .box {
+    background: #e0f7fa;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 123, 158, 0.15);
+    transition: background 0.3s ease;
+  }
+  
+  .box:hover {
+    background: #c6e9f4;
+  }
+  
+  button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 360px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0091c7, #005f78);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 145, 199, 0.6);
+    transition: background 0.4s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #005f78, #0091c7);
+    box-shadow: 0 8px 25px rgba(0, 95, 120, 0.8);
+  }
+  
+  button:active {
+    transform: scale(0.97);
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.3);
+    cursor: pointer;
+    accent-color: #007b9e;
+    transition: accent-color 0.3s ease;
+  }
+  
+  input[type="checkbox"]:hover {
+    accent-color: #005f78;
+  }
+  
+  .contador {
+    font-weight: 700;
+    font-size: 20px;
+    color: #007b9e;
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
+}
+  
+  label {
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+    display: block;
+    text-align: left;
+    max-width: 600px;
+    margin: 12px auto;
+    padding-left: 4px;
+    transition: color 0.3s ease;
+  }
+  
+  label:hover {
+    color: #005f78;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #feedback p, #resumo {
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #004d60;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    body {
+      padding: 20px;
+      align-items: center;
+    }
+    .container {
+      padding: 25px 30px;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    label {
+      font-size: 1rem;
+      max-width: 100%;
+      margin: 10px 0;
+    }
+    button {
+      max-width: 100%;
+      font-size: 1.1rem;
+    }
+  }
+  

@@ -69,3 +69,89 @@ css/game-corpoHumano.css
 game-inovacao.html
 css/game-inovacao.css
 js/game-inovacao.js
+
+🧪 Laboratório Virtual – Mistura de Medicamentos
+Objetivo:
+O jogador deve arrastar ingredientes (princípio ativo, diluente, conservante) e soltá-los no béquer. Se a mistura estiver correta, o medicamento é “criado”.
+
+💡 Mecânica:
+Drag & drop com JavaScript.
+
+Verificação da combinação correta.
+
+Feedback visual.
+
+
+📦 FarmaLogística – Organize a Distribuição
+Objetivo:
+Receber caixas de medicamentos e colocá-las nos destinos corretos (farmácia, hospital, etc), considerando a categoria e validade.
+
+💡 Mecânica:
+"Arraste para o destino correto".
+
+Pode ter “tempo de validade” que expira.
+
+Versões futuras: nível fácil/difícil, pontuação.
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Dosagem - FarmaGames</title>
+  <link rel="stylesheet" href="css/game-dosagem2.css">
+</head>
+<body>
+
+  <a href="index.html" class="botao-canto">←</a>
+
+  <header>
+    <h1>💊 FarmaGames - Dosagem Correta</h1>
+    <p id="status-jogo">Pontuação: <span id="pontuacao-atual">0</span> | Pergunta <span id="numero-atual">1</span> de <span id="total-perguntas">--</span></p>
+  </header>
+
+  <!-- Barra de Progresso -->
+  <div class="progresso-container">
+    <div class="progresso-barra" id="barra-progresso"></div>
+  </div>
+
+  <!-- Instruções -->
+  <section id="instrucoes">
+    <p>👩‍⚕️ Bem-vindo ao jogo de dosagem! Em cada pergunta, você deverá calcular a dosagem correta de medicamentos para diferentes pacientes (humanos e animais).</p>
+    <p>⏱️ Responda o máximo que puder corretamente!</p>
+    <button id="iniciar-btn" onclick="iniciarJogo()">Iniciar Jogo</button>
+  </section>
+
+  <!-- Perguntas -->
+  <section id="perguntas" style="display:none;">
+    <div id="pergunta-container"></div>
+    
+    <label for="resposta">Digite sua resposta:</label>
+    <input type="number" id="resposta" placeholder="Ex: 150" />
+    
+    <div class="botoes-jogo">
+      <button onclick="verificarResposta()">✅ Confirmar Resposta</button>
+    </div>
+  </section>
+
+  <!-- Resultado final -->
+  <section id="resultado" style="display:none;">
+    <p id="pontuacao"></p>
+    <button onclick="location.reload()">🔁 Reiniciar Jogo</button>
+  </section>
+
+  <!-- Temporizador (desativado por padrão, pronto para JS) -->
+  <div id="temporizador" style="display:none;">
+    ⏳ Tempo restante: <span id="tempo-restante">30</span>s
+  </div>
+
+  <script src="js/game-dosagem2.js"></script>
+</body>
+</html>

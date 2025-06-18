@@ -32,69 +32,102 @@ const situacoes = [
     { pergunta: "Você tem um gato de 6kg. O veterinário recomendou Amoxicilina com a dosagem de 20mg por kg. Quantos miligramas ele deve tomar?", resposta: 120 }
 ];
 
-// Função para embaralhar as perguntas
 function embaralharPerguntas(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // Troca os elementos
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
-// Embaralha as perguntas
 embaralharPerguntas(situacoes);
 
 let pontuacao = 0;
 let perguntaAtual = 0;
 
-// Função para iniciar o jogo
+// Array para guardar respostas dadas pelo usuário
+let respostasUsuario = [];
+
+// Iniciar jogo
 function iniciarJogo() {
-    // Esconde as instruções e mostra as perguntas
     document.getElementById("instrucoes").style.display = "none";
     document.getElementById("perguntas").style.display = "block";
-
-    // Exibe a primeira pergunta
+    document.getElementById("finalizar-btn").style.display = "inline-block";
     exibirPergunta();
-    
-    // Altera o botão para "Reiniciar"
     document.getElementById("iniciar-btn").style.display = "none";
 }
 
-// Função para exibir a pergunta atual
+// Exibe pergunta atual
 function exibirPergunta() {
     const perguntaContainer = document.getElementById("pergunta-container");
     const pergunta = situacoes[perguntaAtual];
-
     perguntaContainer.innerHTML = `
-        <p><strong>Pergunta ${perguntaAtual + 1} de ${situacoes.length}</strong></p>
-        <p>${pergunta.pergunta}</p>
-    `;
+      <p><strong>Pergunta ${perguntaAtual + 1} de ${situacoes.length}</strong></p>
+      <p>${pergunta.pergunta}</p>
+  `;
 }
 
-// Função para verificar a resposta do usuário
+// Verifica resposta e avança
 function verificarResposta() {
-    const respostaUsuario = parseInt(document.getElementById("resposta").value);
+    const respostaInput = document.getElementById("resposta");
+    const respostaUsuarioNum = parseInt(respostaInput.value);
     const respostaCorreta = situacoes[perguntaAtual].resposta;
 
-    if (respostaUsuario === respostaCorreta) {
-        pontuacao++;
-    }
+    // Registra se acertou
+    const acertou = respostaUsuarioNum === respostaCorreta;
+    if (acertou) pontuacao++;
 
-    // Avança para a próxima pergunta
+    // Guarda resposta no array
+    respostasUsuario.push({
+        pergunta: situacoes[perguntaAtual].pergunta,
+        respostaUsuario: respostaUsuarioNum,
+        respostaCorreta: respostaCorreta,
+        acertou: acertou
+    });
+
     perguntaAtual++;
+    respostaInput.value = "";
 
-    // Verifica se ainda existem perguntas
     if (perguntaAtual < situacoes.length) {
         exibirPergunta();
-        document.getElementById("resposta").value = ""; // Limpa o campo de resposta
     } else {
-        // Mostra o resultado final
         mostrarResultado();
     }
 }
 
-// Função para exibir o resultado final
+// Finaliza o jogo a qualquer momento
+function finalizarJogo() {
+    // Se estiver na última pergunta, não precisa adicionar nada
+    if (perguntaAtual < situacoes.length) {
+        // Para a pergunta atual sem resposta (não conta como acertada)
+        respostasUsuario.push({
+            pergunta: situacoes[perguntaAtual].pergunta,
+            respostaUsuario: null,
+            respostaCorreta: situacoes[perguntaAtual].resposta,
+            acertou: false
+        });
+    }
+    mostrarResultado();
+}
+
+// Mostra o resultado final, incluindo relatório
 function mostrarResultado() {
     document.getElementById("perguntas").style.display = "none";
     document.getElementById("resultado").style.display = "block";
-    document.getElementById("pontuacao").innerText = `Você acertou ${pontuacao} de ${situacoes.length} perguntas.`;
+
+    const totalRespondidas = respostasUsuario.length;
+    const pontuacaoTexto = `Você acertou ${pontuacao} de ${totalRespondidas} perguntas respondidas.`;
+
+    let detalhes = "<ul>";
+    respostasUsuario.forEach((resp, i) => {
+        detalhes += `<li><strong>Pergunta ${i + 1}:</strong> ${resp.pergunta}<br>
+      Sua resposta: ${resp.respostaUsuario === null ? "Sem resposta" : resp.respostaUsuario} — 
+      ${resp.acertou ? "<span style='color:green;'>Acertou ✅</span>" : `<span style='color:red;'>Errou ❌ (Correto: ${resp.respostaCorreta})</span>`}
+    </li><br>`;
+    });
+    detalhes += "</ul>";
+
+    document.getElementById("pontuacao").innerHTML = pontuacaoTexto + detalhes;
+
+    // Esconder botão finalizar
+    document.getElementById("finalizar-btn").style.display = "none";
 }

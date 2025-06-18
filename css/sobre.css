@@ -1,4 +1,4 @@
-/* Definindo fontes e estilo base */
+/* Fontes e estilo base */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -6,69 +6,106 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave entre os temas */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
 .botao-canto {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 14px;
+    left: 14px;
     background: transparent;
-    border: none;
-    padding: 4px 8px;
-    font-size: 14px;
+    border: 2px solid transparent;
+    padding: 6px 10px;
+    font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.5;
+    opacity: 0.6;
     z-index: 1000;
-    transition: opacity 0.2s, color 0.2s;
-  }
-  
-  /* Hover: aumenta a visibilidade */
-  .botao-canto:hover {
-    opacity: 1;
-  }
-  
-  /* Tema claro: cor preta */
-  .tema-claro .botao-canto {
-    color: #000000;
-  }
-  
-  /* Tema escuro: cor branca */
-  .tema-escuro .botao-canto {
-    color: #dddddd;
-  }  
+    border-radius: 6px;
+    transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    color: #144552;
+    user-select: none;
+}
 
+.botao-canto:hover,
+.botao-canto:focus-visible {
+    opacity: 1;
+    color: #0d3b66;
+    border-color: #0d3b66;
+    outline: none;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: transparent;
+    box-shadow: none;
+    opacity: 0.1;
+    transition: opacity 0.3s, transform 0.2s;
+    pointer-events: auto;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+/* Cabeçalho */
 header {
     background-color: #007bff;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 20px 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
+    font-family: 'Lobster', cursive;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 10px;
 }
 
-/* Seção de conteúdo */
+/* Seção principal */
 .glossary {
-    padding: 30px;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
+    padding: 60px 20px 40px;
 }
 
 .term {
-    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.term:hover {
+    transform: translateY(-3px);
 }
 
 .term h2 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     color: #007bff;
     margin-bottom: 10px;
 }
@@ -76,7 +113,7 @@ header p {
 .term p {
     font-size: 1rem;
     color: #555;
-    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .term ul {
@@ -87,72 +124,52 @@ header p {
 .term ul li {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #555;
+    color: #444;
 }
 
-.term ul li strong {
-    color: #007bff;
+.menu-jogos {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* Estilo do rodapé */
+.menu-jogos:hover {
+    color: #003d80;
+    text-decoration: underline;
+}
+
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 10px;
     background-color: #007bff;
     color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: auto;
 }
 
-/* Estilo do botão de alternância de tema */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #ffffff04;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.007);
-    transition: background-color 0.3s;
-}
-
-#theme-toggle:hover {
-    background-color: #f1f1f104;
-}
-
-/* Tema Escuro */
-body.dark-theme {
-    background-color: #121212;
-    color: #f4f4f400;
-}
-
-body.dark-theme header {
-    background-color: #333;
-}
-
-body.dark-theme .term h2 {
-    color: #5d84cc;
-}
-
-body.dark-theme footer {
-    background-color: #333;
-}
-
-/* Responsividade para telas menores */
+/* Responsivo */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
-    .term h2 {
-        font-size: 1.5rem;
+    header p {
+        font-size: 0.95rem;
     }
 
-    .term p, .term ul li {
-        font-size: 0.9rem;
+    .term h2 {
+        font-size: 1.4rem;
+    }
+
+    .term p,
+    .term ul li {
+        font-size: 0.95rem;
+    }
+
+    .glossary {
+        padding: 50px 15px 30px;
     }
 }

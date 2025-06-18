@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desafio da Inovação</title>
+  <link rel="stylesheet" href="css/game-inovacao.css" />
+</head>
+<body>
+
+  <a href="index.html" class="botao-canto">←</a>
+
+  <div class="container">
+
+    <h1>🧬 Desafio da Inovação</h1>
+
+    <!-- Instruções -->
+    <div id="instrucoes" class="box">
+      <p><strong>Instruções:</strong></p>
+      <ul>
+        <li>Você receberá um problema de saúde.</li>
+        <li>Escolha até <strong>5 ingredientes</strong> para resolvê-lo.</li>
+        <li>Receba pontos de acordo com a eficácia da combinação.</li>
+        <li>No final, veja seu relatório de desempenho.</li>
+      </ul>
+      <button onclick="iniciarJogo()">▶️ Iniciar Jogo</button>
+    </div>
+
+    <!-- Área do jogo -->
+    <div id="jogo" class="hidden">
+
+      <!-- Contador Perguntas -->
+      <div id="contador" class="contador"></div>
+
+      <div id="problema" class="box">
+        <p><strong>Problema de Saúde:</strong> <span id="problema-texto">Resfriado comum</span></p>
+      </div>
+
+      <div id="ingredientes" class="box">
+        <p><strong>Escolha até 5 ingredientes:</strong></p>
+        <label><input type="checkbox" value="Vitamina C" /> Vitamina C</label>
+        <label><input type="checkbox" value="Antiviral" /> Antiviral</label>
+        <label><input type="checkbox" value="Descongestionante" /> Descongestionante</label>
+        <label><input type="checkbox" value="Analgésico" /> Analgésico</label>
+        <label><input type="checkbox" value="Anti-histamínico" /> Anti-histamínico</label>
+        <label><input type="checkbox" value="Hidratação" /> Hidratação</label>
+      </div>
+
+      <button onclick="avaliarEscolha()">✅ Confirmar Escolha</button>
+
+      <div id="feedback" class="box hidden">
+        <p id="resposta"></p>
+        <p id="pontuacao"></p>
+      </div>
+    </div>
+
+    <!-- Relatório Final -->
+    <div id="relatorio" class="box hidden">
+      <h2>📋 Relatório Final</h2>
+      <p id="resumo"></p>
+      <button onclick="reiniciarJogo()">🔄 Reiniciar Jogo</button>
+    </div>
+
+  </div>
+
+  <script src="js/game-inovacao.js"></script>
+</body>
+</html>

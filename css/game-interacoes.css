@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #c62828;
+  }
+  
+  /* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
+}
+
+  #pergunta {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+  
+  #opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #opcoes button {
+    padding: 12px 22px;
+    font-size: 1em;
+    border: 2px solid #c62828;
+    background-color: white;
+    color: #c62828;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  #opcoes button:hover {
+    background-color: #c62828;
+    color: white;
+  }
+  
+  #resultado {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  

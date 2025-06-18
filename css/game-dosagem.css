@@ -7,11 +7,34 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f172a; /* fundo escuro */
+  background-color: #0f172a;
+  /* fundo escuro */
   color: #ffffff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF;
+  /* azul padrão no hover */
 }
 
 /* Cabeçalho */
@@ -51,13 +74,16 @@ main {
   text-align: center;
   box-shadow: 0 0 20px #38bdf8;
 }
+
 #contador {
   font-size: 1rem;
   font-weight: bold;
-  color: #a9c5ec; /* cinza escuro */
+  color: #a9c5ec;
+  /* cinza escuro */
   margin-bottom: 10px;
   text-align: center;
 }
+
 /* Caso (pergunta) */
 #caso {
   font-size: 1.3rem;
@@ -99,7 +125,8 @@ main {
   margin: 30px auto;
   padding: 0 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f2937; /* Texto escuro */
+  color: #1f2937;
+  /* Texto escuro */
 }
 
 #feedback ul {
@@ -109,7 +136,8 @@ main {
 }
 
 #feedback li {
-  background-color: #f3f4f6; /* Cinza claro */
+  background-color: #f3f4f6;
+  /* Cinza claro */
   border: 1px solid #d1d5db;
   border-left: 6px solid #3b82f6;
   border-radius: 10px;
@@ -126,7 +154,8 @@ main {
 
 #feedback li strong {
   font-size: 1.2rem;
-  color: #111827; /* Texto bem escuro para título */
+  color: #111827;
+  /* Texto bem escuro para título */
   margin-bottom: 8px;
   display: block;
 }
@@ -151,12 +180,14 @@ main {
     font-size: 1rem;
   }
 }
+
 #feedback {
   max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f2937; /* Texto escuro */
+  color: #1f2937;
+  /* Texto escuro */
 }
 
 #feedback ul {
@@ -166,7 +197,8 @@ main {
 }
 
 #feedback li {
-  background-color: #f3f4f6; /* Cinza claro */
+  background-color: #f3f4f6;
+  /* Cinza claro */
   border: 1px solid #d1d5db;
   border-left: 6px solid #3b82f6;
   border-radius: 10px;
@@ -183,7 +215,8 @@ main {
 
 #feedback li strong {
   font-size: 1.2rem;
-  color: #111827; /* Texto bem escuro para título */
+  color: #111827;
+  /* Texto bem escuro para título */
   margin-bottom: 8px;
   display: block;
 }

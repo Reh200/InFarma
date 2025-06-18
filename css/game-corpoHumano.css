@@ -1,134 +1,154 @@
-/* Estilo base */
+/* BODY E LAYOUT */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 20px;
-  padding: 0;
-  background-color: #f2f8ff;
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
   color: #333;
-  line-height: 1.6;
-}
-
-/* Títulos */
-h1 {
-  text-align: center;
-  color: #0b3d91;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: #1d3557;
-  margin-top: 20px;
-}
-
-/* Instruções e textos */
-#instructions, #challenge-text, #feedback, #results {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-#instructions p {
-  font-size: 1.2em;
-}
-
-/* Botões padrão */
-button {
-  padding: 10px 20px;
-  margin: 10px 5px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Área dos botões dos sistemas */
-#system-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-#system-buttons button {
-  margin: 8px;
-  background-color: #28a745;
-}
-
-#system-buttons button:hover {
-  background-color: #1c7c31;
-}
-
-/* Opções de resposta */
-#options {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
+/* TÍTULO */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+/* SELEÇÃO DE SISTEMA */
+#system-selection button {
+  background: #147efb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin: 10px 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(20,126,251,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 140px;
+}
+
+#system-selection button:hover {
+  background: #0f69d1;
+  transform: translateY(-3px);
+}
+
+/* ÁREA DE DESAFIO */
+#challenge-area {
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: left;
+  font-size: 1.2rem;
+  color: #1c1c1c;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* TEXTO DO DESAFIO */
+#challenge-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* CONTAINER DAS OPÇÕES - usa flexbox para organizar os botões */
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* BOTÕES DAS OPÇÕES - estilizados, fáceis de clicar */
 #options button {
-  width: 90%;
-  max-width: 500px;
-  margin: 6px 0;
-  background-color: #17a2b8;
+  background: #2a9df4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(42,157,244,0.5);
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  min-width: 150px;
+  user-select: none;
 }
 
 #options button:hover {
-  background-color: #117a8b;
+  background: #1a7bdc;
+  transform: translateY(-2px);
 }
 
-/* Feedback de resposta */
+#options button:active {
+  transform: translateY(1px);
+}
+
+/* FEEDBACK */
 #feedback {
-  font-size: 1.1em;
-  margin-top: 15px;
-  font-style: italic;
-  min-height: 40px;
-}
-
-/* Resultado final */
-#summary {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #007BFF;
+  min-height: 30px; /* evita pular layout quando aparece texto */
   text-align: center;
 }
 
-#results {
-  margin-top: 20px;
-  padding: 10px;
-}
-
-#results p {
-  background-color: #ffffff;
-  border-left: 5px solid #007BFF;
-  padding: 10px;
-  margin: 10px auto;
-  max-width: 700px;
-  text-align: left;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Utilitários */
+/* ESCONDER ELEMENTOS */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  body {
-    margin: 10px;
-  }
+/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
+.botao-canto {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.6;
+  z-index: 1000;
+  border-radius: 6px;
+  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  color: #144552;
+  user-select: none;
+}
 
-  button {
-    width: 100%;
-  }
+.botao-canto:hover,
+.botao-canto:focus-visible {
+  opacity: 1;
+  color: #0d3b66;
+  border-color: #0d3b66;
+  outline: none;
+}
 
-  #options button {
-    width: 100%;
-  }
+#start-area button {
+  background-color: #5676a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 15px rgba(40, 110, 167, 0.5);
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#start-area button:hover {
+  background-color: #0d3b66;
 }

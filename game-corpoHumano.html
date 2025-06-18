@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🧬 Viagem pelo Corpo Humano</title>
+  <title>Viagem pelo Corpo Humano</title>
   <link rel="stylesheet" href="css/game-corpoHumano.css" />
 </head>
 <body>
+
+  <a href="index.html" class="botao-canto">←</a>
+
   <h1>🧬 Viagem pelo Corpo Humano</h1>
-
-  <!-- Instruções -->
+  
   <div id="instructions">
-    <p>Vamos nessa? Aperte <strong>Iniciar</strong> e escolha um sistema para desafiar seus conhecimentos!</p>
+    <h2>Escolha um sistema para explorar:</h2>
   </div>
 
-  <!-- Botão de início -->
   <div id="start-area">
-    <button id="start-btn">Iniciar</button>
+    <button id="start-btn" onclick="startGame()">Iniciar</button>
+    <button id="restart-btn" onclick="restartGame()" class="hidden">Reiniciar</button>
   </div>
 
-  <!-- Seleção de sistemas -->
   <div id="system-selection" class="hidden">
-    <h2>Escolha um sistema do corpo humano:</h2>
-    <div id="system-buttons"></div>
+    <button onclick="startChallenge('Sistema Nervoso')">🧠 Sistema Nervoso</button>
+    <button onclick="startChallenge('Sistema Respiratório')">🌬️ Sistema Respiratório</button>
+    <button onclick="startChallenge('Sistema Circulatório')">🩺 Sistema Circulatório</button>
+    <button onclick="startChallenge('Sistema Digestivo')">🍽️ Sistema Digestivo</button>
+    <button onclick="startChallenge('Sistema Urinário')">🚽 Sistema Urinário</button>
+    <button onclick="startChallenge('Sistema Endócrino')">🧬 Sistema Endócrino</button>
+    <button onclick="startChallenge('Sistema Reprodutor')">👶 Sistema Reprodutor</button>
+    <button onclick="startChallenge('Sistema Muscular')">💪 Sistema Muscular</button>
+    <button onclick="startChallenge('Sistema Esquelético')">🦴 Sistema Esquelético</button>
+    <button onclick="startChallenge('Sistema Imunológico')">🛡️ Sistema Imunológico</button>
   </div>
 
-  <!-- Área de desafio -->
   <div id="challenge-area" class="hidden">
-    <h2 id="challenge-text"></h2>
+    <p id="challenge-text"></p>
     <div id="options"></div>
-    <div id="feedback" role="alert" aria-live="polite" style="margin-top: 1rem; font-weight: bold;"></div>
+    <div id="feedback"></div>
   </div>
 
-  <!-- Resumo final -->
-  <div id="summary" class="hidden">
-    <h2>Resultado Final</h2>
-    <div id="results"></div>
-    <button onclick="location.reload()">Jogar Novamente</button>
-  </div>
-
-  <!-- Script -->
   <script src="js/game-corpoHumano.js"></script>
 </body>
 </html>
