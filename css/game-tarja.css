@@ -1,67 +1,168 @@
+/* Importa uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset e configurações gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Arial Black', Arial, sans-serif;
-    background: #fafafa;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  h1 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-  }
-  
-  /* Botão fixo no canto superior esquerdo */
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #dceeff, #ffffff);
+  color: #111;
+  padding: 30px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Botão de voltar */
 .botao-canto {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background: transparent;
-  border: none;
-  padding: 4px 8px;
-  font-size: 14px;
-  cursor: pointer;
+  top: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+  background: #2b9fff;
+  color: white;
   text-decoration: none;
-  opacity: 0.5;
-  z-index: 1000;
-  transition: opacity 0.2s, color 0.2s;
+  padding: 8px 14px;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .botao-canto:hover {
-  opacity: 1;
-  color: #007BFF;
-  /* azul padrão no hover */
+  transform: scale(1.1);
+  background: #0075d6;
 }
-  #pergunta {
-    font-size: 1.4em;
-    margin-bottom: 25px;
-  }
-  
-  #opcoes {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-  }
-  
-  #opcoes button {
-    padding: 12px 22px;
-    font-size: 1em;
-    border: 2px solid #2e7d32;
-    background-color: white;
-    color: #2e7d32;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  #opcoes button:hover {
-    background-color: #2e7d32;
-    color: white;
-  }
-  
-  #resultado {
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-  
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  color: #0075d6;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 3px rgba(0, 117, 214, 0.2);
+}
+
+/* Contador */
+#contador {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0 25px;
+}
+
+/* Caixa de instruções */
+#instrucoes {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 117, 214, 0.15);
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+#instrucoes h2 {
+  font-size: 1.8rem;
+  color: #0075d6;
+  margin-bottom: 12px;
+}
+
+#instrucoes p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#instrucoes ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#instrucoes li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+/* Botões de controle */
+#botoes-controle {
+  margin: 20px 0;
+}
+
+#botoes-controle button {
+  background: #0075d6;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,117,214,0.2);
+}
+
+#botoes-controle button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Pergunta */
+#pergunta {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Opções */
+#opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#opcoes button {
+  background: white;
+  color: #0075d6;
+  border: 2px solid #0075d6;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+#opcoes button:hover {
+  background: #0075d6;
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 117, 214, 0.3);
+}
+
+/* Resultado */
+#resultado {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Rodapé */
+footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #555;
+  padding-top: 30px;
+}

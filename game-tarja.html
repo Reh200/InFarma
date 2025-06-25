@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <title>Tarja Certa</title>
   <link rel="stylesheet" href="css/game-tarja.css" />
 </head>
+
 <body>
 
+  <!-- Botão de navegação -->
   <a href="index.html" class="botao-canto">←</a>
 
   <h1>💊 Tarja Certa</h1>
+
+  <!-- Contador de Perguntas -->
+  <div id="contador"></div>
+
+  <!-- Instruções -->
+  <div id="instrucoes">
+    <h2>Como Jogar</h2>
+    <p>Bem-vindo ao jogo "Tarja Certa"! O objetivo é simples: você deverá identificar a tarja
+      do medicamento apresentado em cada pergunta.</p>
+    <p><strong>Regras do jogo:</strong></p>
+    <ul>
+      <li>Em cada rodada, será mostrado um medicamento.</li>
+      <li>Você deve escolher a tarja correta associada a esse medicamento.</li>
+      <li>As tarjas possíveis são: ⚪ Tarja Branca, 🔴 Tarja Vermelha, 🔴📄 Tarja Vermelha (Retida), e ⚫ Tarja Preta.
+      </li>
+      <li>Cada acerto vai gerar uma resposta positiva, e cada erro será corrigido, permitindo que você tente novamente.
+      </li>
+      <li>Após a última pergunta, você pode finalizar o jogo a qualquer momento.</li>
+    </ul>
+    <p>Está pronto para começar? Clique em "Iniciar" e boa sorte!</p>
+  </div>
+
+  <!-- Botões de Controle -->
+  <div id="botoes-controle">
+    <button id="iniciar" onclick="iniciarJogo()">Iniciar</button>
+    <button id="reiniciar" onclick="reiniciarJogo()" style="display:none;">Reiniciar</button>
+    <button id="finalizar" onclick="finalizarJogo()" style="display:none;">Finalizar</button>
+  </div>
+
+  <!-- Pergunta e Opções -->
   <div id="pergunta"></div>
   <div id="opcoes"></div>
   <div id="resultado"></div>
 
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Tarja Certa. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script -->
   <script src="js/game-tarja.js"></script>
 </body>
+
 </html>

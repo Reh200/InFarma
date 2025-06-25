@@ -1,15 +1,140 @@
+/* Resetando alguns estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #fff8f0;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  h1 {
-    color: #c62828;
-  }
-  
-  /* Botão fixo no canto superior esquerdo */
+  font-family: 'Georgia', serif;
+  background: #f8f1e3;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #c62828;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#instrucoes {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #555;
+}
+
+#contador {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#pergunta {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#opcoes button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: 2px solid #c62828;
+  background-color: white;
+  color: #c62828;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#opcoes button:hover {
+  background-color: #c62828;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#resultado {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-top: 20px;
+  color: #333;
+}
+
+#controle {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #c62828;
+  background-color: white;
+  color: #c62828;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #c62828;
+  color: white;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #f0f0f0;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilo para o botão de "Finalizar" */
+#finalizarBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2em;
+}
+
+#finalizarBtn:hover {
+  background-color: #d32f2f;
+}
+
+#reiniciarBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2em;
+}
+
+#reiniciarBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Efeito de transição nos botões */
+button, #reiniciarBtn, #finalizarBtn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reiniciarBtn,
+#finalizarBtn {
+  display: none;
+}
+
+/* Botão fixo no canto superior esquerdo */
 .botao-canto {
   position: fixed;
   top: 10px;
@@ -17,9 +142,9 @@ body {
   background: transparent;
   border: none;
   padding: 4px 8px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none; /* Remover o sublinhado */
   opacity: 0.5;
   z-index: 1000;
   transition: opacity 0.2s, color 0.2s;
@@ -27,40 +152,6 @@ body {
 
 .botao-canto:hover {
   opacity: 1;
-  color: #007BFF; /* azul padrão no hover */
+  color: #007BFF; /* Azul no hover */
+  text-decoration: none; /* Garantir que o sublinhado não apareça no hover */
 }
-
-  #pergunta {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-  }
-  
-  #opcoes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  #opcoes button {
-    padding: 12px 22px;
-    font-size: 1em;
-    border: 2px solid #c62828;
-    background-color: white;
-    color: #c62828;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  #opcoes button:hover {
-    background-color: #c62828;
-    color: white;
-  }
-  
-  #resultado {
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-  

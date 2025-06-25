@@ -6,13 +6,33 @@
   <link rel="stylesheet" href="css/game-interacoes.css" />
 </head>
 <body>
-
   <a href="index.html" class="botao-canto">←</a>
 
   <h1>💊 Interações Perigosas</h1>
+  
+  <!-- Instruções que aparecerão antes de iniciar o jogo -->
+  <div id="instrucoes">
+    <p>Bem-vindo ao jogo de interações perigosas! O objetivo é responder se os medicamentos listados interagem entre si ou são seguros para o uso conjunto.</p>
+    <p>Cada pergunta possui duas opções: "Interagem" ou "Seguros".</p>
+    <p>Boa sorte!</p>
+  </div>
+
+  <!-- Botão de Iniciar -->
+  <button id="iniciarBtn">Iniciar</button>
+
+  <!-- Contador de Perguntas -->
+  <div id="contador"></div>
+
+  <!-- Perguntas e opções do jogo -->
   <div id="pergunta"></div>
   <div id="opcoes"></div>
   <div id="resultado"></div>
+
+  <!-- Botões de Controle -->
+  <div id="controle">
+    <button id="finalizarBtn">Finalizar</button>
+    <button id="reiniciarBtn">Reiniciar</button>
+  </div>
 
   <script src="js/game-interacoes.js"></script>
 </body>
