@@ -9,26 +9,38 @@
   <meta property="og:image" content="img/logo-farmagames.png" />
   <title>FarmaGames - Início</title>
 
-  <link rel="manifest" href="manifest.json" />
+  <!-- Ícones e fontes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="css/joguinhos.css" />
 </head>
 
 <body>
+  <!-- Botão invisível de alternância de tema -->
+  <button id="theme-toggle" title="Alternar tema"></button>
 
+  <!-- Botão voltar (seta) no canto superior esquerdo -->
+  <a href="index.html" class="botao-voltar" title="Voltar para o início">←</a>
+
+  <!-- Cabeçalho -->
   <header>
     <h1>FarmaGames</h1>
     <p>Escolha seu jogo educativo e divirta-se aprendendo!</p>
   </header>
 
+  <!-- Introdução -->
   <main>
     <section class="intro">
       <img src="img/logo-rosa-azul.png" alt="Logo FarmaGames" class="logo-destaque" />
       <p>Aprenda de forma divertida com nossos jogos interativos sobre saúde, medicamentos e o corpo humano.</p>
     </section>
 
+    <!-- Lista de jogos -->
     <nav class="grid-jogos">
-      <a href="game-classificacao.html" class="menu-jogos">🤕🩹 <span>Classifique os Efeitos</span></a>      
+      <a href="game-classificacao.html" class="menu-jogos">🤕🩹 <span>Classifique os Efeitos</span></a>
       <a href="game-corpoHumano.html" class="menu-jogos">🧬 <span>Viagem pelo Corpo Humano</span></a>
       <a href="game-dosagem.html" class="menu-jogos">⚖️🧴 <span>Dosagem Correta</span></a>
       <a href="game-dosagem2.html" class="menu-jogos">🧑‍⚕️ <span>Dosagem de Medicamentos</span></a>
@@ -43,14 +55,17 @@
     </nav>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>Desenvolvido por Aline Renata - Projeto Educacional 💙</p>
   </footer>
 
-  <a href="sobre.html" class="sobre-btn" title="Sobre o site">
-    ℹ️ <span class="texto-sobre">SOBRE</span>
-  </a>
-  
-  <script src="js/sw-register.js"></script>
+  <!-- Script de troca de tema -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
 </body>
 </html>

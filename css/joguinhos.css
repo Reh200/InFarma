@@ -1,7 +1,4 @@
-/* === IMPORTAÇÃO DE FONTE === */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-/* === CONFIGURAÇÃO GLOBAL === */
+/* === IMPORTAÇÃO E CONFIGURAÇÃO GLOBAL === */
 body {
   margin: 0;
   padding: 0;
@@ -14,33 +11,85 @@ body {
   line-height: 1.6;
 }
 
-.sobre-btn {
+/* === BOTÃO VOLTAR === */
+.botao-voltar {
   position: absolute;
   top: 10px;
-  right: 10px;
-  font-size: 14px; /* Tamanho menor do ícone */
+  left: 10px;
+  font-size: 20px;
+  text-decoration: none;
   background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
   border: none;
-  color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  text-align: center;
+  z-index: 1000;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.sobre-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
+.botao-voltar:hover {
+  color: rgba(0, 0, 0, 0.9);
   transform: scale(1.1);
 }
 
-.sobre-btn:active {
-  transform: scale(0.95);
+body.dark-theme .botao-voltar {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-theme .botao-voltar:hover {
+  color: #ffffff;
+}
+
+/* === BOTÃO SOBRE === */
+.sobre-btn {
+  position: absolute;
+  top: 38px;
+  left: 10px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.sobre-btn:hover {
+  color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
 }
 
 .texto-sobre {
   display: block;
-  font-size: 8px; /* Tamanho bem pequeno da palavra */
-  color: rgba(0, 0, 0, 0.6); /* Cor do texto */
-  margin-top: 1px; /* Menor espaço entre o emoji e o texto */
+  font-size: 8px;
+  margin-top: 1px;
+}
+
+body.dark-theme .sobre-btn {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-theme .texto-sobre {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* === BOTÃO DE TROCA DE TEMA === */
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.05;
+  z-index: 999;
+}
+
+#theme-toggle:hover {
+  opacity: 0.2;
 }
 
 /* === CABEÇALHO === */
@@ -50,7 +99,6 @@ header {
   padding: 16px 20px;
   text-align: center;
   border-bottom: 2px solid #0056b3;
-  animation: fadeInUp 0.8s ease both;
 }
 
 header h1 {
@@ -66,10 +114,10 @@ header p {
   color: #e0e0e0;
 }
 
-/* === LOGO PRINCIPAL === */
+/* === LOGO === */
 .logo-destaque {
-  max-width: 120px;           
-  border-radius: 12px;        
+  max-width: 120px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 20px;
 }
@@ -78,7 +126,6 @@ header p {
 .intro {
   text-align: center;
   margin: 40px 20px 30px;
-  animation: fadeInUp 0.8s ease both;
 }
 
 .intro p {
@@ -101,14 +148,13 @@ header p {
   background-color: #007BFF;
   color: white;
   text-decoration: none;
-  font-size: 1em;           
+  font-size: 1em;
   font-weight: 600;
   text-align: center;
-  padding: 10px 16px;       
+  padding: 10px 16px;
   border-radius: 8px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  animation: scaleIn 0.5s ease both;
 }
 
 .menu-jogos:hover {
@@ -127,48 +173,46 @@ header p {
 
 /* === RODAPÉ === */
 footer {
-  background-color: #333;
+  background-color: #007BFF;
   color: #f5f5f5;
   text-align: center;
   padding: 15px 10px;
   font-size: 0.9em;
   margin-top: auto;
   border-top: 2px solid #0056b3;
-  animation: fadeInUp 0.8s ease both;
 }
 
-footer a {
+/* === TEMA ESCURO === */
+body.dark-theme {
+  background: linear-gradient(to bottom right, #121212, #1e1e1e);
+  color: #e0e0e0;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+  background-color: #007BFF;
+  color: #e0e0e0;
+}
+
+body.dark-theme .intro p {
+  color: #ccc;
+}
+
+body.dark-theme .menu-jogos {
+  background-color: #007BFF;
   color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: #007BFF;
+body.dark-theme .menu-jogos:hover {
+  background-color: #0056b3;
 }
 
-/* === ANIMAÇÕES === */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+body.dark-theme .menu-jogos:active {
+  background-color: #004085;
 }
 
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+body.dark-theme .logo-destaque {
+  filter: brightness(0.9);
 }
 
 /* === RESPONSIVO === */

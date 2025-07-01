@@ -1,15 +1,94 @@
-/* Fontes e estilo base */
+/* === Estilo base === */
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333333;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
+/* === Instrução visual (tema claro) === */
+.tema-instrucao {
+    background: linear-gradient(to right, #eaf4ff, #ffffff);
+    border-left: 6px solid #1a73e8;
+    padding: 16px 20px 16px 50px;
+    margin: 40px auto;
+    font-size: 1rem;
+    color: #1a1a1a;
+    max-width: 860px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    position: relative;
+}
+
+.tema-instrucao::before {
+    content: "💡";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1.4rem;
+    color: #1a73e8;
+}
+
+/* === Tema escuro === */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme .term {
+    background-color: #222222;
+    color: #e5e5e5;
+}
+
+body.dark-theme .term h2 {
+    color: #82aaff;
+}
+
+body.dark-theme .term p {
+    color: #e0e0e0;
+}
+
+body.dark-theme .term ul li {
+    color: #d0d0d0;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+body.dark-theme header h1 {
+    color: #ffffff;
+}
+
+body.dark-theme header p {
+    color: #dddddd;
+}
+
+body.dark-theme footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-theme .tema-instrucao {
+    background: linear-gradient(to right, #2a2a2a, #1f1f1f);
+    border-left-color: #82aaff;
+    color: #d0d0d0;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .tema-instrucao::before {
+    color: #82aaff;
+}
+
+body.dark-theme .botao-canto {
+    color: #cccccc;
+}
+
+/* === Botão voltar === */
 .botao-canto {
     position: fixed;
     top: 14px;
@@ -23,9 +102,9 @@ body {
     opacity: 0.6;
     z-index: 1000;
     border-radius: 6px;
-    transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     color: #144552;
     user-select: none;
+    transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .botao-canto:hover,
@@ -36,7 +115,7 @@ body {
     outline: none;
 }
 
-/* Botão de tema */
+/* === Botão de alternância de tema === */
 #theme-toggle {
     position: fixed;
     top: 15px;
@@ -48,8 +127,8 @@ body {
     cursor: pointer;
     font-size: 1.5rem;
     color: transparent;
-    box-shadow: none;
     opacity: 0.1;
+    box-shadow: none;
     transition: opacity 0.3s, transform 0.2s;
     pointer-events: auto;
 }
@@ -59,12 +138,7 @@ body {
     opacity: 1;
 }
 
-body.dark-theme {
-    background-color: #121212;
-    color: white;
-}
-
-/* Cabeçalho */
+/* === Cabeçalho === */
 header {
     background-color: #007bff;
     color: #fff;
@@ -77,14 +151,16 @@ header h1 {
     font-family: 'Lobster', cursive;
     margin: 0;
     font-size: 2.8rem;
+    color: inherit;
 }
 
 header p {
     font-size: 1.1rem;
     margin-top: 10px;
+    color: inherit;
 }
 
-/* Seção principal */
+/* === Conteúdo principal === */
 .glossary {
     max-width: 960px;
     margin: 0 auto;
@@ -97,7 +173,8 @@ header p {
     border-radius: 12px;
     margin-bottom: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
+    color: #444444;
 }
 
 .term:hover {
@@ -112,7 +189,7 @@ header p {
 
 .term p {
     font-size: 1rem;
-    color: #555;
+    color: #555555;
     margin-bottom: 15px;
 }
 
@@ -124,9 +201,10 @@ header p {
 .term ul li {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #444;
+    color: #444444;
 }
 
+/* === Link interno === */
 .menu-jogos {
     color: #0056b3;
     text-decoration: none;
@@ -139,7 +217,7 @@ header p {
     text-decoration: underline;
 }
 
-/* Rodapé */
+/* === Rodapé === */
 footer {
     text-align: center;
     padding: 15px 10px;
@@ -148,9 +226,10 @@ footer {
     font-size: 0.95rem;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
     margin-top: auto;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Responsivo */
+/* === Responsividade === */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
