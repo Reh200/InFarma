@@ -1,4 +1,6 @@
-/* Definindo variáveis de cor para facilitar manutenção */
+/* =============================
+   VARIÁVEIS DE COR (CSS VARIABLES)
+   ============================= */
 :root {
   --cor-fundo-claro: #f9f9f9;
   --cor-fundo-escuro: #333;
@@ -14,10 +16,12 @@
   --cor-botao-ativo: #f0ad4e;
 }
 
-/* Corpo e Tipografia */
+/* =============================
+   RESET & CORPO
+   ============================= */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: var(--cor-fundo-claro);
+  background-color: var(--cor-fundo-claro);
   color: var(--cor-fundo-escuro);
   text-align: center;
   padding: 60px 20px;
@@ -25,7 +29,9 @@ body {
   line-height: 1.6;
 }
 
-/* Título principal */
+/* =============================
+   TÍTULO PRINCIPAL
+   ============================= */
 h1 {
   font-size: 3em;
   color: var(--cor-fundo-escuro);
@@ -36,7 +42,9 @@ h1 {
   line-height: 1.1;
 }
 
-/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
+/* =============================
+   BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO
+   ============================= */
 .botao-canto {
   position: fixed;
   top: 14px;
@@ -48,11 +56,11 @@ h1 {
   cursor: pointer;
   text-decoration: none;
   opacity: 0.6;
-  z-index: 1000;
-  border-radius: 6px;
-  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   color: #144552;
+  border-radius: 6px;
   user-select: none;
+  z-index: 1000;
+  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .botao-canto:hover,
@@ -63,7 +71,9 @@ h1 {
   outline: none;
 }
 
-/* Pergunta */
+/* =============================
+   PERGUNTA
+   ============================= */
 #pergunta {
   font-size: 1.8em;
   margin-bottom: 40px;
@@ -71,7 +81,9 @@ h1 {
   font-weight: 400;
 }
 
-/* Opções */
+/* =============================
+   ÁREA DE OPÇÕES
+   ============================= */
 #opcoes {
   display: flex;
   justify-content: center;
@@ -88,43 +100,62 @@ h1 {
   color: var(--cor-fundo-escuro);
   cursor: pointer;
   border-radius: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px var(--cor-sombra);
-  text-transform: uppercase;
   font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px var(--cor-sombra);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+              box-shadow 0.3s ease;
 }
 
-#opcoes button:hover {
+#opcoes button:hover:not(:disabled) {
   background-color: var(--cor-fundo-escuro);
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 8px 16px var(--cor-hover-sombra);
 }
 
-/* Resultado */
+#opcoes button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =============================
+   RESULTADO
+   ============================= */
 #resultado {
   font-size: 1.4em;
   font-weight: 500;
   color: var(--cor-fundo-escuro);
   margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
-/* Contagem da pergunta */
+/* =============================
+   CONTAGEM DE PERGUNTA
+   ============================= */
 #contagem-pergunta {
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
+  display: none; /* Escondido no início */
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f4f8;
+  font-size: 1.2em;
+  font-weight: 700;
   color: var(--cor-texto-secundario);
+  background-color: #f0f4f8;
   padding: 15px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border-left: 5px solid var(--cor-secundaria);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 400px;
-  margin: 30px auto;
+  margin: 20px auto 40px auto; /* margem top 20 e bottom 40 */
+  text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  user-select: none; /* Evita seleção acidental do texto */
+  cursor: default;   /* Indica que não é clicável */
 }
 
 #contagem-pergunta:hover {
@@ -132,13 +163,16 @@ h1 {
   box-shadow: 0 6px 20px var(--cor-hover-sombra);
 }
 
-/* Botões de Iniciar, Reiniciar e Finalizar */
+/* =============================
+   CONTAINER DE BOTÕES (INICIAR, REINICIAR, FINALIZAR)
+   ============================= */
 #inicio-reinicio {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 #inicio-reinicio button {
@@ -153,32 +187,32 @@ h1 {
   color: white;
   box-shadow: 0 4px 10px var(--cor-sombra);
   transition: all 0.3s ease-in-out;
+  min-width: 130px;
 }
 
-#inicio-reinicio button:hover {
+#inicio-reinicio button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--cor-hover-sombra);
   opacity: 0.9;
 }
 
-/* Estilo para o botão de Iniciar */
 #btn-iniciar {
   background: linear-gradient(45deg, var(--cor-secundaria), var(--cor-acento));
 }
 
-/* Estilo para o botão de Reiniciar */
 #btn-reiniciar {
   background: linear-gradient(45deg, #d9534f, var(--cor-botao-ativo));
   display: none;
 }
 
-/* Novo: Estilo para o botão de Finalizar */
 #btn-finalizar {
   background: linear-gradient(45deg, #6c757d, #adb5bd);
   display: none;
 }
 
-/* Responsividade */
+/* =============================
+   RESPONSIVIDADE
+   ============================= */
 @media (max-width: 768px) {
   body {
     padding: 40px 10px;
