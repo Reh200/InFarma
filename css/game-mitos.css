@@ -1,67 +1,177 @@
+/* Importação de font moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset básico global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================
+  ANIMAÇÕES
+  =====================================
+*/
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* =====================================
+  LAYOUT GERAL
+  =====================================
+*/
 body {
-  font-family: Verdana, sans-serif;
-  background: #e0f7fa;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #333;
   text-align: center;
   padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-  color: #00796b;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #ff7f50; /* Laranja-Pêssego */
+  margin-bottom: 25px; /* Mais espaço para o título */
+  animation: fade-in-up 0.8s ease-out;
 }
 
-/* Botão fixo no canto superior esquerdo */
+/* =====================================
+  CONTADOR E PERGUNTA
+  =====================================
+*/
+#contador-perguntas {
+  font-size: 1.1em;
+  color: #6c757d;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#pergunta {
+  font-size: 1.4em;
+  margin: 30px 0; /* Espaço generoso acima e abaixo da pergunta */
+  max-width: 700px;
+  animation: fade-in-up 1s ease-out;
+}
+
+/* =====================================
+  BOTÕES E RESULTADO
+  =====================================
+*/
+#opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px; /* Espaço entre a pergunta e as opções */
+  animation: fade-in-up 1.2s ease-out;
+}
+
+#opcoes button {
+  background: #e0f2f1;
+  border: 2px solid #00897b;
+  color: #00897b;
+  padding: 14px 28px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#opcoes button:hover {
+  background-color: #b2dfdb;
+  color: #004d40;
+  transform: translateY(-4px);
+  border-color: #004d40;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#botao-inicio,
+#botao-finalizar {
+  background: #4fc3f7;
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1em;
+  margin: 25px 8px; /* Mais espaço acima para separar das opções */
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(79,195,247,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+#botao-inicio:hover,
+#botao-finalizar:hover {
+  background: #29b6f6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(41,182,246,0.4);
+}
+
+#botao-inicio {
+  animation: pulse 2s infinite;
+}
+
+#resultado {
+  margin-top: 35px; /* Espaço generoso para separar dos botões de controle */
+  font-size: 1.3em;
+  white-space: pre-wrap;
+  max-width: 700px;
+  animation: fade-in-up 1.4s ease-out;
+}
+
+/* =====================================
+  ITENS DE NAVEGAÇÃO
+  =====================================
+*/
 .botao-canto {
   position: fixed;
   top: 10px;
   left: 10px;
-  background: transparent;
-  border: none;
-  padding: 4px 8px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #ddd;
+  padding: 6px 12px;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.5;
-  z-index: 1000;
-  transition: opacity 0.2s, color 0.2s;
+  border-radius: 4px;
+  color: #555;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .botao-canto:hover {
-  opacity: 1;
-  color: #007BFF;
-  /* azul padrão no hover */
+  background: #f0f0f0;
+  transform: scale(1.05);
 }
 
-#pergunta {
-  font-size: 1.3em;
-  margin-bottom: 25px;
-}
-
-#opcoes {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-#opcoes button {
-  padding: 12px 25px;
-  font-size: 1.1em;
-  border: 2px solid #00796b;
-  background-color: white;
-  color: #00796b;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-#opcoes button:hover {
-  background-color: #00796b;
-  color: white;
-}
-
-#resultado {
-  font-weight: bold;
-  font-size: 1.3em;
+/* =====================================
+  LAYOUT RESPONSIVO
+  =====================================
+*/
+@media (max-width: 600px) {
+  h1 { font-size: 2em; }
+  #pergunta { font-size: 1.2em; padding: 0 10px; }
+  #opcoes button { width: 100%; max-width: 300px; }
+  #botao-inicio, #botao-finalizar { width: 80%; }
 }
