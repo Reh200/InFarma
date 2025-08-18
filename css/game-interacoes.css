@@ -1,66 +1,166 @@
+/* === VARIÁVEIS DE COR === */
+:root {
+  --cor-principal: #3264a8;
+  --cor-secundaria: #f0f4f8;
+  --cor-texto-principal: #2c3e50;
+  --cor-sucesso: #2ecc71;
+  --cor-erro: #e74c3c;
+  --cor-hover: #4e80b8;
+}
+
+/* === RESET E BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #fff8f0;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  h1 {
-    color: #c62828;
-  }
-  
-  /* Botão fixo no canto superior esquerdo */
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  background: var(--cor-secundaria);
+  color: var(--cor-texto-principal);
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* === TÍTULO E TEXTOS === */
+h1 {
+  color: var(--cor-principal);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+#instrucoes,
+#contador,
+#pergunta {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+#pergunta {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+}
+
+#resultado {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: var(--cor-texto-principal);
+}
+
+/* === BOTÕES GERAIS === */
+button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 2px solid var(--cor-principal);
+  background-color: white;
+  color: var(--cor-principal);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-principal);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  border-color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* === OPÇÕES DE RESPOSTA === */
+#opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+#opcoes button {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === CONTROLE DE BOTÕES === */
+#controle {
+  margin-top: 2rem;
+}
+
+#controle button {
+  margin: 0 0.5rem;
+}
+
+/* === BOTÕES ESPECÍFICOS === */
+#finalizarBtn {
+  background-color: var(--cor-erro);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  display: none;
+}
+
+#finalizarBtn:hover {
+  background-color: #c0392b;
+}
+
+#reiniciarBtn {
+  background-color: var(--cor-sucesso);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  display: none;
+}
+
+#reiniciarBtn:hover {
+  background-color: #27ae60;
+}
+
+/* === BOTÃO DE VOLTAR === */
 .botao-canto {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 1rem;
+  left: 1rem;
   background: transparent;
   border: none;
-  padding: 4px 8px;
-  font-size: 14px;
+  font-size: 1.2rem;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.5;
+  color: var(--cor-principal);
+  opacity: 0.7;
   z-index: 1000;
   transition: opacity 0.2s, color 0.2s;
 }
 
 .botao-canto:hover {
   opacity: 1;
-  color: #007BFF; /* azul padrão no hover */
+  color: var(--cor-hover);
 }
 
-  #pergunta {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-  }
-  
+/* === RESPONSIVO === */
+@media (max-width: 600px) {
   #opcoes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   #opcoes button {
-    padding: 12px 22px;
-    font-size: 1em;
-    border: 2px solid #c62828;
-    background-color: white;
-    color: #c62828;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
   }
-  
-  #opcoes button:hover {
-    background-color: #c62828;
-    color: white;
-  }
-  
-  #resultado {
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-  
+}
+
+
